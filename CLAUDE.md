@@ -32,12 +32,26 @@ npx tsc -b           # Type check (part of build process)
 
 ```
 src/
-├── components/ui/   # shadcn/ui components
-├── lib/            # Utility functions (utils.ts for cn helper)
-├── assets/         # Static assets
-├── App.tsx         # Main app component
-├── main.tsx        # React entry point
-└── index.css       # Global styles with Tailwind imports
+├── components/
+│   ├── ui/            # shadcn/ui components (Button, Card, Navigation, etc.)
+│   ├── layout/        # Layout components (Navigation)
+│   ├── navigation/    # Navigation-specific components (Navbar)
+│   └── grid-background/  # Background effect components
+├── section/           # Page sections (Hero, About, Products, etc.)
+│   ├── hero/         # Multiple hero variants (hero-1 to hero-5)
+│   ├── about/        # Company introduction components
+│   ├── products/     # Products and services sections
+│   ├── portfolio/    # Client portfolio section
+│   ├── blog/         # Blog section components
+│   └── footer/       # Footer components
+├── template/         # Full page templates (template-1, template-2, etc.)
+├── data/             # Data layer with provider pattern implementation
+├── types/            # TypeScript type definitions
+├── lib/              # Utility functions (utils.ts for cn helper)
+├── assets/           # Static assets
+├── App.tsx           # Main app component (renders Template2)
+├── main.tsx          # React entry point
+└── index.css         # Global styles with Tailwind imports
 ```
 
 ## Component System
@@ -61,6 +75,22 @@ src/
 - **Animation**: tw-animate-css for additional animations
 - **Theme**: New York style with neutral base colors and custom radius values
 
+## Architecture Patterns
+
+- **Template-Based Architecture**: Full page layouts are organized as reusable templates (Template2 is currently active)
+- **Section-Based Components**: Pages are composed of discrete sections (Hero, About, Products, Portfolio, Blog, Footer)
+- **Data Provider Pattern**: Uses factory pattern with provider interfaces for data management (ProductDataProvider, BlogDataProvider, PartnerDataProvider)
+- **Type Safety**: Comprehensive TypeScript interfaces following Interface Segregation Principle
+- **Component Variants**: Multiple variants for similar components (5 different hero sections available)
+
+## Data Layer
+
+The project implements a clean data architecture with:
+- **Provider Pattern**: `DataProviderFactory` creates specific data providers
+- **Interface Segregation**: Separate interfaces for different data types (Product, BlogPost, Partner)
+- **Type Definitions**: All data structures defined in `src/types/index.ts`
+- **Mock Data**: Static data in `src/data/index.ts` for development and prototyping
+
 ## Development Notes
 
 - Uses TypeScript strict mode with proper path mapping
@@ -68,3 +98,4 @@ src/
 - Vite HMR for fast development
 - All components use forwardRef pattern when applicable
 - shadcn/ui components follow accessibility best practices with Radix UI
+- Template system allows easy switching between different page layouts

@@ -30,16 +30,16 @@ export default function BlogSection() {
   ];
 
   return (
-    <section id="blog" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+    <section id="blog" className="py-12 sm:py-16 md:py-20" style={{backgroundColor: '#F5F5F5'}}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
-          <Badge variant="outline" className="mb-4 sm:mb-6 text-xs sm:text-sm" style={{borderColor: '#45ABD5', color: '#01193F'}}>
+          <div className="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
             Update Terbaru
-          </Badge>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
             Berita dan Artikel Terbaru
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style={{color: '#505050'}}>
             Tetap terkini dengan tren terbaru dalam teknologi pendidikan dan perkembangan perusahaan kami
           </p>
         </div>

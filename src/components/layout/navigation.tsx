@@ -9,14 +9,31 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { Smartphone, FileText, Settings, GraduationCap, Building2, UserCheck, Wallet, PieChart } from "lucide-react";
-import React from "react";
+import { Smartphone, FileText, Settings, GraduationCap, Building2, UserCheck, Wallet, PieChart, Menu, X } from "lucide-react";
+import React, { useState, useEffect } from "react";
 
 export default function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
-        <div className="flex items-center space-x-2">
+    <nav className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      isScrolled
+        ? 'bg-white border-b border-gray-200 shadow-sm'
+        : 'bg-brand-navy border-b border-[#1c3660]'
+    }`}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center">
+        {/* Left Column - Logo (flex-1) */}
+        <div className="flex-1 flex items-center">
           <img
             src="/logo_uswah.png"
             alt="PT Uswah Salam AlAzhar"
@@ -24,17 +41,21 @@ export default function Navigation() {
           />
         </div>
 
-        {/* Desktop Navigation */}
-        <NavigationMenu className="hidden md:flex">
+        {/* Middle Column - Navigation Menu (flex-1) */}
+        <NavigationMenu className="flex-1 hidden md:flex justify-center">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#home" className="text-sm font-medium text-gray-700 hover:text-primary-brand transition-colors">
+              <NavigationMenuLink href="#home" className={`text-sm font-medium transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+              }`}>
                 Beranda
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-primary-brand transition-colors bg-transparent">
+              <NavigationMenuTrigger className={`text-sm font-medium transition-colors bg-transparent ${
+                isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+              }`}>
                 Produk & Layanan
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -74,32 +95,159 @@ export default function Navigation() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink href="#portfolio" className="text-sm font-medium text-gray-700 hover:text-primary-brand transition-colors">
-                Portofolio
+              <NavigationMenuLink href="#portfolio" className={`text-sm font-medium transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+              }`}>
+                Portfolio
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink href="#blog" className="text-sm font-medium text-gray-700 hover:text-primary-brand transition-colors">
+              <NavigationMenuLink href="#blog" className={`text-sm font-medium transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+              }`}>
                 Blog
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink href="#career" className="text-sm font-medium text-gray-700 hover:text-primary-brand transition-colors">
+              <NavigationMenuLink href="#career" className={`text-sm font-medium transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+              }`}>
                 Karir
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="flex items-center space-x-2 sm:space-x-4">
-          <Button variant="ghost" size="sm" className="hidden sm:inline-flex bg-transparent hover:bg-transparent text-gray-700 hover:text-primary-brand">Contact</Button>
-          <Button size="sm" className="text-xs sm:text-sm px-3 sm:px-4 text-white" style={{background: 'linear-gradient(135deg, #45ABD5 0%, #01193F 100%)'}}>
+        {/* Right Column - Contact & Support (flex-1) */}
+        <div className="flex-1 flex items-center justify-end space-x-2 sm:space-x-4">
+          <Button variant="ghost" size="sm" className={`hidden sm:inline-flex bg-transparent hover:bg-transparent transition-colors ${
+            isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+          }`}>
+            Contact
+          </Button>
+          <Button size="sm" className="hidden sm:flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 sm:py-4 rounded-sm text-black bg-yellow-300 hover:bg-yellow-500 transition-colors">
+            <img
+              src="/icon/support.svg"
+              alt="Support"
+              className="w-4 h-4"
+            />
             Support
+          </Button>
+
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            className={`md:hidden ${
+              isScrolled ? 'text-gray-700' : 'text-white'
+            }`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-50 bg-black/50" onClick={() => setIsMobileMenuOpen(false)}>
+          <div
+            className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-brand-navy shadow-lg transform transition-transform"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Mobile Menu Header */}
+            <div className="flex items-center justify-end p-4 border-b border-[#1c3660]">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-white"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <X className="h-6 w-6" />
+              </Button>
+            </div>
+
+            {/* Mobile Menu Items */}
+            <div className="p-4 space-y-4">
+              <a
+                href="#home"
+                className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Beranda
+              </a>
+
+              {/* Mobile Products Dropdown */}
+              <div className="space-y-2">
+                <div className="py-2 text-base font-medium text-white">
+                  Produk & Layanan
+                </div>
+                <div className="pl-4 space-y-3">
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-gray-300">Solusi Digital</h4>
+                    <div className="pl-2 space-y-2">
+                      <a href="#mobile" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>Mobile Application</a>
+                      <a href="#erapor" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>e-Rapor System</a>
+                      <a href="#backoffice" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>Backoffice System</a>
+                      <a href="#lms" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>Learning Management System</a>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-gray-300">Sistem Manajemen</h4>
+                    <div className="pl-2 space-y-2">
+                      <a href="#ams" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>AMS - Academic Management</a>
+                      <a href="#hris" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>HRIS - Human Resources</a>
+                      <a href="#ziswaf" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>ZISWAF Management</a>
+                      <a href="#bi" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>BI Dashboard</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="#portfolio"
+                className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Portfolio
+              </a>
+
+              <a
+                href="#blog"
+                className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Blog
+              </a>
+
+              <a
+                href="#career"
+                className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Karir
+              </a>
+
+              {/* Mobile Support Buttons */}
+              <div className="pt-4 border-t border-[#1c3660] space-y-3">
+                <Button variant="ghost" size="sm" className="w-full justify-start text-white hover:text-gray-200">
+                  Contact
+                </Button>
+                <Button size="sm" className="w-full justify-center items-center gap-2 text-sm px-4 py-3 rounded-sm text-black bg-yellow-300 hover:bg-yellow-500 transition-colors">
+                  <img
+                    src="/icon/support.svg"
+                    alt="Support"
+                    className="w-4 h-4"
+                  />
+                  Support
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

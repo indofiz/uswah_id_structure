@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowRight,
@@ -8,37 +7,53 @@ import {
 
 export default function Hero1() {
   return (
-    <section id="home" className="relative overflow-hidden py-12 sm:py-20 md:py-32" style={{background: 'linear-gradient(135deg, #f0f9ff 0%, #ffffff 50%, #f8fafc 100%)'}}>
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+    <section id="home" className="relative overflow-hidden py-12 sm:py-20 md:py-32 bg-brand-navy">
+      {/* Ornament decorations */}
+      <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-[554px] sm:h-[480px]">
+        <img
+          src="/ornament/hero-bottom-left.png"
+          alt=""
+          className="w-full h-full object-contain"
+        />
+      </div>
+      <div className="absolute top-0 right-0 w-48 h-48 sm:w-[496px] sm:h-[472px]">
+        <img
+          src="/ornament/hero-top-right.png"
+          alt=""
+          className="w-full h-full object-contain"
+        />
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="mx-auto max-w-4xl text-center">
-          <Badge variant="outline" className="mb-4 sm:mb-6 text-xs sm:text-sm" style={{borderColor: '#45ABD5', color: '#01193F'}}>
+          <div className="mb-4  mx-auto sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-white">
             Perusahaan Jasa Layanan IT Terpercaya
-          </Badge>
+          </div>
 
-          <h1 className="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900">
-            <span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(135deg, #249BCD 0%, #147BA6 100%)'}}>
-              PT Uswah Salam
+          <h1 className="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+            <span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(135deg, #9CDBF5 0%, #308AB0 100%)'}}>
+              PT USWAH SALAM
             </span>
             <br />
-            AlAzhar
+            <span className="text-white">
+              AL AZHAR
+            </span>
           </h1>
 
-          <p className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl text-gray-600">
+          <p className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl text-gray-200">
             Transforming Education Through Innovative Technology Solutions
           </p>
 
-          <p className="mb-8 sm:mb-10 text-base sm:text-lg text-gray-500 max-w-3xl mx-auto px-4">
+          <p className="mb-8 sm:mb-10 text-base sm:text-lg max-w-3xl mx-auto px-4" style={{color: '#93B4E7'}}>
             Empowering educational institutions across Indonesia with cutting-edge technology solutions that streamline operations, enhance learning experiences, and drive institutional growth.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-            <Button className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 md:py-6 text-white hover:opacity-90 transition-opacity" style={{background: 'linear-gradient(135deg, #45ABD5 0%, #147BA6 100%)'}}>
+            <Button className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-5 sm:py-4 md:py-6 text-white hover:opacity-90 transition-opacity" style={{background: 'linear-gradient(135deg, #45ABD5 0%, #147BA6 100%)'}}>
               Explore Product
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
-            <Button variant="outline" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 md:py-6">
+            <Button variant="outline" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-5 sm:py-4 md:py-6 text-white border-white bg-transparent hover:bg-white hover:text-gray-900 transition-colors">
               Services
             </Button>
           </div>
@@ -46,41 +61,42 @@ export default function Hero1() {
 
         {/* Certifications */}
         <div className="mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto px-4">
-          {/* Mobile: Title above, Desktop: Title inline with certifications */}
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-8">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
-              {[
-                {
-                  label: "ISO 9001:2015",
-                  description: "Quality Management",
-                  image: "/sertification/iso-9001.png"
-                },
-                {
-                  label: "ISO 27001:2013",
-                  description: "Information Security",
-                  image: "/sertification/iso-27001.png"
-                }
-              ].map((item, index) => (
-                <Card key={index} className="text-center border-gray-200 hover:shadow-md transition-shadow w-full sm:w-auto">
-                  <CardContent className="pt-4 pb-4">
-                    <div className="flex flex-col lg:flex-row items-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
+            {[
+              {
+                label: "ISO 9001:2015",
+                description: "Quality Management",
+                image: "/sertification/iso-9001.png"
+              },
+              {
+                label: "ISO 27001:2013",
+                description: "Information Security",
+                image: "/sertification/iso-27001.png"
+              }
+            ].map((item, index) => (
+              <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto sm:max-w-xs flex-1">
+                <CardContent className="p-3 sm:p-4">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="flex-shrink-0">
                       <img
                         src={item.image}
                         alt={item.label}
-                        className="h-12 w-12 sm:h-16 sm:w-16 mx-auto object-contain"
+                        className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
                       />
-                      <div className="flex justify-start flex-col text-left">
-                      <div className="text-sm sm:text-base font-semibold text-gray-900 mb-1">{item.label}</div>
-                      <div className="text-xs sm:text-sm text-gray-600">{item.description}</div>
-                      </div>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                    <div className="flex flex-col text-left min-w-0">
+                      <div className="text-sm sm:text-base font-semibold text-gray-900 leading-tight">{item.label}</div>
+                      <div className="text-xs sm:text-sm text-gray-600 leading-tight">{item.description}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
+
+      
     </section>
   );
 }

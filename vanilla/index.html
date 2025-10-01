@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT USWAH SALAM AL AZHAR - Transforming Education Through Innovative Technology Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="min-h-screen bg-white">
+        <!-- Navigation -->
+        <nav class="sticky top-0 z-50 w-full transition-all duration-300 bg-brand-navy border-b border-navy-dark" id="nav-container">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center">
+                <!-- Left Column - Logo (flex-1) -->
+                <div class="flex-1 flex items-center">
+                    <img src="./logo_uswah.png" alt="PT Uswah Salam AlAzhar" class="h-8 w-auto object-contain">
+                </div>
+
+                <!-- Middle Column - Navigation Menu (flex-1) -->
+                <div class="flex-1 hidden md:flex justify-center">
+                    <ul class="flex gap-2 list-none navbar-desktop">
+                        <li class="list-none">
+                            <a href="#home" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Beranda</a>
+                        </li>
+                        <li class="nav-menu relative list-none">
+                            <button class="nav-link text-sm font-medium transition-colors bg-transparent text-white hover:text-gray-200 flex items-center gap-1" id="products-trigger">
+                                Produk & Layanan
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="nav-menu-content absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-400 md:w-500 lg:w-600 bg-white rounded-lg shadow-lg border border-gray-200 p-4 opacity-0 invisible transition-all duration-200" id="products-content">
+                                <div class="grid gap-3 md:grid-cols-2">
+                                    <div class="grid gap-1">
+                                        <h3 class="text-sm font-medium leading-none text-gray-900 mb-2">Solusi Digital</h3>
+                                        <a href="#mobile" class="list-item">
+                                            <div class="list-item-header">
+                                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                                </svg>
+                                                <div class="list-item-title">Mobile Application</div>
+                                            </div>
+                                            <p class="list-item-description">Native mobile apps untuk iOS dan Android</p>
+                                        </a>
+                                        <a href="#erapor" class="list-item">
+                                            <div class="list-item-header">
+                                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                                </svg>
+                                                <div class="list-item-title">e-Rapor System</div>
+                                            </div>
+                                            <p class="list-item-description">Sistem rapor digital dengan tracking otomatis</p>
+                                        </a>
+                                        <a href="#backoffice" class="list-item">
+                                            <div class="list-item-header">
+                                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                </svg>
+                                                <div class="list-item-title">Backoffice System</div>
+                                            </div>
+                                            <p class="list-item-description">Platform administratif komprehensif</p>
+                                        </a>
+                                        <a href="#lms" class="list-item">
+                                            <div class="list-item-header">
+                                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                                                </svg>
+                                                <div class="list-item-title">Learning Management System</div>
+                                            </div>
+                                            <p class="list-item-description">LMS dengan konten interaktif dan analytics</p>
+                                        </a>
+                                    </div>
+                                    <div class="grid gap-1">
+                                        <h3 class="text-sm font-medium leading-none text-gray-900 mb-2">Sistem Manajemen</h3>
+                                        <a href="#ams" class="list-item">
+                                            <div class="list-item-header">
+                                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                                </svg>
+                                                <div class="list-item-title">AMS - Academic Management</div>
+                                            </div>
+                                            <p class="list-item-description">Solusi manajemen akademik lengkap</p>
+                                        </a>
+                                        <a href="#hris" class="list-item">
+                                            <div class="list-item-header">
+                                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                </svg>
+                                                <div class="list-item-title">HRIS - Human Resources</div>
+                                            </div>
+                                            <p class="list-item-description">Sistem HR terintegrasi untuk payroll dan attendance</p>
+                                        </a>
+                                        <a href="#ziswaf" class="list-item">
+                                            <div class="list-item-header">
+                                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                                </svg>
+                                                <div class="list-item-title">ZISWAF Management</div>
+                                            </div>
+                                            <p class="list-item-description">Sistem Zakat, Infaq, Sedekah, dan Wakaf</p>
+                                        </a>
+                                        <a href="#bi" class="list-item">
+                                            <div class="list-item-header">
+                                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                                                </svg>
+                                                <div class="list-item-title">BI Dashboard</div>
+                                            </div>
+                                            <p class="list-item-description">Business Intelligence dengan real-time analytics</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-none">
+                            <a href="#portfolio" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Portfolio</a>
+                        </li>
+                        <li class="list-none">
+                            <a href="#blog" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Blog</a>
+                        </li>
+                        <li class="list-none">
+                            <a href="#career" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Karir</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Column - Contact & Support (flex-1) -->
+                <div class="flex-1 flex items-center justify-end gap-4">
+                    <button class="btn btn-ghost hidden sm:inline-flex bg-transparent hover:bg-transparent transition-colors text-white hover:text-gray-200" id="contact-btn" style="color: white;">
+                        Contact
+                    </button>
+                    <button class="btn hidden sm:flex items-center gap-2.5 text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-xs text-black bg-yellow-300 hover:bg-yellow-500 transition-colors" id="support-btn">
+                        <img src="./icon/support.svg" alt="Support" class="w-4 h-4">
+                        Support
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-ghost md:hidden text-white" id="mobile-menu-btn">
+                        <svg class="icon" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg class="icon hidden" id="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <div class="mobile-menu-overlay hidden" id="mobile-overlay">
+                <div class="mobile-menu" id="mobile-menu">
+                    <!-- Mobile Menu Header -->
+                    <div class="flex items-center justify-end p-4 border-b border-navy-dark">
+                        <button class="btn btn-ghost text-white" id="mobile-close-btn">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Items -->
+                    <div class="p-6 space-y-6">
+                        <a href="#home" class="mobile-menu-link block py-3 text-lg font-medium text-white hover:text-primary-brand transition-colors">
+                            Beranda
+                        </a>
+
+                        <a href="#products" class="mobile-menu-link block py-3 text-lg font-medium text-white hover:text-primary-brand transition-colors">
+                            Produk & Layanan
+                        </a>
+
+                        <a href="#portfolio" class="mobile-menu-link block py-3 text-lg font-medium text-white hover:text-primary-brand transition-colors">
+                            Portfolio
+                        </a>
+
+                        <a href="#blog" class="mobile-menu-link block py-3 text-lg font-medium text-white hover:text-primary-brand transition-colors">
+                            Blog
+                        </a>
+
+                        <a href="#career" class="mobile-menu-link block py-3 text-lg font-medium text-white hover:text-primary-brand transition-colors">
+                            Karir
+                        </a>
+
+                        <!-- Mobile Contact & Support -->
+                        <div class="pt-4 space-y-4">
+                        <a href="#contact" class="mobile-menu-link block py-3 text-lg font-medium text-white hover:text-primary-brand transition-colors">
+                            Contact
+                        </a>
+                            <button class="btn w-full justify-center items-center gap-3 text-lg px-4 py-4 text-black bg-yellow-300 hover:bg-yellow-500 transition-colors">
+                                <img src="./icon/support.svg" alt="Support" class="w-5 h-5">
+                                Support
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="relative overflow-hidden py-12 sm:py-20 md:py-32 bg-brand-navy">
+            <!-- Ornament decorations -->
+            <div class="absolute bottom-0 left-0 hero-ornament-bottom" style="width: 192px; height: 192px;">
+                <img src="./ornament/hero-bottom-left.png" alt="" class="w-full h-full object-contain">
+            </div>
+            <div class="absolute top-0 right-0 hero-ornament-top" style="width: 192px; height: 192px;">
+                <img src="./ornament/hero-top-right.png" alt="" class="w-full h-full object-contain">
+            </div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="mx-auto max-w-4xl text-center">
+                    <div class="mb-4 mx-auto sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-white">
+                        Perusahaan Jasa Layanan IT Terpercaya
+                    </div>
+                    <h1 class="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+                        <span class="bg-clip-text text-transparent" style="background-image: linear-gradient(135deg, #9CDBF5 0%, #308AB0 100%)">
+                            PT USWAH SALAM
+                        </span>
+                        <br>
+                        <span class="text-white">
+                            AL AZHAR
+                        </span>
+                    </h1>
+                    <p class="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl text-gray-200">
+                        Transforming Education Through Innovative Technology Solutions
+                    </p>
+                    <p class="mb-8 sm:mb-10 text-base sm:text-lg max-w-3xl mx-auto px-4" style="color: #93B4E7">
+                        Empowering educational institutions across Indonesia with cutting-edge technology solutions that streamline operations, enhance learning experiences, and drive institutional growth.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+                        <button class="btn text-white hover:opacity-90 transition-opacity hero-button-gradient" style="padding: 12px 20px; font-weight: 600 !important; font-size: 18px;">
+                            Explore Product
+                            <svg class="ml-2 h-4 w-4 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn-outline border-white bg-transparent transition-colors" style="padding: 12px 20px; font-size: 18px; color: white !important;" onmouseover="this.style.backgroundColor='white'; this.style.color='#01193F'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'">
+                            Services
+                        </button>
+                    </div>
+                </div>
+                <!-- Certifications -->
+                <div class="mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto px-4">
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
+                        <div class="card bg-white border-0 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto sm:max-w-xs flex-1">
+                            <div class="p-3 sm:p-4">
+                                <div class="flex items-center gap-3 sm:gap-4">
+                                    <div class="flex-shrink-0">
+                                        <img src="./sertification/iso-9001.png" alt="ISO 9001:2015" class="h-10 w-10 sm:h-12 sm:w-12 object-contain">
+                                    </div>
+                                    <div class="flex flex-col text-left min-w-0">
+                                        <div class="text-sm sm:text-base font-semibold text-gray-900 leading-tight">ISO 9001:2015</div>
+                                        <div class="text-xs sm:text-sm text-gray-600 leading-tight">Quality Management</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-white border-0 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto sm:max-w-xs flex-1">
+                            <div class="p-3 sm:p-4">
+                                <div class="flex items-center gap-3 sm:gap-4">
+                                    <div class="flex-shrink-0">
+                                        <img src="./sertification/iso-27001.png" alt="ISO 27001:2013" class="h-10 w-10 sm:h-12 sm:w-12 object-contain">
+                                    </div>
+                                    <div class="flex flex-col text-left min-w-0">
+                                        <div class="text-sm sm:text-base font-semibold text-gray-900 leading-tight">ISO 27001:2013</div>
+                                        <div class="text-xs sm:text-sm text-gray-600 leading-tight">Information Security</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Introduction -->
+        <section id="company-intro" class="py-12 sm:py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-brand-navy">
+                            Tentang Perusahaan Kami
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-brand-navy">
+                            Inovasi Teknologi dengan Nilai-Nilai Kemanusiaan
+                        </h2>
+                        <p class="text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed" style="color: #505050">
+                            PT Uswah Salam Alazhar adalah perusahaan teknologi informasi yang berkomitmen untuk menghadirkan solusi digital yang tidak hanya canggih secara teknologi, tetapi juga bermanfaat secara sosial dan ekonomi. Kami fokus pada pengembangan sistem pendidikan, platform crowdfunding sosial, sistem pembayaran digital, dan Sistem Informasi Travel untuk industri perjalanan modern.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+                            <div class="flex items-center space-x-3">
+                                <img src="./icon/tentang-check.svg" alt="" class="h-5 w-5 sm:h-6 sm:w-6">
+                                <span class="text-sm sm:text-base" style="color: #505050">Tim Profesional Berpengalaman</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <img src="./icon/tentang-globe.svg" alt="" class="h-5 w-5 sm:h-6 sm:w-6">
+                                <span class="text-sm sm:text-base" style="color: #505050">Solusi Aman & Terpercaya</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <img src="./icon/tentang-shield.svg" alt="" class="h-5 w-5 sm:h-6 sm:w-6">
+                                <span class="text-sm sm:text-base" style="color: #505050">Transformasi Digital Efisien</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <img src="./icon/tentang-star.svg" alt="" class="h-5 w-5 sm:h-6 sm:w-6">
+                                <span class="text-sm sm:text-base" style="color: #505050">Dampak Sosial & Ekonomi</span>
+                            </div>
+                        </div>
+
+                        <button class="btn w-full sm:w-auto text-white px-8 text-base" style="background: #01193F; padding-top: 12px; padding-bottom: 12px; font-weight: 600 !important;">
+                            Pelajari Lebih Lanjut
+                        </button>
+                    </div>
+
+                    <div class="relative order-1 lg:order-2">
+                        <div class="grid grid-cols-2 gap-3 sm:gap-6">
+                            <div class="card text-center shadow-none border bg-white transition-all duration-300">
+                                <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                                    <div class="inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl mb-3 sm:mb-4 relative about-icon-gradient" style="box-shadow: 8px 8px 0 rgba(69, 171, 213, 0.3)">
+                                        <img src="./icon/grid-about-building.svg" alt="" class="h-6 w-6 sm:h-8 sm:w-8">
+                                    </div>
+                                    <div class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2" style="color: #01193F">500+</div>
+                                    <div class="text-xs sm:text-sm px-1" style="color: #505050">Educational Institutions</div>
+                                </div>
+                            </div>
+                            <div class="card text-center shadow-none border bg-white transition-all duration-300">
+                                <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                                    <div class="inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl mb-3 sm:mb-4 relative about-icon-gradient" style="box-shadow: 8px 8px 0 rgba(69, 171, 213, 0.3)">
+                                        <img src="./icon/grid-about-users.svg" alt="" class="h-6 w-6 sm:h-8 sm:w-8">
+                                    </div>
+                                    <div class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2" style="color: #01193F">50K+</div>
+                                    <div class="text-xs sm:text-sm px-1" style="color: #505050">Daily Active Users</div>
+                                </div>
+                            </div>
+                            <div class="card text-center shadow-none border bg-white transition-all duration-300">
+                                <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                                    <div class="inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl mb-3 sm:mb-4 relative about-icon-gradient" style="box-shadow: 8px 8px 0 rgba(69, 171, 213, 0.3)">
+                                        <img src="./icon/grid-about-star.svg" alt="" class="h-6 w-6 sm:h-8 sm:w-8">
+                                    </div>
+                                    <div class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2" style="color: #01193F">4.9/5</div>
+                                    <div class="text-xs sm:text-sm px-1" style="color: #505050">Customer Rating</div>
+                                </div>
+                            </div>
+                            <div class="card text-center shadow-none border bg-white transition-all duration-300">
+                                <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                                    <div class="inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl mb-3 sm:mb-4 relative about-icon-gradient" style="box-shadow: 8px 8px 0 rgba(69, 171, 213, 0.3)">
+                                        <img src="./icon/grid-about-system.svg" alt="" class="h-6 w-6 sm:h-8 sm:w-8">
+                                    </div>
+                                    <div class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2" style="color: #01193F">99.9%</div>
+                                    <div class="text-xs sm:text-sm px-1" style="color: #505050">System Uptime</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products and Services -->
+        <section id="products-services" class="py-12 sm:py-16 md:py-20" style="background-color: #F5F5F5">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+                        Produk Kami
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+                        Solusi Teknologi Digital Terpadu
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+                        Temukan berbagai solusi inovatif yang dirancang untuk mentransformasi institusi Anda
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card bg-white rounded-xl shadow-none border transition-all duration-300 overflow-hidden relative" style="border-color: #DADADA">
+                        <div class="w-10 h-10 rounded-lg bg-white shadow-lg flex items-center justify-center" style="position: absolute; top: 16px; right: 16px; z-index: 10;">
+                            <img src="./icon/phone-product.svg" alt="" class="h-6 w-6">
+                        </div>
+                        <div class="h-64 bg-gray-100">
+                            <img src="./product/image 4-1.png" alt="Mobile Application" class="w-full h-full object-cover">
+                        </div>
+                        <div style="padding: 12px 32px 24px 32px">
+                            <h3 class="text-xl mb-3" style="font-size: 20px; font-weight: 600; color: #01193F;">
+                                Mobile Application
+                            </h3>
+                            <p class="text-sm leading-relaxed mb-4 line-clamp-4 text-brand-navy">
+                                Native mobile apps for iOS and Android with seamless user experience and offline capabilities.
+                            </p>
+                            <button class="btn btn-ghost h-auto w-full text-primary-brand flex justify-between gap-2" style="padding: 0; background: transparent !important;">
+                                <span class="flex-1 text-left text-primary-brand" style="font-weight: 600;">Lihat Detail</span>
+                                <img src="./icon/arrow-right-blue.svg" alt="" class="h-4 w-4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white rounded-xl shadow-none border transition-all duration-300 overflow-hidden relative" style="border-color: #DADADA">
+                        <div class="w-10 h-10 rounded-lg bg-white shadow-lg flex items-center justify-center" style="position: absolute; top: 16px; right: 16px; z-index: 10;">
+                            <img src="./icon/phone-product.svg" alt="" class="h-6 w-6">
+                        </div>
+                        <div class="h-64 bg-gray-100">
+                            <img src="./product/image 4-2.png" alt="e-Rapor System" class="w-full h-full object-cover">
+                        </div>
+                        <div style="padding: 12px 32px 24px 32px">
+                            <h3 class="text-xl mb-3" style="font-size: 20px; font-weight: 600; color: #01193F;">
+                                e-Rapor System
+                            </h3>
+                            <p class="text-sm leading-relaxed mb-4 line-clamp-4 text-brand-navy">
+                                Digital report card system with automated grading, progress tracking, and parent communication.
+                            </p>
+                            <button class="btn btn-ghost h-auto w-full text-primary-brand flex justify-between gap-2" style="padding: 0; background: transparent !important;">
+                                <span class="flex-1 text-left text-primary-brand" style="font-weight: 600;">Lihat Detail</span>
+                                <img src="./icon/arrow-right-blue.svg" alt="" class="h-4 w-4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white rounded-xl shadow-none border transition-all duration-300 overflow-hidden relative" style="border-color: #DADADA">
+                        <div class="w-10 h-10 rounded-lg bg-white shadow-lg flex items-center justify-center" style="position: absolute; top: 16px; right: 16px; z-index: 10;">
+                            <img src="./icon/phone-product.svg" alt="" class="h-6 w-6">
+                        </div>
+                        <div class="h-64 bg-gray-100">
+                            <img src="./product/image 4-3.png" alt="Backoffice System" class="w-full h-full object-cover">
+                        </div>
+                        <div style="padding: 12px 32px 24px 32px">
+                            <h3 class="text-xl mb-3" style="font-size: 20px; font-weight: 600; color: #01193F;">
+                                Backoffice System
+                            </h3>
+                            <p class="text-sm leading-relaxed mb-4 line-clamp-4 text-brand-navy">
+                                Comprehensive administrative platform for managing operations, finances, and institutional workflows.
+                            </p>
+                            <button class="btn btn-ghost h-auto w-full text-primary-brand flex justify-between gap-2" style="padding: 0; background: transparent !important;">
+                                <span class="flex-1 text-left text-primary-brand" style="font-weight: 600;">Lihat Detail</span>
+                                <img src="./icon/arrow-right-blue.svg" alt="" class="h-4 w-4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white rounded-xl shadow-none border transition-all duration-300 overflow-hidden relative" style="border-color: #DADADA">
+                        <div class="w-10 h-10 rounded-lg bg-white shadow-lg flex items-center justify-center" style="position: absolute; top: 16px; right: 16px; z-index: 10;">
+                            <img src="./icon/phone-product.svg" alt="" class="h-6 w-6">
+                        </div>
+                        <div class="h-64 bg-gray-100">
+                            <img src="./product/image 4-4.png" alt="Learning Management System" class="w-full h-full object-cover">
+                        </div>
+                        <div style="padding: 12px 32px 24px 32px">
+                            <h3 class="text-xl mb-3" style="font-size: 20px; font-weight: 600; color: #01193F;">
+                                Learning Management System
+                            </h3>
+                            <p class="text-sm leading-relaxed mb-4 line-clamp-4 text-brand-navy">
+                                Advanced LMS with interactive content delivery, assessment tools, and learning analytics.
+                            </p>
+                            <button class="btn btn-ghost h-auto w-full text-primary-brand flex justify-between gap-2" style="padding: 0; background: transparent !important;">
+                                <span class="flex-1 text-left text-primary-brand" style="font-weight: 600;">Lihat Detail</span>
+                                <img src="./icon/arrow-right-blue.svg" alt="" class="h-4 w-4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white rounded-xl shadow-none border transition-all duration-300 overflow-hidden relative" style="border-color: #DADADA">
+                        <div class="h-64 bg-gray-100">
+                            <img src="./product/image 4-5.png" alt="Yazan System" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-10 h-10 rounded-lg bg-white shadow-lg flex items-center justify-center" style="position: absolute; top: 16px; right: 16px; z-index: 10;">
+                            <img src="./icon/phone-product.svg" alt="" class="h-6 w-6">
+                        </div>
+                        <div style="padding: 12px 32px 24px 32px">
+                            <h3 class="text-xl mb-3" style="font-size: 20px; font-weight: 600; color: #01193F;">
+                                Yazan System
+                            </h3>
+                            <p class="text-sm leading-relaxed mb-4 line-clamp-4 text-brand-navy">
+                                Digital writing and documentation platform with collaborative editing and version control.
+                            </p>
+                            <button class="btn btn-ghost h-auto w-full text-primary-brand flex justify-between gap-2" style="padding: 0; background: transparent !important;">
+                                <span class="flex-1 text-left text-primary-brand" style="font-weight: 600;">Lihat Detail</span>
+                                <img src="./icon/arrow-right-blue.svg" alt="" class="h-4 w-4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white rounded-xl shadow-none border transition-all duration-300 overflow-hidden relative" style="border-color: #DADADA">
+                        <div class="w-10 h-10 rounded-lg bg-white shadow-lg flex items-center justify-center" style="position: absolute; top: 16px; right: 16px; z-index: 10;">
+                            <img src="./icon/phone-product.svg" alt="" class="h-6 w-6">
+                        </div>
+                        <div class="h-64 bg-gray-100">
+                            <img src="./product/image 4-6.png" alt="AMS - Academic Management" class="w-full h-full object-cover">
+                        </div>
+                        <div style="padding: 12px 32px 24px 32px">
+                            <h3 class="text-xl mb-3" style="font-size: 20px; font-weight: 600; color: #01193F;">
+                                AMS - Academic Management
+                            </h3>
+                            <p class="text-sm leading-relaxed mb-4 line-clamp-4 text-brand-navy">
+                                Complete academic management solution covering curriculum, scheduling, and student lifecycle management.
+                            </p>
+                            <button class="btn btn-ghost h-auto w-full text-primary-brand flex justify-between gap-2" style="padding: 0; background: transparent !important;">
+                                <span class="flex-1 text-left text-primary-brand" style="font-weight: 600;">Lihat Detail</span>
+                                <img src="./icon/arrow-right-blue.svg" alt="" class="h-4 w-4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white rounded-xl shadow-none border transition-all duration-300 overflow-hidden relative" style="border-color: #DADADA">
+                        <div class="h-64 bg-gray-100">
+                            <img src="./product/image 4-7.png" alt="HRIS - Human Resources" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-10 h-10 rounded-lg bg-white shadow-lg flex items-center justify-center" style="position: absolute; top: 16px; right: 16px; z-index: 10;">
+                            <img src="./icon/phone-product.svg" alt="" class="h-6 w-6">
+                        </div>
+                        <div style="padding: 12px 32px 24px 32px">
+                            <h3 class="text-xl mb-3" style="font-size: 20px; font-weight: 600; color: #01193F;">
+                                HRIS - Human Resources
+                            </h3>
+                            <p class="text-sm leading-relaxed mb-4 line-clamp-4 text-brand-navy">
+                                Integrated HR management system for payroll, attendance, performance, and employee development.
+                            </p>
+                            <button class="btn btn-ghost h-auto w-full text-primary-brand flex justify-between gap-2" style="padding: 0; background: transparent !important;">
+                                <span class="flex-1 text-left text-primary-brand" style="font-weight: 600;">Lihat Detail</span>
+                                <img src="./icon/arrow-right-blue.svg" alt="" class="h-4 w-4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white rounded-xl shadow-none border transition-all duration-300 overflow-hidden relative" style="border-color: #DADADA">
+                        <div class="h-64 bg-gray-100">
+                            <img src="./product/image 4-8.png" alt="ZISWAF Management" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-10 h-10 rounded-lg bg-white shadow-lg flex items-center justify-center" style="position: absolute; top: 16px; right: 16px; z-index: 10;">
+                            <img src="./icon/phone-product.svg" alt="" class="h-6 w-6">
+                        </div>
+                        <div style="padding: 12px 32px 24px 32px">
+                            <h3 class="text-xl mb-3" style="font-size: 20px; font-weight: 600; color: #01193F;">
+                                ZISWAF Management
+                            </h3>
+                            <p class="text-sm leading-relaxed mb-4 line-clamp-4 text-brand-navy">
+                                Comprehensive system for managing Zakat, Infaq, Sedekah, and Wakaf with transparency and accountability.
+                            </p>
+                            <button class="btn btn-ghost h-auto w-full text-primary-brand flex justify-between gap-2" style="padding: 0; background: transparent !important;">
+                                <span class="flex-1 text-left text-primary-brand" style="font-weight: 600;">Lihat Detail</span>
+                                <img src="./icon/arrow-right-blue.svg" alt="" class="h-4 w-4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white rounded-xl shadow-none border transition-all duration-300 overflow-hidden relative" style="border-color: #DADADA">
+                        <div class="w-10 h-10 rounded-lg bg-white shadow-lg flex items-center justify-center" style="position: absolute; top: 16px; right: 16px; z-index: 10;">
+                            <img src="./icon/phone-product.svg" alt="" class="h-6 w-6">
+                        </div>
+                        <div class="h-64 bg-gray-100">
+                            <img src="./product/image 4.png" alt="BI Dashboard" class="w-full h-full object-cover">
+                        </div>
+                        <div style="padding: 12px 32px 24px 32px">
+                            <h3 class="text-xl mb-3" style="font-size: 20px; font-weight: 600; color: #01193F;">
+                                BI Dashboard
+                            </h3>
+                            <p class="text-sm leading-relaxed mb-4 line-clamp-4 text-brand-navy">
+                                Business Intelligence dashboard with real-time analytics, reporting, and data visualization tools.
+                            </p>
+                            <button class="btn btn-ghost h-auto w-full text-primary-brand flex justify-between gap-2" style="padding: 0; background: transparent !important;">
+                                <span class="flex-1 text-left text-primary-brand" style="font-weight: 600;">Lihat Detail</span>
+                                <img src="./icon/arrow-right-blue.svg" alt="" class="h-4 w-4">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Portfolio -->
+        <section id="client-portfolio" class="py-12 sm:py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+                        Klien Kami
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+                        Dipercaya oleh Berbagai Institusi Terkemuka
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+                        Bergabunglah dengan ratusan yayasan, lembaga pendidikan, dan organisasi yang telah mentransformasi operasional mereka dengan solusi kami
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 sm:gap-6 mb-12 sm:mb-16">
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/yam.png" alt="Yayasan Al Azhar Membangun" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Yayasan Pendidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/yapi.png" alt="Yayasan Pendidikan Islam" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Lembaga Pendidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/ykih.png" alt="Yayasan Kemala Ilmu" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Institusi Pendidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/ypu.png" alt="Yayasan Pendidikan Umat" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Yayasan Pendidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/laz.png" alt="LAZ Nurul Hayat" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Lembaga Amil Zakat</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/yns.png" alt="Yayasan Nurul Salam" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Yayasan Pendidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/logo_ypis_.png" alt="Yayasan Pendidikan Islam Singapura" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Lembaga Pendidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/logo_ypi_.png" alt="Yayasan Pendidikan Indonesia" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Yayasan Pendidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/avicena.png" alt="Avicena Medical Center" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Rumah Sakit</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/logo_yayasanikc_.png" alt="Yayasan Ika Cendekia" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Lembaga Pendidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/logo_yayasanlampung_.png" alt="Yayasan Lampung" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Yayasan Pendidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="pt-4 sm:pt-6 pb-4 sm:pb-6">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 rounded-lg sm:rounded-xl flex items-center justify-center bg-white p-2">
+                                <img src="./client/logo_yayasanumulyatama_.png" alt="Yayasan Umulyatama" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium px-1">Lembaga Pendidikan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-2 portfolio-bg-gradient" style="border-color: #45ABD5">
+                    <div class="p-4 sm:p-6 md:p-8">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center">
+                            <div>
+                                <div class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2" style="color: #45ABD5">500+</div>
+                                <div class="text-xs sm:text-sm md:text-base text-gray-600 px-1">Educational Institutions</div>
+                            </div>
+                            <div>
+                                <div class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2" style="color: #01193F">50K+</div>
+                                <div class="text-xs sm:text-sm md:text-base text-gray-600 px-1">Active Students</div>
+                            </div>
+                            <div>
+                                <div class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2" style="color: #45ABD5">99.9%</div>
+                                <div class="text-xs sm:text-sm md:text-base text-gray-600 px-1">System Reliability</div>
+                            </div>
+                            <div>
+                                <div class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2" style="color: #01193F">24/7</div>
+                                <div class="text-xs sm:text-sm md:text-base text-gray-600 px-1">Technical Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mitra Kami -->
+        <section id="mitra" class="py-12 sm:py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+                        Mitra Kami
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+                        Mitra Yang Berkerjasama Dengan Kami
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+                        Dukungan mitra menjadi bagian penting dalam perjalanan kami untuk menciptakan solusi terbaik dan memberikan manfaat nyata.
+                    </p>
+                </div>
+
+                <!-- 4x3 Grid Layout -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 16.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 17.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 18.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 19.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 20.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 21.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 22.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 24.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 25.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/image 26.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/JKP INDO.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+
+                    <div class="card text-center border hover:shadow-md transition-shadow" style="border-color: #DADADA">
+                        <div class="pt-6 sm:pt-8 pb-6 sm:pb-8">
+                            <div class="w-full h-20 sm:h-24 md:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white py-2 px-4">
+                                <img src="./mitra/imageeee.png" alt="Yayasan Pendidikan Contoh" class="max-w-full object-contain" style="max-height: 60px; max-width: 100%;">
+                            </div>
+                            <p class="text-xs sm:text-sm font-medium px-1 text-brand-navy">Yayasan Pendidikan Contoh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-12 sm:py-16 md:py-20" style="background-color: #F5F5F5">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+                        Update Terbaru
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+                        Berita dan Artikel Terbaru
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+                        Tetap terkini dengan tren terbaru dalam teknologi pendidikan dan perkembangan perusahaan kami
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
+                    <!-- Blog Post 1 -->
+                    <div class="card overflow-hidden border-gray-200 hover:shadow-lg transition-shadow">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center" alt="Masa Depan Pembelajaran Digital di Indonesia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div style="padding-top: 16px; padding-bottom: 12px;">
+                            <div class="flex items-center space-x-2 text-xs sm:text-sm text-gray-500" style="padding: 0 1.5rem; margin-bottom: 12px;">
+                                <span class="badge badge-secondary text-xs">
+                                    Teknologi Pendidikan
+                                </span>
+                                <span>•</span>
+                                <span class="text-xs sm:text-sm">15 Maret 2024</span>
+                            </div>
+                            <h3 class="text-lg sm:text-xl text-gray-900 transition-colors leading-tight hover:text-primary-brand" style="padding: 0 1.5rem; margin-bottom: 0;">
+                                Masa Depan Pembelajaran Digital di Indonesia
+                            </h3>
+                        </div>
+                        <div style="padding: 0.25rem 1.5rem 1rem 1.5rem;">
+                            <p class="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
+                                Mengeksplorasi bagaimana teknologi pendidikan canggih mentransformasi lanskap pembelajaran di seluruh institusi Indonesia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="card overflow-hidden border-gray-200 hover:shadow-lg transition-shadow">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center" alt="Fitur Dashboard Analytics Canggih Telah Dirilis" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div style="padding-top: 16px; padding-bottom: 12px;">
+                            <div class="flex items-center space-x-2 text-xs sm:text-sm text-gray-500" style="padding: 0 1.5rem; margin-bottom: 12px;">
+                                <span class="badge badge-secondary text-xs">
+                                    Update Produk
+                                </span>
+                                <span>•</span>
+                                <span class="text-xs sm:text-sm">10 Maret 2024</span>
+                            </div>
+                            <h3 class="text-lg sm:text-xl text-gray-900 transition-colors leading-tight hover:text-primary-brand" style="padding: 0 1.5rem; margin-bottom: 0;">
+                                Fitur Dashboard Analytics Canggih Telah Dirilis
+                            </h3>
+                        </div>
+                        <div style="padding: 0.25rem 1.5rem 1rem 1.5rem;">
+                            <p class="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
+                                Temukan alat analitik baru yang powerful untuk membantu pendidik membuat keputusan berbasis data dengan hasil yang lebih baik.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="card overflow-hidden border-gray-200 hover:shadow-lg transition-shadow">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop&crop=center" alt="Studi Kasus: Peningkatan 300% Engagement Siswa" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div style="padding-top: 16px; padding-bottom: 12px;">
+                            <div class="flex items-center space-x-2 text-xs sm:text-sm text-gray-500" style="padding: 0 1.5rem; margin-bottom: 12px;">
+                                <span class="badge badge-secondary text-xs">
+                                    Studi Kasus
+                                </span>
+                                <span>•</span>
+                                <span class="text-xs sm:text-sm">5 Maret 2024</span>
+                            </div>
+                            <h3 class="text-lg sm:text-xl text-gray-900 transition-colors leading-tight hover:text-primary-brand" style="padding: 0 1.5rem; margin-bottom: 0;">
+                                Studi Kasus: Peningkatan 300% Engagement Siswa
+                            </h3>
+                        </div>
+                        <div style="padding: 0.25rem 1.5rem 1rem 1.5rem;">
+                            <p class="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
+                                Bagaimana SMA Jakarta memanfaatkan solusi LMS kami untuk mencapai peningkatan luar biasa dalam partisipasi siswa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-outline w-full sm:w-auto" style="border-color: #45ABD5; color: #01193F">
+                        Lihat Semua Artikel
+                        <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="bg-brand-navy text-white py-12 sm:py-16 relative overflow-hidden">
+            <!-- Background Ornaments -->
+            <div class="absolute top-0 right-0 w-48 h-48 sm:w-[300px] sm:h-[280px]">
+                <img src="./ornament/hero-top-right.png" alt="" class="w-full h-full object-contain">
+            </div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
+
+                    <!-- Column 1: Logo and Company Info -->
+                    <div class="space-y-6">
+                        <div>
+                            <img src="./logo_uswah.png" alt="Uswah" class="h-12 w-auto mb-4">
+                            <h3 class="text-xl font-bold mb-2">Solusi Digital</h3>
+                            <h4 class="text-lg font-medium text-gray-300 mb-6">Layanan Pendidikan</h4>
+                        </div>
+
+                        <!-- Social Media Icons -->
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-primary-brand rounded-lg flex items-center justify-center hover:bg-primary-brand/80 transition-colors" style="text-decoration: none;">
+                                <img src="./social/facebook.svg" alt="Facebook" class="w-6 h-6">
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary-brand rounded-lg flex items-center justify-center hover:bg-primary-brand/80 transition-colors" style="text-decoration: none;">
+                                <img src="./social/linkin.svg" alt="LinkedIn" class="w-6 h-6">
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary-brand rounded-lg flex items-center justify-center hover:bg-primary-brand/80 transition-colors" style="text-decoration: none;">
+                                <img src="./social/instagram.svg" alt="Instagram" class="w-6 h-6">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Produk & Layanan -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-6 text-primary-brand">PRODUK & LAYANAN</h3>
+                        <ul class="space-y-3 text-gray-300" style="list-style: none;">
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Salam App</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Salam e-Rapor</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Salam Admin</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Learning Management System</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Ziswaf System</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Portfolio & About -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-6 text-primary-brand">PORTOFOLIO</h3>
+                        <ul class="space-y-3 text-gray-300 mb-8" style="list-style: none;">
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Daftar Sekolah Terdaftar</a></li>
+                        </ul>
+
+                        <h3 class="text-lg font-semibold mb-6 text-primary-brand">TENTANG</h3>
+                        <ul class="space-y-3 text-gray-300" style="list-style: none;">
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Tentang USA</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Karir USA</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact & Certifications -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-6 text-primary-brand">PRODUK & LAYANAN</h3>
+                        <div class="space-y-4 text-gray-300">
+                            <p class="text-sm leading-relaxed">
+                                SalamThe Darmawangsa Square Unit 268 - Jakarta Selatan. DKI Jakarta.
+                            </p>
+                            <p class="text-sm">uswah@salam-alazhar.id</p>
+                            <p class="text-sm">(021) 72786730 - (021) 72786780</p>
+                        </div>
+
+                        <!-- ISO Certifications -->
+                        <div class="flex space-x-4 mt-8">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                <img src="./sertification/iso-27001.png" alt="ISO 27001" class="w-12 h-12 object-contain">
+                            </div>
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                <img src="./sertification/iso-9001.png" alt="ISO 9001" class="w-12 h-12 object-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+            </div>
+            <div class="bg-brand-navy pt-6 sm:pt-8 text-center" style="border-top: 1px solid #092D66;">
+                <p class="text-sm text-gray-300">
+                    © 2021. All Right Reserved. Uswah Salam AlAzhar
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

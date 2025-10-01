@@ -1,6 +1,7 @@
 "use client";
 import Hero1 from "@/section/hero/hero-1";
 import CompanyIntro from "@/section/about/company-intro";
+import Services from "@/section/services/services";
 import ProductsServices from "@/section/products/products-services";
 import ClientPortfolio from "@/section/portfolio/client-portfolio";
 import MitraKami from "@/section/partners/mitra-kami";
@@ -19,6 +20,9 @@ export default function Template2() {
 
       {/* Company Introduction */}
       <CompanyIntro />
+
+      {/* Services */}
+      <Services />
 
       {/* Products and Services */}
       <ProductsServices />

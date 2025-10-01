@@ -49,11 +49,12 @@ export default function Services() {
               </p>
 
               {/* Service Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-3 mb-6">
                 {["Web App", "Mobile Apps", "Custom Systems", "Maintenance"].map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-white bg-opacity-20 rounded-full text-primary-brand text-sm"
+                    className="rounded-full text-brand-navy text-sm bg-white font-medium"
+                    style={{padding: '6px 14px'}}
                   >
                     {tag}
                   </span>
@@ -100,11 +101,12 @@ export default function Services() {
               </p>
 
               {/* Service Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-3 mb-6">
                 {["SaaS", "Cloud Hosting", "Email Hosting", "Backup & Recovery"].map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-white bg-opacity-20 rounded-full text-brand-navy text-sm"
+                    className="rounded-full text-brand-navy text-sm bg-white font-medium"
+                    style={{padding: '6px 14px'}}
                   >
                     {tag}
                   </span>

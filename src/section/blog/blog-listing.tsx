@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 
 const categories = [
@@ -125,7 +132,7 @@ export default function BlogListing() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Search and Filter Section */}
-        <div className="bg-gray-50 rounded-lg p-6 mb-12">
+        <div className="bg-gray-50 rounded-lg p-6 mb-12 border border-gray-300">
           {/* Search Bar */}
           <div className="relative mb-6">
             <Input
@@ -133,7 +140,7 @@ export default function BlogListing() {
               placeholder="Masukkan keyword judul berita ..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-4 pr-12 py-6 text-base border-gray-300 rounded-lg"
+              className="pl-4 pr-12 py-6 text-base border-gray-300 rounded-lg bg-white"
             />
             <Button
               size="lg"
@@ -171,7 +178,7 @@ export default function BlogListing() {
                 />
               </div>
               <CardHeader className="pb-3">
-                <div className="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+                <div className="flex items-center space-x-2 text-sm text-gray-500 mb-2 mt-4">
                   <Badge variant="secondary" className="text-xs bg-gray-100 text-gray-700">
                     {post.category}
                   </Badge>
@@ -192,96 +199,97 @@ export default function BlogListing() {
         </div>
 
         {/* Pagination */}
-        <div className="flex items-center justify-between border-t border-gray-200 pt-6">
+        <div className="flex items-center justify-center gap-6 pt-6">
           {/* Rows per page selector */}
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-600">Rows per page</span>
-            <select
-              value={rowsPerPage}
-              onChange={(e) => setRowsPerPage(Number(e.target.value))}
-              className="border border-gray-300 rounded px-2 py-1 text-sm"
+            <Select
+              value={rowsPerPage.toString()}
+              onValueChange={(value) => setRowsPerPage(Number(value))}
             >
-              <option value={10}>10</option>
-              <option value={20}>20</option>
-              <option value={50}>50</option>
-            </select>
+              <SelectTrigger className="w-[70px] h-8">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="10">10</SelectItem>
+                <SelectItem value="20">20</SelectItem>
+                <SelectItem value="50">50</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           {/* Page Navigation */}
           <div className="flex items-center gap-2">
             <Button
               variant="ghost"
-              size="icon"
+              size="sm"
               onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
               disabled={currentPage === 1}
-              className="h-8 w-8"
+              className="h-8 px-3"
             >
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="h-4 w-4 mr-1" />
+              Previous
             </Button>
 
             <div className="flex items-center gap-1">
-              {currentPage > 2 && (
-                <>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setCurrentPage(1)}
-                    className="h-8 w-8 p-0"
-                  >
-                    1
-                  </Button>
-                  {currentPage > 3 && <span className="text-gray-400">...</span>}
-                </>
-              )}
-
-              {currentPage > 1 && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setCurrentPage(currentPage - 1)}
-                  className="h-8 w-8 p-0"
-                >
-                  {currentPage - 1}
-                </Button>
-              )}
-
               <Button
-                variant="default"
+                variant="ghost"
                 size="sm"
-                className="h-8 w-8 p-0 bg-[#01193F] hover:bg-[#012247]"
+                onClick={() => setCurrentPage(1)}
+                className="h-8 w-8 p-0"
               >
-                {currentPage}
+                1
               </Button>
 
-              {currentPage < totalPages && (
+              {currentPage > 3 && <span className="text-gray-400 px-1">...</span>}
+
+              {currentPage > 2 && currentPage < totalPages - 1 && (
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={() => setCurrentPage(currentPage + 1)}
-                  className="h-8 w-8 p-0"
+                  onClick={() => setCurrentPage(currentPage)}
+                  className="h-8 w-8 p-0 bg-[#01193F] text-white hover:bg-[#012247] hover:text-white"
                 >
-                  {currentPage + 1}
+                  {currentPage}
                 </Button>
               )}
 
-              {currentPage < totalPages - 1 && (
-                <>
-                  <span className="text-gray-400">...</span>
-                  <span className="text-sm text-gray-600">{totalPages}</span>
-                </>
+              {currentPage === 2 && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setCurrentPage(2)}
+                  className="h-8 w-8 p-0 bg-[#01193F] text-white hover:bg-[#012247] hover:text-white"
+                >
+                  2
+                </Button>
               )}
-            </div>
 
-            <span className="text-sm text-gray-600 mx-2">Next</span>
+              {currentPage < totalPages - 2 && <span className="text-gray-400 px-1">...</span>}
+
+              {totalPages > 2 && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setCurrentPage(3)}
+                  className="h-8 w-8 p-0"
+                >
+                  3
+                </Button>
+              )}
+
+              {totalPages > 3 && <span className="text-gray-400 px-1">...</span>}
+            </div>
 
             <Button
               variant="ghost"
-              size="icon"
+              size="sm"
               onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
               disabled={currentPage === totalPages}
-              className="h-8 w-8"
+              className="h-8 px-3"
             >
-              <ChevronRight className="h-4 w-4" />
+              Next
+              <ChevronRight className="h-4 w-4 ml-1" />
             </Button>
           </div>
         </div>

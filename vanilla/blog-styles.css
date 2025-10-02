@@ -1,0 +1,241 @@
+/* Blog-specific styles */
+
+/* Hero ornaments for blog page - 25% smaller */
+@media (min-width: 640px) {
+    .blog-hero .absolute.bottom-0 { width: 415.5px !important; height: 360px !important; }
+    .blog-hero .absolute.top-0 { width: 372px !important; height: 354px !important; }
+}
+
+/* Decorative blobs */
+.blob-1 {
+    position: absolute;
+    top: 5rem;
+    right: 25%;
+    width: 24rem;
+    height: 24rem;
+    background-color: #45ABD5;
+    border-radius: 9999px;
+    mix-blend-mode: multiply;
+    filter: blur(48px);
+    opacity: 0.1;
+    animation: blob-animation 7s ease-in-out infinite;
+}
+
+.blob-2 {
+    position: absolute;
+    top: 10rem;
+    left: 25%;
+    width: 24rem;
+    height: 24rem;
+    background-color: #45ABD5;
+    border-radius: 9999px;
+    mix-blend-mode: multiply;
+    filter: blur(48px);
+    opacity: 0.1;
+    animation: blob-animation 7s ease-in-out infinite 2s;
+}
+
+@keyframes blob-animation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Search input */
+.search-input {
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #45ABD5;
+    box-shadow: 0 0 0 3px rgba(69, 171, 213, 0.1);
+}
+
+.search-button:hover {
+    background: #3a96bd;
+}
+
+/* Category buttons */
+.category-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.category-btn:hover {
+    background-color: #45ABD5;
+    color: white;
+    border-color: #45ABD5;
+}
+
+.category-btn.active {
+    background-color: #45ABD5;
+    color: white;
+    border-color: #45ABD5;
+}
+
+/* Blog card */
+.blog-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    transition: box-shadow 0.15s ease;
+}
+
+.blog-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.blog-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image {
+    transform: scale(1.05);
+}
+
+.blog-card-badge {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.25rem;
+    background-color: #f3f4f6;
+    color: #374151;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.blog-card-title {
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #111827;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.blog-card-description {
+    font-size: 0.875rem;
+    line-height: 1.625;
+    color: #4b5563;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/* Custom Select */
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.rows-select {
+    width: 70px;
+    height: 32px;
+    padding: 0.25rem 2rem 0.25rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    background-color: white;
+    font-size: 0.875rem;
+    color: #374151;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1rem;
+}
+
+.rows-select:focus {
+    outline: none;
+    border-color: #45ABD5;
+    box-shadow: 0 0 0 3px rgba(69, 171, 213, 0.1);
+}
+
+/* Pagination buttons */
+.pagination-btn {
+    padding: 0.5rem 0.75rem;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    color: #4b5563;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-btn-nav {
+    padding: 0.5rem 0.75rem;
+}
+
+.pagination-btn-number {
+    width: 32px;
+    padding: 0;
+}
+
+.pagination-btn-active {
+    background-color: #01193F;
+    color: white;
+}
+
+.pagination-btn-active:hover {
+    background-color: #012247;
+    color: white;
+}
+
+.pagination-ellipsis {
+    padding: 0 0.25rem;
+    color: #9ca3af;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .search-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .search-input {
+        padding-right: 7rem !important;
+    }
+
+    .pagination-btn-nav {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .pagination-btn-nav svg {
+        width: 14px;
+        height: 14px;
+    }
+}

@@ -2,7 +2,23 @@
 
 export default function BlogHero() {
   return (
-    <section className="relative pt-32 pb-16 bg-gradient-to-br from-[#01193F] via-[#012247] to-[#01193F]">
+    <section className="relative pt-32 pb-16 bg-gradient-to-br from-[#01193F] via-[#012247] to-[#01193F] overflow-hidden">
+      {/* Ornament decorations */}
+      <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-[415.5px] sm:h-[360px]">
+        <img
+          src="/ornament/hero-bottom-left.png"
+          alt=""
+          className="w-full h-full object-contain"
+        />
+      </div>
+      <div className="absolute top-0 right-0 w-36 h-36 sm:w-[372px] sm:h-[354px]">
+        <img
+          src="/ornament/hero-top-right.png"
+          alt=""
+          className="w-full h-full object-contain"
+        />
+      </div>
+
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-1/4 w-96 h-96 bg-[#45ABD5] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>

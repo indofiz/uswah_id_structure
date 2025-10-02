@@ -2,45 +2,40 @@
 
 export default function BlogHero() {
   return (
-    <section className="relative pt-32 pb-16 bg-gradient-to-br from-[#01193F] via-[#012247] to-[#01193F] overflow-hidden">
-      {/* Ornament decorations */}
-      <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-[415.5px] sm:h-[360px]">
-        <img
-          src="/ornament/hero-bottom-left.png"
-          alt=""
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <div className="absolute top-0 right-0 w-36 h-36 sm:w-[372px] sm:h-[354px]">
-        <img
-          src="/ornament/hero-top-right.png"
-          alt=""
-          className="w-full h-full object-contain"
-        />
-      </div>
+    <section id="blog-hero" className="relative overflow-hidden bg-brand-navy">
+      {/* Background Ornaments */}
+      <div className="relative w-full h-[240px] md:h-[400px]">
+        {/* Ornament decorations */}
+        <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-[415.5px] sm:h-[360px] opacity-60">
+          <img
+            src="/ornament/hero-bottom-left.png"
+            alt=""
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <div className="absolute top-0 right-0 w-36 h-36 sm:w-[372px] sm:h-[354px] opacity-60">
+          <img
+            src="/ornament/hero-top-right.png"
+            alt=""
+            className="w-full h-full object-contain"
+          />
+        </div>
 
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-1/4 w-96 h-96 bg-[#45ABD5] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-        <div className="absolute top-40 left-1/4 w-96 h-96 bg-[#45ABD5] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 mb-6 rounded-full border border-[#45ABD5] bg-white/5 backdrop-blur-sm">
-            <span className="text-[#45ABD5] text-sm font-medium">Berita Terbaru</span>
+        {/* Content */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-white mx-auto">
+                Berita Terbaru
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+                Informasi Terbaru
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style={{color: '#93B4E7'}}>
+                Ikuti perkembangan terkini seputar kegiatan, inovasi, dan pencapaian kami melalui berita dan informasi terbaru.
+              </p>
+            </div>
           </div>
-
-          {/* Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Informasi Terbaru
-          </h1>
-
-          {/* Description */}
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ikuti perkembangan terkini seputar kegiatan, inovasi, dan pencapaian kami melalui berita dan informasi terbaru.
-          </p>
         </div>
       </div>
     </section>

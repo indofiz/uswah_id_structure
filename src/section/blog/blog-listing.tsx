@@ -132,19 +132,22 @@ export default function BlogListing() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Search and Filter Section */}
-        <div className="bg-gray-50 rounded-lg p-6 mb-12 border border-gray-300">
+        <div className="mb-12">
           {/* Search Bar */}
-          <div className="relative mb-6">
+          <div className="relative mb-8">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none z-10 flex items-center">
+              <Search className="h-5 w-5 text-gray-400" />
+            </div>
             <Input
               type="text"
-              placeholder="Masukkan keyword judul berita ..."
+              placeholder="Cari artikel..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-4 pr-12 py-6 text-base border-gray-300 rounded-lg bg-white"
+              className="pl-12 pr-36 py-3.5 text-[0.9375rem] border-gray-200 rounded-xl bg-white focus:border-[#45ABD5] focus:ring-4 focus:ring-[#45ABD5]/8 transition-all"
             />
             <Button
-              size="lg"
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#45ABD5] hover:bg-[#3a96bd] text-white"
+              size="sm"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#45ABD5] hover:bg-[#3a96bd] text-white px-5 py-2.5 rounded-lg"
             >
               <Search className="h-5 w-5 mr-2" />
               Cari
@@ -158,7 +161,7 @@ export default function BlogListing() {
                 key={index}
                 variant="outline"
                 size="sm"
-                className="rounded-full border-gray-300 hover:bg-[#45ABD5] hover:text-white hover:border-[#45ABD5] transition-colors"
+                className="rounded-lg border-gray-200 hover:bg-gray-50 hover:text-[#45ABD5] hover:border-[#45ABD5] transition-all"
               >
                 {category}
               </Button>
@@ -178,21 +181,21 @@ export default function BlogListing() {
                 />
               </div>
               <CardHeader className="pb-3">
-                <div className="flex items-center space-x-2 text-sm text-gray-500 mb-2 mt-4">
-                  <Badge variant="secondary" className="text-xs bg-gray-100 text-gray-700">
-                    {post.category}
-                  </Badge>
-                  <span>•</span>
-                  <span className="text-xs">{post.date}</span>
+                <div className="mb-2">
+                  <span className="text-xs font-medium text-[#45ABD5]">{post.date}</span>
                 </div>
                 <CardTitle className="text-base text-gray-900 leading-tight line-clamp-2">
                   {post.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-sm text-gray-600 line-clamp-3 leading-relaxed">
+              <CardContent className="pt-1">
+                <CardDescription className="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-4">
                   {post.description}
                 </CardDescription>
+                <a href="#" className="text-sm font-semibold text-[#45ABD5] inline-flex items-center gap-2 hover:gap-3 transition-all">
+                  Baca Selengkapnya
+                  <ChevronRight className="h-4 w-4" />
+                </a>
               </CardContent>
             </Card>
           ))}

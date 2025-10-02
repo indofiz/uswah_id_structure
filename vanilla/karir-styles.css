@@ -1,0 +1,70 @@
+/* Karir Hero Section */
+.karir-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+/* Left Ornament - Vertically Centered */
+.karir-ornament-left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 128px;
+    height: auto;
+}
+
+@media (min-width: 640px) {
+    .karir-ornament-left {
+        width: 192px;
+    }
+}
+
+@media (min-width: 768px) {
+    .karir-ornament-left {
+        width: 256px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .karir-ornament-left {
+        width: 320px;
+    }
+}
+
+/* Right Ornament - Vertically Centered */
+.karir-ornament-right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 128px;
+    height: auto;
+}
+
+@media (min-width: 640px) {
+    .karir-ornament-right {
+        width: 192px;
+    }
+}
+
+@media (min-width: 768px) {
+    .karir-ornament-right {
+        width: 256px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .karir-ornament-right {
+        width: 320px;
+    }
+}
+
+/* Gradient Text */
+.karir-heading {
+    background-image: linear-gradient(135deg, #204984 0%, #3C73C1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}

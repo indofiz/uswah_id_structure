@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - PT USWAH SALAM AL AZHAR</title>
+    <title>Portfolio - PT USWAH SALAM AL AZHAR</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="blog-styles.css">
+    <link rel="stylesheet" href="portfolio-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Main Container -->
@@ -40,7 +40,7 @@
                                 <div class="grid gap-3 md:grid-cols-2">
                                     <div class="grid gap-1">
                                         <h3 class="text-sm font-medium leading-none text-gray-900 mb-2">Solusi Digital</h3>
-                                        <a href="#mobile" class="list-item">
+                                        <a href="index.html#mobile" class="list-item">
                                             <div class="list-item-header">
                                                 <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
@@ -52,7 +52,7 @@
                                     </div>
                                     <div class="grid gap-1">
                                         <h3 class="text-sm font-medium leading-none text-gray-900 mb-2">Sistem Manajemen</h3>
-                                        <a href="#ams" class="list-item">
+                                        <a href="index.html#ams" class="list-item">
                                             <div class="list-item-header">
                                                 <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
@@ -66,7 +66,7 @@
                             </div>
                         </li>
                         <li class="list-none">
-                            <a href="index.html#portfolio" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Portfolio</a>
+                            <a href="portfolio.html" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Portfolio</a>
                         </li>
                         <li class="list-none">
                             <a href="blog.html" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Blog</a>
@@ -121,7 +121,7 @@
                             Produk & Layanan
                         </a>
 
-                        <a href="index.html#portfolio" class="mobile-menu-link block py-3 text-lg font-medium text-white hover:text-primary-brand transition-colors">
+                        <a href="portfolio.html" class="mobile-menu-link block py-3 text-lg font-medium text-white hover:text-primary-brand transition-colors">
                             Portfolio
                         </a>
 
@@ -148,30 +148,24 @@
             </div>
         </nav>
 
-        <!-- Blog Hero Section -->
-        <section id="blog-hero" class="blog-hero relative overflow-hidden bg-brand-navy">
-            <!-- Background Ornaments -->
-            <div class="blog-hero-container relative">
-                <!-- Ornament decorations -->
-                <div class="absolute bottom-0 left-0 blog-ornament-bottom-left">
-                    <img src="./ornament/hero-bottom-left.png" alt="" class="w-full h-full object-contain">
-                </div>
-                <div class="absolute top-0 right-0 blog-ornament-top-right">
-                    <img src="./ornament/hero-top-right.png" alt="" class="w-full h-full object-contain">
-                </div>
+        <!-- Portfolio Hero Section -->
+        <section id="portfolio-hero" class="portfolio-hero relative overflow-hidden bg-brand-navy">
+            <div class="portfolio-hero-container relative">
+                <!-- Map Background Image -->
+                <img src="../public/map.png" alt="Indonesia Map" class="portfolio-map-image">
 
                 <!-- Content -->
-                <div class="absolute inset-0 flex items-center justify-center">
+                <div class="portfolio-hero-content absolute inset-0 flex items-center justify-center">
                     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div class="text-center">
                             <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-white mx-auto">
-                                Berita Terbaru
+                                Portofolio Kami
                             </div>
                             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-                                Informasi Terbaru
+                                Daftar Sekolah
                             </h1>
                             <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #93B4E7">
-                                Ikuti perkembangan terkini seputar kegiatan, inovasi, dan pencapaian kami melalui berita dan informasi terbaru.
+                                Sekolah-sekolah berikut menjanji bukti nyata perjalanan kami dalam membangun kolaborasi dan memberikan layanan terbaik.
                             </p>
                         </div>
                     </div>
@@ -179,83 +173,103 @@
             </div>
         </section>
 
-        <!-- Blog Listing Section -->
-        <section class="py-16 bg-white">
+        <!-- School List Section -->
+        <section id="school-list" class="py-12 sm:py-16 md:py-20" style="background-color: #F5F5F5">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Search and Filter Section -->
-                <div class="mb-12">
-                    <!-- Search Bar -->
-                    <div class="relative mb-4">
-                        <div class="search-icon-wrapper">
-                            <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                            </svg>
+                <!-- Province 1 -->
+                <div class="mb-12 sm:mb-16">
+                    <!-- Province Title -->
+                    <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                        <div class="flex items-center justify-center bg-primary-brand rounded-lg p-1" style="width: 40px; height: 40px;">
+                            <img src="../public/icon/location.png" alt="Location" class="w-7 h-7 object-contain">
                         </div>
-                        <input
-                            type="text"
-                            id="search-input"
-                            placeholder="Cari artikel..."
-                            class="search-input-modern"
-                        />
-                        <button class="search-button-modern" id="search-btn">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                            </svg>
-                            Cari
-                        </button>
+                        <h2 class="text-xl sm:text-2xl font-semibold text-brand-navy" style="font-family: 'Poppins', sans-serif;">
+                            DKI JAKARTA
+                        </h2>
                     </div>
 
-                    <!-- Category Filters -->
-                    <div class="flex flex-wrap gap-3" id="category-filters">
-                        <button class="category-btn-modern" data-category="Teknologi Pendidikan">Teknologi Pendidikan</button>
-                        <button class="category-btn-modern" data-category="Sistem Al-Azhar">Sistem Al-Azhar</button>
-                        <button class="category-btn-modern" data-category="Idzul Fikri">Idzul Fikri</button>
-                        <button class="category-btn-modern" data-category="Pancasila">Pancasila</button>
-                        <button class="category-btn-modern" data-category="LMS">LMS</button>
-                        <button class="category-btn-modern" data-category="PMII">PMII</button>
+                    <!-- School Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- School Card 1 -->
+                        <div class="card bg-white border-gray-200 hover:shadow-lg transition-shadow relative overflow-hidden">
+                            <!-- Ornament in bottom right -->
+                            <div class="school-card-ornament absolute bottom-0 right-0">
+                                <img src="../public/ornament/card-bottom-right.png" alt="" class="w-full h-full object-contain">
+                            </div>
+
+                            <div class="p-6">
+                                <h3 class="text-base sm:text-lg font-semibold text-brand-navy mb-3">
+                                    Kebayoran Baru
+                                </h3>
+                                <ul class="space-y-2 text-gray-700" style="list-style: none; padding-left: 0;">
+                                    <li class="text-sm sm:text-base">• TK Islam Al Azhar 1 Kebayoran Baru</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- School Card 2 -->
+                        <div class="card bg-white border-gray-200 hover:shadow-lg transition-shadow relative overflow-hidden">
+                            <div class="school-card-ornament absolute bottom-0 right-0">
+                                <img src="../public/ornament/card-bottom-right.png" alt="" class="w-full h-full object-contain">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-base sm:text-lg font-semibold text-brand-navy mb-3">
+                                    Kebayoran Baru
+                                </h3>
+                                <ul class="space-y-2 text-gray-700" style="list-style: none; padding-left: 0;">
+                                    <li class="text-sm sm:text-base">• SD Islam Al Azhar 1 Kebayoran Baru</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- School Card 3 -->
+                        <div class="card bg-white border-gray-200 hover:shadow-lg transition-shadow relative overflow-hidden">
+                            <div class="school-card-ornament absolute bottom-0 right-0">
+                                <img src="../public/ornament/card-bottom-right.png" alt="" class="w-full h-full object-contain">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-base sm:text-lg font-semibold text-brand-navy mb-3">
+                                    Kebayoran Baru
+                                </h3>
+                                <ul class="space-y-2 text-gray-700" style="list-style: none; padding-left: 0;">
+                                    <li class="text-sm sm:text-base">• SMP Islam Al Azhar 1 Kebayoran Baru</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- School Card 4 -->
+                        <div class="card bg-white border-gray-200 hover:shadow-lg transition-shadow relative overflow-hidden">
+                            <div class="school-card-ornament absolute bottom-0 right-0">
+                                <img src="../public/ornament/card-bottom-right.png" alt="" class="w-full h-full object-contain">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-base sm:text-lg font-semibold text-brand-navy mb-3">
+                                    Kebayoran Baru
+                                </h3>
+                                <ul class="space-y-2 text-gray-700" style="list-style: none; padding-left: 0;">
+                                    <li class="text-sm sm:text-base">• SMA Islam Al Azhar 1 Kebayoran Baru</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- School Card 5 -->
+                        <div class="card bg-white border-gray-200 hover:shadow-lg transition-shadow relative overflow-hidden">
+                            <div class="school-card-ornament absolute bottom-0 right-0">
+                                <img src="../public/ornament/card-bottom-right.png" alt="" class="w-full h-full object-contain">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-base sm:text-lg font-semibold text-brand-navy mb-3">
+                                    Kebayoran Baru
+                                </h3>
+                                <ul class="space-y-2 text-gray-700" style="list-style: none; padding-left: 0;">
+                                    <li class="text-sm sm:text-base">• SMA Islam Al Azhar 3 Kebayoran Baru</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Blog Posts Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12" id="blog-posts-grid">
-                    <!-- Blog posts will be dynamically inserted here -->
-                </div>
-
-                <!-- Pagination -->
-                <div class="flex items-center justify-center gap-6 pt-6">
-                    <!-- Rows per page selector -->
-                    <div class="flex items-center gap-2">
-                        <span class="text-sm text-gray-600">Rows per page</span>
-                        <div class="custom-select">
-                            <select id="rows-per-page" class="rows-select">
-                                <option value="10">10</option>
-                                <option value="20">20</option>
-                                <option value="50">50</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Page Navigation -->
-                    <div class="flex items-center gap-2">
-                        <button id="prev-btn" class="pagination-btn pagination-btn-nav">
-                            <svg class="h-4 w-4" style="margin-right: 0.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                            Previous
-                        </button>
-
-                        <div class="flex items-center gap-1" id="pagination-numbers">
-                            <!-- Page numbers will be dynamically inserted here -->
-                        </div>
-
-                        <button id="next-btn" class="pagination-btn pagination-btn-nav">
-                            Next
-                            <svg class="h-4 w-4" style="margin-left: 0.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+                <!-- Additional provinces would be repeated here with same structure -->
             </div>
         </section>
 
@@ -351,6 +365,5 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="blog-script.js"></script>
 </body>
 </html>

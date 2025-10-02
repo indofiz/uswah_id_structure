@@ -11,10 +11,13 @@ import {
 import { cn } from "@/lib/utils";
 import { Smartphone, FileText, Settings, GraduationCap, Building2, UserCheck, Wallet, PieChart, Menu, X } from "lucide-react";
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,10 +48,12 @@ export default function Navigation() {
         <NavigationMenu className="flex-1 hidden md:flex justify-center">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink href="#home" className={`text-sm font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
-              }`}>
-                Beranda
+              <NavigationMenuLink asChild>
+                <Link to="/" className={`text-sm font-medium transition-colors ${
+                  isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+                }`}>
+                  Beranda
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
@@ -62,31 +67,31 @@ export default function Navigation() {
                 <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   <div className="grid gap-1">
                     <h3 className="text-sm font-medium leading-none text-gray-900 mb-2">Solusi Digital</h3>
-                    <ListItem href="#mobile" title="Mobile Application" icon={<Smartphone className="h-4 w-4" />}>
+                    <ListItem href={isHomePage ? "#mobile" : "/#mobile"} title="Mobile Application" icon={<Smartphone className="h-4 w-4" />}>
                       Native mobile apps untuk iOS dan Android
                     </ListItem>
-                    <ListItem href="#erapor" title="e-Rapor System" icon={<FileText className="h-4 w-4" />}>
+                    <ListItem href={isHomePage ? "#erapor" : "/#erapor"} title="e-Rapor System" icon={<FileText className="h-4 w-4" />}>
                       Sistem rapor digital dengan tracking otomatis
                     </ListItem>
-                    <ListItem href="#backoffice" title="Backoffice System" icon={<Settings className="h-4 w-4" />}>
+                    <ListItem href={isHomePage ? "#backoffice" : "/#backoffice"} title="Backoffice System" icon={<Settings className="h-4 w-4" />}>
                       Platform administratif komprehensif
                     </ListItem>
-                    <ListItem href="#lms" title="Learning Management System" icon={<GraduationCap className="h-4 w-4" />}>
+                    <ListItem href={isHomePage ? "#lms" : "/#lms"} title="Learning Management System" icon={<GraduationCap className="h-4 w-4" />}>
                       LMS dengan konten interaktif dan analytics
                     </ListItem>
                   </div>
                   <div className="grid gap-1">
                     <h3 className="text-sm font-medium leading-none text-gray-900 mb-2">Sistem Manajemen</h3>
-                    <ListItem href="#ams" title="AMS - Academic Management" icon={<Building2 className="h-4 w-4" />}>
+                    <ListItem href={isHomePage ? "#ams" : "/#ams"} title="AMS - Academic Management" icon={<Building2 className="h-4 w-4" />}>
                       Solusi manajemen akademik lengkap
                     </ListItem>
-                    <ListItem href="#hris" title="HRIS - Human Resources" icon={<UserCheck className="h-4 w-4" />}>
+                    <ListItem href={isHomePage ? "#hris" : "/#hris"} title="HRIS - Human Resources" icon={<UserCheck className="h-4 w-4" />}>
                       Sistem HR terintegrasi untuk payroll dan attendance
                     </ListItem>
-                    <ListItem href="#ziswaf" title="ZISWAF Management" icon={<Wallet className="h-4 w-4" />}>
+                    <ListItem href={isHomePage ? "#ziswaf" : "/#ziswaf"} title="ZISWAF Management" icon={<Wallet className="h-4 w-4" />}>
                       Sistem Zakat, Infaq, Sedekah, dan Wakaf
                     </ListItem>
-                    <ListItem href="#bi" title="BI Dashboard" icon={<PieChart className="h-4 w-4" />}>
+                    <ListItem href={isHomePage ? "#bi" : "/#bi"} title="BI Dashboard" icon={<PieChart className="h-4 w-4" />}>
                       Business Intelligence dengan real-time analytics
                     </ListItem>
                   </div>
@@ -95,26 +100,32 @@ export default function Navigation() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink href="#portfolio" className={`text-sm font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
-              }`}>
-                Portfolio
+              <NavigationMenuLink asChild>
+                <Link to="/portfolio" className={`text-sm font-medium transition-colors ${
+                  isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+                }`}>
+                  Portfolio
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink href="#blog" className={`text-sm font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
-              }`}>
-                Blog
+              <NavigationMenuLink asChild>
+                <Link to="/blog" className={`text-sm font-medium transition-colors ${
+                  isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+                }`}>
+                  Blog
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink href="#career" className={`text-sm font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
-              }`}>
-                Karir
+              <NavigationMenuLink asChild>
+                <Link to="/karir" className={`text-sm font-medium transition-colors ${
+                  isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+                }`}>
+                  Karir
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -171,13 +182,13 @@ export default function Navigation() {
 
             {/* Mobile Menu Items */}
             <div className="p-4 space-y-4">
-              <a
-                href="#home"
+              <Link
+                to="/"
                 className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Beranda
-              </a>
+              </Link>
 
               {/* Mobile Products Dropdown */}
               <div className="space-y-2">
@@ -188,47 +199,47 @@ export default function Navigation() {
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-gray-300">Solusi Digital</h4>
                     <div className="pl-2 space-y-2">
-                      <a href="#mobile" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>Mobile Application</a>
-                      <a href="#erapor" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>e-Rapor System</a>
-                      <a href="#backoffice" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>Backoffice System</a>
-                      <a href="#lms" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>Learning Management System</a>
+                      <a href={isHomePage ? "#mobile" : "/#mobile"} className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>Mobile Application</a>
+                      <a href={isHomePage ? "#erapor" : "/#erapor"} className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>e-Rapor System</a>
+                      <a href={isHomePage ? "#backoffice" : "/#backoffice"} className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>Backoffice System</a>
+                      <a href={isHomePage ? "#lms" : "/#lms"} className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>Learning Management System</a>
                     </div>
                   </div>
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-gray-300">Sistem Manajemen</h4>
                     <div className="pl-2 space-y-2">
-                      <a href="#ams" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>AMS - Academic Management</a>
-                      <a href="#hris" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>HRIS - Human Resources</a>
-                      <a href="#ziswaf" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>ZISWAF Management</a>
-                      <a href="#bi" className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>BI Dashboard</a>
+                      <a href={isHomePage ? "#ams" : "/#ams"} className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>AMS - Academic Management</a>
+                      <a href={isHomePage ? "#hris" : "/#hris"} className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>HRIS - Human Resources</a>
+                      <a href={isHomePage ? "#ziswaf" : "/#ziswaf"} className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>ZISWAF Management</a>
+                      <a href={isHomePage ? "#bi" : "/#bi"} className="block text-sm text-gray-400 hover:text-white" onClick={() => setIsMobileMenuOpen(false)}>BI Dashboard</a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <a
-                href="#portfolio"
+              <Link
+                to="/portfolio"
                 className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Portfolio
-              </a>
+              </Link>
 
-              <a
-                href="#blog"
+              <Link
+                to="/blog"
                 className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Blog
-              </a>
+              </Link>
 
-              <a
-                href="#career"
+              <Link
+                to="/karir"
                 className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Karir
-              </a>
+              </Link>
 
               {/* Mobile Support Buttons */}
               <div className="pt-4 border-t border-[#1c3660] space-y-3">

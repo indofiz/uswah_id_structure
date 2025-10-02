@@ -147,21 +147,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     />
                 </div>
                 <div style="padding-top: 1rem; padding-bottom: 0.75rem;">
-                    <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2" style="padding: 0 1.5rem; margin-top: 1rem;">
-                        <span class="blog-card-badge">
-                            ${post.category}
-                        </span>
-                        <span>•</span>
-                        <span class="text-xs">${post.date}</span>
+                    <div style="padding: 0 1.5rem; margin-bottom: 0.5rem;">
+                        <span style="color: #45ABD5; font-size: 0.75rem; font-weight: 500;">${post.date}</span>
                     </div>
                     <h3 class="blog-card-title" style="padding: 0 1.5rem; margin-bottom: 0;">
                         ${post.title}
                     </h3>
                 </div>
                 <div style="padding: 0.25rem 1.5rem 1rem 1.5rem;">
-                    <p class="blog-card-description">
+                    <p class="blog-card-description" style="margin-bottom: 1rem;">
                         ${post.description}
                     </p>
+                    <a href="#" style="color: #45ABD5; font-size: 0.875rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                        Baca Selengkapnya
+                        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
                 </div>
             `;
             blogPostsGrid.appendChild(card);
@@ -280,6 +282,29 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 // Remove active class from all buttons
                 categoryBtns.forEach(b => b.classList.remove('active'));
+
+                selectedCategory = category;
+                btn.classList.add('active');
+            }
+
+            currentPage = 1;
+            renderBlogPosts();
+        });
+    });
+
+    // Update category button selector for new class name
+    const categoryBtnsModern = document.querySelectorAll('.category-btn-modern');
+    categoryBtnsModern.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.dataset.category;
+
+            // Toggle category selection
+            if (selectedCategory === category) {
+                selectedCategory = null;
+                btn.classList.remove('active');
+            } else {
+                // Remove active class from all buttons
+                categoryBtnsModern.forEach(b => b.classList.remove('active'));
 
                 selectedCategory = category;
                 btn.classList.add('active');

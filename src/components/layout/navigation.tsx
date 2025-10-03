@@ -111,6 +111,16 @@ export default function Navigation() {
 
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
+                <Link to="/tentang" className={`text-sm font-medium transition-colors ${
+                  isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
+                }`}>
+                  Tentang
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
                 <Link to="/blog" className={`text-sm font-medium transition-colors ${
                   isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
                 }`}>
@@ -133,10 +143,10 @@ export default function Navigation() {
 
         {/* Right Column - Contact & Support (flex-1) */}
         <div className="flex-1 flex items-center justify-end space-x-2 sm:space-x-4">
-          <Button variant="ghost" size="sm" className={`hidden sm:inline-flex bg-transparent hover:bg-transparent transition-colors ${
+          <Button variant="ghost" size="sm" asChild className={`hidden sm:inline-flex bg-transparent hover:bg-transparent transition-colors ${
             isScrolled ? 'text-gray-700 hover:text-primary-brand' : 'text-white hover:text-gray-200'
           }`}>
-            Contact
+            <Link to="/contact">Contact</Link>
           </Button>
           <Button size="sm" className="hidden sm:flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 sm:py-4 rounded-sm text-black bg-yellow-300 hover:bg-yellow-500 transition-colors">
             <img
@@ -226,6 +236,14 @@ export default function Navigation() {
               </Link>
 
               <Link
+                to="/tentang"
+                className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Tentang
+              </Link>
+
+              <Link
                 to="/blog"
                 className="block py-2 text-base font-medium text-white hover:text-gray-200 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -243,8 +261,8 @@ export default function Navigation() {
 
               {/* Mobile Support Buttons */}
               <div className="pt-4 border-t border-[#1c3660] space-y-3">
-                <Button variant="ghost" size="sm" className="w-full justify-start text-white hover:text-gray-200">
-                  Contact
+                <Button variant="ghost" size="sm" asChild className="w-full justify-start text-white hover:text-gray-200">
+                  <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
                 </Button>
                 <Button size="sm" className="w-full justify-center items-center gap-2 text-sm px-4 py-3 rounded-sm text-black bg-yellow-300 hover:bg-yellow-500 transition-colors">
                   <img

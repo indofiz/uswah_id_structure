@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - PT Uswah Salam AlAzhar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tentang-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <img src="./logo_uswah.png" alt="PT Uswah Salam AlAzhar">
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="nav-menu">
+        <a href="index.html">Beranda</a>
+        <a href="index.html#mobile">Produk & Layanan</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="blog.html">Blog</a>
+        <a href="karir.html">Karir</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-contact">Contact</a>
+        <a href="#" class="btn-support">
+          <img src="./icon/support.svg" alt="Support">
+          Support
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <svg class="icon-svg" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="icon-svg" id="close-icon" style="display: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close">
+            <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-menu-items">
+          <a href="index.html">Beranda</a>
+          <div class="mobile-submenu">
+            <div class="mobile-submenu-title">Produk & Layanan</div>
+            <div style="padding-left: 1rem; margin-top: 0.5rem;">
+              <h4 style="font-size: 0.875rem; font-weight: 600; color: #d1d5db; margin-top: 0.5rem;">Solusi Digital</h4>
+              <div class="mobile-submenu-links">
+                <a href="index.html#mobile">Mobile Application</a>
+                <a href="index.html#erapor">e-Rapor System</a>
+                <a href="index.html#backoffice">Backoffice System</a>
+                <a href="index.html#lms">Learning Management System</a>
+              </div>
+              <h4 style="font-size: 0.875rem; font-weight: 600; color: #d1d5db; margin-top: 0.5rem;">Sistem Manajemen</h4>
+              <div class="mobile-submenu-links">
+                <a href="index.html#ams">AMS - Academic Management</a>
+                <a href="index.html#hris">HRIS - Human Resources</a>
+                <a href="index.html#ziswaf">ZISWAF Management</a>
+                <a href="index.html#bi">BI Dashboard</a>
+              </div>
+            </div>
+          </div>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="tentang.html">Tentang</a>
+          <a href="blog.html">Blog</a>
+          <a href="karir.html">Karir</a>
+          <div class="mobile-menu-actions">
+            <a href="#contact" class="mobile-btn-contact">Contact</a>
+            <a href="#" class="mobile-btn-support">
+              <img src="./icon/support.svg" alt="Support">
+              Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tentang Kami Section -->
+  <section class="tentang-section">
+    <div class="container" style="max-width: 1280px;">
+      <!-- Header -->
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+          Tentang Kami
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+          Tentang Uswah Salam Al Azhar
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #01193F">
+          Kami hadir untuk memberikan layanan yang memudahkan hidup Anda, dengan semangat kolaborasi dan inovasi tanpa henti.
+        </p>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="./logo_uswah_big.png" alt="Uswah Logo">
+      </div>
+
+      <!-- Company Description -->
+      <div class="company-description">
+        <p>
+          PT. Uswah Salam AlAzhar (PTUSA) adalah perusahaan teknologi informasi yang fokus utama nya adalah memberikan layanan sistem informasi pendidikan yang terintegrasi. Dimulai dari Unit Salam Al Azhar yang sudah mulai memberikan layanan sistem informasi pendidikan terintegrasi sejak Tahun 2019 untuk lebih 80 Sekolah Al Azhar di seluruh Indonesia, PTUSA secara resmi berdiri pada 29 September 2020 dan melayani kebutuhan sekolah pada multi jenjang pendidikan. Saat ini PTUSA terus melakukan inovasi teknologi dengan pengembangan produk diantaranya sistem Zakat Infak Sedekah dan Wakaf, digital library, asset management, dan gerbang layanan pembayaran digital melelui channel Virtual Account dan QRIS.
+        </p>
+      </div>
+
+      <!-- Visi & Misi -->
+      <div class="visi-misi-grid">
+        <!-- Visi -->
+        <div class="visi-card">
+          <h3>Visi</h3>
+          <p>
+            Menjadi sebuah perusahaan yang berdaya saing tinggi serta mampu memberikan kontribusi baik dalam bidang penelitian teknologi informasi dan komunikasi maupun pengabdian kepada masyarakat.
+          </p>
+        </div>
+
+        <!-- Misi -->
+        <div class="misi-card">
+          <h3>Misi</h3>
+          <ul class="misi-list">
+            <li class="misi-item">
+              <span class="misi-bullet"></span>
+              <span class="misi-text">
+                Membangun ICT Pendidikan Nasional yang mandiri dengan cara menyediakan beragam produk dan layanan online terpadu
+              </span>
+            </li>
+            <li class="misi-item">
+              <span class="misi-bullet"></span>
+              <span class="misi-text">
+                Membangun sistem pembayaran digital yang aman serta terpercaya
+              </span>
+            </li>
+            <li class="misi-item">
+              <span class="misi-bullet"></span>
+              <span class="misi-text">
+                Membantu meningkatkan layanan dakwah dan sosial melalui program digitalisasi
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <!-- Top Right Ornament -->
+    <div class="video-ornament-top">
+      <img src="./ornament/ornament-video-top-right.png" alt="">
+    </div>
+
+    <!-- Bottom Left Ornament -->
+    <div class="video-ornament-bottom">
+      <img src="./ornament/ornament-video-bottom-left.png" alt="">
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <!-- Video Container -->
+      <div class="video-container">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/QMk6OERJVxQ"
+            title="Uswah Salam Al Azhar Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Portfolio Section -->
+  <section class="portfolio-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+          Klien Kami
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+          Dipercaya oleh Berbagai Institusi Terkemuka
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+          Bergabunglah dengan ratusan yayasan, lembaga pendidikan, dan organisasi yang telah mentransformasi operasional mereka dengan solusi kami
+        </p>
+      </div>
+
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/yam.png" alt="Yayasan Al Azhar Membangun">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/yapi.png" alt="Yayasan Pendidikan Islam">
+          </div>
+          <p class="partner-type">Lembaga Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/ykih.png" alt="Yayasan Kemala Ilmu">
+          </div>
+          <p class="partner-type">Institusi Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/ypu.png" alt="Yayasan Pendidikan Umat">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/laz.png" alt="LAZ Nurul Hayat">
+          </div>
+          <p class="partner-type">Lembaga Amil Zakat</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/yns.png" alt="Yayasan Nurul Salam">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/logo_ypis_.png" alt="Yayasan Pendidikan Islam Singapura">
+          </div>
+          <p class="partner-type">Lembaga Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/logo_ypi_.png" alt="Yayasan Pendidikan Indonesia">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/avicena.png" alt="Avicena Medical Center">
+          </div>
+          <p class="partner-type">Rumah Sakit</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/logo_yayasanikc_.png" alt="Yayasan Ika Cendekia">
+          </div>
+          <p class="partner-type">Lembaga Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/logo_yayasanlampung_.png" alt="Yayasan Lampung">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="./client/logo_yayasanumulyatama_.png" alt="Yayasan Umulyatama">
+          </div>
+          <p class="partner-type">Lembaga Pendidikan</p>
+        </div>
+      </div>
+
+      <div class="stats-card">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value" style="color: #45ABD5;">500+</div>
+            <div class="stat-label">Educational Institutions</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" style="color: #01193F;">50K+</div>
+            <div class="stat-label">Active Students</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" style="color: #45ABD5;">99.9%</div>
+            <div class="stat-label">System Reliability</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" style="color: #01193F;">24/7</div>
+            <div class="stat-label">Technical Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mitra Kami Section -->
+  <section class="mitra-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+          Mitra Kami
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+          Mitra Yang Berkerjasama Dengan Kami
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+          Dukungan mitra menjadi bagian penting dalam perjalanan kami untuk menciptakan solusi terbaik dan memberikan manfaat nyata.
+        </p>
+      </div>
+
+      <div class="mitra-grid">
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 16.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 17.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 18.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 19.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 20.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 21.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 22.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 24.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 25.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/image 26.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/JKP INDO.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="./mitra/imageeee.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+          Testimonial
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+          Apa Kata Mereka?
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+          Pendapat mereka menjadi bukti nyata atas kualitas dan layanan yang kami berikan.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <!-- Top Right Ornament -->
+          <div class="testimonial-ornament">
+            <img src="./ornament/top-right-card-testimonial.png" alt="">
+          </div>
+
+          <!-- Quote Icon -->
+          <div class="quote-icon">
+            <img src="./icon/testimonial-quote.svg" alt="">
+          </div>
+
+          <!-- Testimonial Text -->
+          <p class="testimonial-text">
+            The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words.
+          </p>
+
+          <!-- Author Info -->
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="./testimonial/avatar-1.jpg" alt="Juliansyah">
+            </div>
+            <div>
+              <h4 class="author-name">Juliansyah</h4>
+              <p class="author-title">Guru Matematika</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <!-- Top Right Ornament -->
+          <div class="testimonial-ornament">
+            <img src="./ornament/top-right-card-testimonial.png" alt="">
+          </div>
+
+          <!-- Quote Icon -->
+          <div class="quote-icon">
+            <img src="./icon/testimonial-quote.svg" alt="">
+          </div>
+
+          <!-- Testimonial Text -->
+          <p class="testimonial-text">
+            The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words.
+          </p>
+
+          <!-- Author Info -->
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="./testimonial/avatar-2.jpg" alt="Juliansyah">
+            </div>
+            <div>
+              <h4 class="author-name">Juliansyah</h4>
+              <p class="author-title">Guru Matematika</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <!-- Top Right Ornament -->
+          <div class="testimonial-ornament">
+            <img src="./ornament/top-right-card-testimonial.png" alt="">
+          </div>
+
+          <!-- Quote Icon -->
+          <div class="quote-icon">
+            <img src="./icon/testimonial-quote.svg" alt="">
+          </div>
+
+          <!-- Testimonial Text -->
+          <p class="testimonial-text">
+            The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words.
+          </p>
+
+          <!-- Author Info -->
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="./testimonial/avatar-3.jpg" alt="Juliansyah">
+            </div>
+            <div>
+              <h4 class="author-name">Juliansyah</h4>
+              <p class="author-title">Guru Matematika</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Background Ornament -->
+    <div class="footer-ornament">
+      <img src="./ornament/hero-top-right.png" alt="">
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <div class="footer-grid">
+        <!-- Column 1: Logo and Company Info -->
+        <div class="footer-column">
+          <div>
+            <img src="./logo_uswah.png" alt="Uswah" class="footer-logo">
+            <h3 class="footer-tagline">Solusi Digital</h3>
+            <h4 class="footer-subtitle">Layanan Pendidikan</h4>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <img src="./social/facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./social/linkin.svg" alt="LinkedIn">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./social/instagram.svg" alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Produk & Layanan -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <ul class="footer-links">
+            <li><a href="#">Salam App</a></li>
+            <li><a href="#">Salam e-Rapor</a></li>
+            <li><a href="#">Salam Admin</a></li>
+            <li><a href="#">Learning Management System</a></li>
+            <li><a href="#">Ziswaf System</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Portfolio & About -->
+        <div class="footer-column">
+          <h3>PORTOFOLIO</h3>
+          <ul class="footer-links">
+            <li><a href="#">Daftar Sekolah Terdaftar</a></li>
+          </ul>
+
+          <h3 style="margin-top: 2rem;">TENTANG</h3>
+          <ul class="footer-links">
+            <li><a href="#">Tentang USA</a></li>
+            <li><a href="#">Karir USA</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Certifications -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <div class="footer-contact">
+            <p>SalamThe Darmawangsa Square Unit 268 - Jakarta Selatan. DKI Jakarta.</p>
+            <p>uswah@salam-alazhar.id</p>
+            <p>(021) 72786730 - (021) 72786780</p>
+          </div>
+
+          <!-- ISO Certifications -->
+          <div class="iso-certifications">
+            <div class="iso-badge">
+              <img src="./sertification/iso-27001.png" alt="ISO 27001">
+            </div>
+            <div class="iso-badge">
+              <img src="./sertification/iso-9001.png" alt="ISO 9001">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      <p>© 2021. All Right Reserved. Uswah Salam AlAzhar</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll functionality
+    const navbar = document.getElementById('navbar');
+    let isScrolled = false;
+
+    function handleScroll() {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 50 && !isScrolled) {
+        isScrolled = true;
+        navbar.classList.add('scrolled');
+      } else if (scrollY <= 50 && isScrolled) {
+        isScrolled = false;
+        navbar.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    let isMobileMenuOpen = false;
+
+    function toggleMobileMenu() {
+      isMobileMenuOpen = !isMobileMenuOpen;
+
+      if (isMobileMenuOpen) {
+        mobileMenu.classList.add('active');
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'inline-block';
+      } else {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'inline-block';
+        closeIcon.style.display = 'none';
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    mobileMenuClose.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when clicking overlay
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        toggleMobileMenu();
+      }
+    });
+
+    // Close mobile menu when clicking on menu links
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-items a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+  </script>
+</body>
+</html>

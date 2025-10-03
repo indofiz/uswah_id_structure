@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - PT Uswah Salam AlAzhar</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: white;
+      min-height: 100vh;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Navigation Styles */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      width: 100%;
+      transition: all 0.3s;
+      background-color: #01193F;
+      border-bottom: 1px solid #1c3660;
+    }
+
+    nav.scrolled {
+      background-color: white;
+      border-bottom: 1px solid #e5e7eb;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      display: flex;
+      height: 4rem;
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .nav-logo {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 2rem;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-menu {
+      flex: 1;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.3s;
+      text-decoration: none;
+      color: white;
+    }
+
+    nav.scrolled .nav-menu a {
+      color: #374151;
+    }
+
+    .nav-menu a:hover {
+      color: #d1d5db;
+    }
+
+    nav.scrolled .nav-menu a:hover {
+      color: #249BCD;
+    }
+
+    .nav-actions {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+
+    .btn-contact {
+      display: none;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: color 0.3s;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav.scrolled .btn-contact {
+      color: #374151;
+    }
+
+    .btn-contact:hover {
+      color: #d1d5db;
+    }
+
+    nav.scrolled .btn-contact:hover {
+      color: #249BCD;
+    }
+
+    .btn-support {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      background-color: #fde047;
+      color: black;
+      border: none;
+      border-radius: 0.125rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-support:hover {
+      background-color: #facc15;
+    }
+
+    .btn-support img {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .mobile-menu-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+
+    nav.scrolled .mobile-menu-btn {
+      color: #374151;
+    }
+
+    .mobile-menu-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .mobile-menu-overlay.active {
+      display: block;
+    }
+
+    .mobile-menu-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 20rem;
+      max-width: 85vw;
+      background-color: #01193F;
+      box-shadow: -4px 0 6px -1px rgba(0, 0, 0, 0.1);
+      transform: translateX(100%);
+      transition: transform 0.3s;
+    }
+
+    .mobile-menu-overlay.active .mobile-menu-panel {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 1rem;
+      border-bottom: 1px solid #1c3660;
+    }
+
+    .mobile-menu-close {
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .mobile-menu-items {
+      padding: 1rem;
+    }
+
+    .mobile-menu-items a {
+      display: block;
+      padding: 0.5rem 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .mobile-menu-items a:hover {
+      color: #d1d5db;
+    }
+
+    .mobile-submenu {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .mobile-submenu-title {
+      padding: 0.5rem 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: white;
+    }
+
+    .mobile-submenu h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #d1d5db;
+      margin-top: 0.5rem;
+    }
+
+    .mobile-submenu-links {
+      padding-left: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .mobile-submenu-links a {
+      display: block;
+      font-size: 0.875rem;
+      color: #9ca3af;
+      padding: 0.25rem 0;
+    }
+
+    .mobile-submenu-links a:hover {
+      color: white;
+    }
+
+    .mobile-menu-actions {
+      padding-top: 1rem;
+      margin-top: 1rem;
+      border-top: 1px solid #1c3660;
+    }
+
+    .mobile-btn-contact {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 0.875rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .mobile-btn-contact:hover {
+      color: #d1d5db;
+    }
+
+    .mobile-btn-support {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      margin-top: 0.75rem;
+      background-color: #fde047;
+      color: black;
+      border: none;
+      border-radius: 0.125rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .mobile-btn-support:hover {
+      background-color: #facc15;
+    }
+
+    .mobile-btn-support img {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    /* Tentang Kami Section */
+    .tentang-section {
+      padding: 3rem 0;
+      background: white;
+    }
+
+    .tentang-badge {
+      display: inline-block;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid #249BCD;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      color: #249BCD;
+      margin-bottom: 1.5rem;
+    }
+
+    .tentang-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #01193F;
+      text-align: center;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo-container img {
+      width: 16rem;
+      height: auto;
+      max-width: 400px;
+    }
+
+    .company-description {
+      max-width: 80rem;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .company-description p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #01193F;
+    }
+
+    .visi-misi-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+
+    .visi-card, .misi-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+
+    .visi-card h3, .misi-card h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: #01193F;
+    }
+
+    .visi-card p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #01193F;
+    }
+
+    .misi-list {
+      list-style: none;
+    }
+
+    .misi-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .misi-bullet {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background-color: #249BCD;
+      margin-top: 0.5rem;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .misi-text {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #01193F;
+    }
+
+    /* Video Section */
+    .video-section {
+      position: relative;
+      padding: 3rem 0;
+      background-color: #01193F;
+      overflow: hidden;
+    }
+
+    .video-ornament-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8rem;
+      height: auto;
+      opacity: 0.5;
+    }
+
+    .video-ornament-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 8rem;
+      height: auto;
+      opacity: 0.5;
+    }
+
+    .video-container {
+      max-width: 48rem;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Client Portfolio Section */
+    .portfolio-section {
+      padding: 3rem 0;
+      background: white;
+    }
+
+    .section-badge {
+      display: inline-block;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid #249BCD;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      color: #249BCD;
+      background: white;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: #01193F;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .section-description {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #505050;
+      max-width: 48rem;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .partner-card {
+      text-align: center;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      transition: box-shadow 0.3s;
+      background: white;
+    }
+
+    .partner-card:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .partner-logo {
+      width: 5rem;
+      height: 5rem;
+      margin: 0 auto 1rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      padding: 0.5rem;
+    }
+
+    .partner-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .partner-type {
+      font-size: 0.875rem;
+      color: #6b7280;
+      font-weight: 500;
+      padding: 0 0.25rem;
+    }
+
+    .stats-card {
+      background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+      border: 2px solid #45ABD5;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 0 0.25rem;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+
+    /* Mitra Section */
+    .mitra-section {
+      padding: 3rem 0;
+      background: white;
+    }
+
+    .mitra-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .mitra-card {
+      text-align: center;
+      border: 1px solid #DADADA;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      transition: box-shadow 0.3s;
+      background: white;
+    }
+
+    .mitra-card:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .mitra-logo {
+      width: 100%;
+      height: 5rem;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+    }
+
+    .mitra-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .mitra-name {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #01193F;
+      padding: 0 0.25rem;
+    }
+
+    /* Testimonial Section */
+    .testimonial-section {
+      padding: 3rem 0;
+      background-color: #F5F5F5;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      position: relative;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 24px;
+      padding: 1.5rem;
+      overflow: hidden;
+    }
+
+    .testimonial-ornament {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .testimonial-ornament img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .quote-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .quote-icon img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.875rem;
+      line-height: 1.75;
+      color: #505050;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .author-avatar {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: #e5e7eb;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .author-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #01193F;
+    }
+
+    .author-title {
+      font-size: 0.875rem;
+      color: #505050;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #01193F;
+      color: white;
+      padding: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-ornament {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 12rem;
+      height: 12rem;
+    }
+
+    .footer-ornament img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .footer-column h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #249BCD;
+    }
+
+    .footer-logo {
+      height: 3rem;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+
+    .footer-tagline {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-subtitle {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #d1d5db;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-link {
+      width: 3rem;
+      height: 3rem;
+      background-color: #249BCD;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      background-color: rgba(36, 155, 205, 0.8);
+    }
+
+    .social-link img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-contact p {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: #d1d5db;
+      margin-bottom: 1rem;
+    }
+
+    .iso-certifications {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .iso-badge {
+      width: 4rem;
+      height: 4rem;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .iso-badge img {
+      width: 3rem;
+      height: 3rem;
+      object-fit: contain;
+    }
+
+    .footer-copyright {
+      background-color: #01193F;
+      border-top: 1px solid #092D66;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    .footer-copyright p {
+      font-size: 0.875rem;
+      color: #d1d5db;
+    }
+
+    /* Icon SVG Styles */
+    .icon-svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 640px) {
+      .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .nav-container {
+        padding: 0 1.5rem;
+      }
+
+      .btn-contact, .btn-support {
+        display: inline-flex;
+      }
+
+      .tentang-section {
+        padding: 4rem 0;
+      }
+
+      .tentang-badge {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+
+      .tentang-title {
+        font-size: 1.875rem;
+        margin-bottom: 2rem;
+      }
+
+      .logo-container img {
+        width: 20rem;
+      }
+
+      .company-description {
+        margin-bottom: 4rem;
+      }
+
+      .company-description p {
+        font-size: 1.125rem;
+      }
+
+      .visi-misi-grid {
+        gap: 3rem;
+      }
+
+      .visi-card, .misi-card {
+        padding: 2rem;
+      }
+
+      .visi-card h3, .misi-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .visi-card p, .misi-text {
+        font-size: 1.125rem;
+      }
+
+      .video-section {
+        padding: 4rem 0;
+      }
+
+      .video-ornament-top, .video-ornament-bottom {
+        width: 12rem;
+      }
+
+      .portfolio-section, .mitra-section, .testimonial-section {
+        padding: 4rem 0;
+      }
+
+      .section-badge {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-title {
+        font-size: 1.875rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-description {
+        font-size: 1.125rem;
+        margin-bottom: 4rem;
+      }
+
+      .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+      }
+
+      .partner-logo {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      .partner-type {
+        font-size: 0.875rem;
+      }
+
+      .stats-card {
+        padding: 1.5rem;
+      }
+
+      .stats-grid {
+        gap: 1.5rem;
+      }
+
+      .stat-value {
+        font-size: 1.5rem;
+      }
+
+      .stat-label {
+        font-size: 0.875rem;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .testimonial-ornament {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      .quote-icon {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      .quote-icon img {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+
+      .testimonial-text {
+        font-size: 1rem;
+      }
+
+      .author-avatar {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      .author-name {
+        font-size: 1.125rem;
+      }
+
+      .author-title {
+        font-size: 0.875rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-ornament {
+        width: 18.75rem;
+        height: 17.5rem;
+      }
+
+      .footer-copyright {
+        padding: 2rem 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .nav-menu {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+      }
+
+      .tentang-section {
+        padding: 5rem 0;
+      }
+
+      .tentang-title {
+        font-size: 2.25rem;
+      }
+
+      .logo-container img {
+        width: 24rem;
+      }
+
+      .visi-misi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .video-section {
+        padding: 5rem 0;
+      }
+
+      .video-ornament-top, .video-ornament-bottom {
+        width: 16rem;
+      }
+
+      .portfolio-section, .mitra-section, .testimonial-section {
+        padding: 5rem 0;
+      }
+
+      .section-title {
+        font-size: 2.25rem;
+      }
+
+      .section-description {
+        font-size: 1.25rem;
+      }
+
+      .stats-card {
+        padding: 2rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      .stat-value {
+        font-size: 1.875rem;
+      }
+
+      .stat-label {
+        font-size: 1rem;
+      }
+
+      .mitra-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .mitra-logo {
+        height: 6rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      .nav-container {
+        padding: 0 2rem;
+      }
+
+      .partners-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .partners-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .mitra-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <img src="/logo_uswah.png" alt="PT Uswah Salam AlAzhar">
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="nav-menu">
+        <a href="/">Beranda</a>
+        <a href="/#mobile">Produk & Layanan</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/tentang">Tentang</a>
+        <a href="/blog">Blog</a>
+        <a href="/karir">Karir</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <a href="/contact" class="btn-contact">Contact</a>
+        <a href="#" class="btn-support">
+          <img src="/icon/support.svg" alt="Support">
+          Support
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <svg class="icon-svg" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="icon-svg" id="close-icon" style="display: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close">
+            <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-menu-items">
+          <a href="/">Beranda</a>
+          <div class="mobile-submenu">
+            <div class="mobile-submenu-title">Produk & Layanan</div>
+            <div style="padding-left: 1rem; margin-top: 0.5rem;">
+              <h4 style="font-size: 0.875rem; font-weight: 600; color: #d1d5db; margin-top: 0.5rem;">Solusi Digital</h4>
+              <div class="mobile-submenu-links">
+                <a href="/#mobile">Mobile Application</a>
+                <a href="/#erapor">e-Rapor System</a>
+                <a href="/#backoffice">Backoffice System</a>
+                <a href="/#lms">Learning Management System</a>
+              </div>
+              <h4 style="font-size: 0.875rem; font-weight: 600; color: #d1d5db; margin-top: 0.5rem;">Sistem Manajemen</h4>
+              <div class="mobile-submenu-links">
+                <a href="/#ams">AMS - Academic Management</a>
+                <a href="/#hris">HRIS - Human Resources</a>
+                <a href="/#ziswaf">ZISWAF Management</a>
+                <a href="/#bi">BI Dashboard</a>
+              </div>
+            </div>
+          </div>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/tentang">Tentang</a>
+          <a href="/blog">Blog</a>
+          <a href="/karir">Karir</a>
+          <div class="mobile-menu-actions">
+            <a href="/contact" class="mobile-btn-contact">Contact</a>
+            <a href="#" class="mobile-btn-support">
+              <img src="/icon/support.svg" alt="Support">
+              Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tentang Kami Section -->
+  <section class="tentang-section">
+    <div class="container" style="max-width: 1280px;">
+      <!-- Header Badge -->
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <div class="tentang-badge" style="display: inline-block;">
+          Tentang Kami
+        </div>
+        <h2 class="tentang-title">
+          Tentang Uswah Salam Al Azhar
+        </h2>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="/logo_uswah_big.png" alt="Uswah Logo">
+      </div>
+
+      <!-- Company Description -->
+      <div class="company-description">
+        <p>
+          PT. Uswah Salam AlAzhar (PTUSA) adalah perusahaan teknologi informasi yang fokus utama nya adalah memberikan layanan sistem informasi pendidikan yang terintegrasi. Dimulai dari Unit Salam Al Azhar yang sudah mulai memberikan layanan sistem informasi pendidikan terintegrasi sejak Tahun 2019 untuk lebih 80 Sekolah Al Azhar di seluruh Indonesia, PTUSA secara resmi berdiri pada 29 September 2020 dan melayani kebutuhan sekolah pada multi jenjang pendidikan. Saat ini PTUSA terus melakukan inovasi teknologi dengan pengembangan produk diantaranya sistem Zakat Infak Sedekah dan Wakaf, digital library, asset management, dan gerbang layanan pembayaran digital melelui channel Virtual Account dan QRIS.
+        </p>
+      </div>
+
+      <!-- Visi & Misi -->
+      <div class="visi-misi-grid">
+        <!-- Visi -->
+        <div class="visi-card">
+          <h3>Visi</h3>
+          <p>
+            Menjadi sebuah perusahaan yang berdaya saing tinggi serta mampu memberikan kontribusi baik dalam bidang penelitian teknologi informasi dan komunikasi maupun pengabdian kepada masyarakat.
+          </p>
+        </div>
+
+        <!-- Misi -->
+        <div class="misi-card">
+          <h3>Misi</h3>
+          <ul class="misi-list">
+            <li class="misi-item">
+              <span class="misi-bullet"></span>
+              <span class="misi-text">
+                Membangun ICT Pendidikan Nasional yang mandiri dengan cara menyediakan beragam produk dan layanan online terpadu
+              </span>
+            </li>
+            <li class="misi-item">
+              <span class="misi-bullet"></span>
+              <span class="misi-text">
+                Membangun sistem pembayaran digital yang aman serta terpercaya
+              </span>
+            </li>
+            <li class="misi-item">
+              <span class="misi-bullet"></span>
+              <span class="misi-text">
+                Membantu meningkatkan layanan dakwah dan sosial melalui program digitalisasi
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <!-- Top Right Ornament -->
+    <div class="video-ornament-top">
+      <img src="/ornament/ornament-video-top-right.png" alt="">
+    </div>
+
+    <!-- Bottom Left Ornament -->
+    <div class="video-ornament-bottom">
+      <img src="/ornament/ornament-video-bottom-left.png" alt="">
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <!-- Video Container -->
+      <div class="video-container">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/QMk6OERJVxQ"
+            title="Uswah Salam Al Azhar Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Portfolio Section -->
+  <section class="portfolio-section">
+    <div class="container" style="max-width: 1280px;">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <div class="section-badge" style="display: inline-block;">
+          Klien Kami
+        </div>
+        <h2 class="section-title">
+          Dipercaya oleh Berbagai Institusi Terkemuka
+        </h2>
+        <p class="section-description">
+          Bergabunglah dengan ratusan yayasan, lembaga pendidikan, dan organisasi yang telah mentransformasi operasional mereka dengan solusi kami
+        </p>
+      </div>
+
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/yam.png" alt="Yayasan Al Azhar Membangun">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/yapi.png" alt="Yayasan Pendidikan Islam">
+          </div>
+          <p class="partner-type">Lembaga Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/ykih.png" alt="Yayasan Kemala Ilmu">
+          </div>
+          <p class="partner-type">Institusi Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/ypu.png" alt="Yayasan Pendidikan Umat">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/laz.png" alt="LAZ Nurul Hayat">
+          </div>
+          <p class="partner-type">Lembaga Amil Zakat</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/yns.png" alt="Yayasan Nurul Salam">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/logo_ypis_.png" alt="Yayasan Pendidikan Islam Singapura">
+          </div>
+          <p class="partner-type">Lembaga Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/logo_ypi_.png" alt="Yayasan Pendidikan Indonesia">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/avicena.png" alt="Avicena Medical Center">
+          </div>
+          <p class="partner-type">Rumah Sakit</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/logo_yayasanikc_.png" alt="Yayasan Ika Cendekia">
+          </div>
+          <p class="partner-type">Lembaga Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/logo_yayasanlampung_.png" alt="Yayasan Lampung">
+          </div>
+          <p class="partner-type">Yayasan Pendidikan</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-logo">
+            <img src="/client/logo_yayasanumulyatama_.png" alt="Yayasan Umulyatama">
+          </div>
+          <p class="partner-type">Lembaga Pendidikan</p>
+        </div>
+      </div>
+
+      <div class="stats-card">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value" style="color: #45ABD5;">500+</div>
+            <div class="stat-label">Educational Institutions</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" style="color: #01193F;">50K+</div>
+            <div class="stat-label">Active Students</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" style="color: #45ABD5;">99.9%</div>
+            <div class="stat-label">System Reliability</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" style="color: #01193F;">24/7</div>
+            <div class="stat-label">Technical Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mitra Kami Section -->
+  <section class="mitra-section">
+    <div class="container" style="max-width: 1280px;">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <div class="section-badge" style="display: inline-block;">
+          Mitra Kami
+        </div>
+        <h2 class="section-title">
+          Mitra Yang Berkerjasama Dengan Kami
+        </h2>
+        <p class="section-description">
+          Dukungan mitra menjadi bagian penting dalam perjalanan kami untuk menciptakan solusi terbaik dan memberikan manfaat nyata.
+        </p>
+      </div>
+
+      <div class="mitra-grid">
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 16.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 17.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 18.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 19.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 20.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 21.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 22.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 24.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 25.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/image 26.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/JKP INDO.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+        <div class="mitra-card">
+          <div class="mitra-logo">
+            <img src="/mitra/imageeee.png" alt="Mitra">
+          </div>
+          <p class="mitra-name">Yayasan Pendidikan Contoh</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <div class="container" style="max-width: 1280px;">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <div class="section-badge" style="display: inline-block;">
+          Testimonial
+        </div>
+        <h2 class="section-title">
+          Apa Kata Mereka?
+        </h2>
+        <p class="section-description">
+          Pendapat mereka menjadi bukti nyata atas kualitas dan layanan yang kami berikan.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <!-- Top Right Ornament -->
+          <div class="testimonial-ornament">
+            <img src="/ornament/top-right-card-testimonial.png" alt="">
+          </div>
+
+          <!-- Quote Icon -->
+          <div class="quote-icon">
+            <img src="/icon/testimonial-quote.svg" alt="">
+          </div>
+
+          <!-- Testimonial Text -->
+          <p class="testimonial-text">
+            The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words.
+          </p>
+
+          <!-- Author Info -->
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="/testimonial/avatar-1.jpg" alt="Juliansyah">
+            </div>
+            <div>
+              <h4 class="author-name">Juliansyah</h4>
+              <p class="author-title">Guru Matematika</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <!-- Top Right Ornament -->
+          <div class="testimonial-ornament">
+            <img src="/ornament/top-right-card-testimonial.png" alt="">
+          </div>
+
+          <!-- Quote Icon -->
+          <div class="quote-icon">
+            <img src="/icon/testimonial-quote.svg" alt="">
+          </div>
+
+          <!-- Testimonial Text -->
+          <p class="testimonial-text">
+            The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words.
+          </p>
+
+          <!-- Author Info -->
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="/testimonial/avatar-2.jpg" alt="Juliansyah">
+            </div>
+            <div>
+              <h4 class="author-name">Juliansyah</h4>
+              <p class="author-title">Guru Matematika</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <!-- Top Right Ornament -->
+          <div class="testimonial-ornament">
+            <img src="/ornament/top-right-card-testimonial.png" alt="">
+          </div>
+
+          <!-- Quote Icon -->
+          <div class="quote-icon">
+            <img src="/icon/testimonial-quote.svg" alt="">
+          </div>
+
+          <!-- Testimonial Text -->
+          <p class="testimonial-text">
+            The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words.
+          </p>
+
+          <!-- Author Info -->
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="/testimonial/avatar-3.jpg" alt="Juliansyah">
+            </div>
+            <div>
+              <h4 class="author-name">Juliansyah</h4>
+              <p class="author-title">Guru Matematika</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Background Ornament -->
+    <div class="footer-ornament">
+      <img src="/ornament/hero-top-right.png" alt="">
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <div class="footer-grid">
+        <!-- Column 1: Logo and Company Info -->
+        <div class="footer-column">
+          <div>
+            <img src="/logo_uswah.png" alt="Uswah" class="footer-logo">
+            <h3 class="footer-tagline">Solusi Digital</h3>
+            <h4 class="footer-subtitle">Layanan Pendidikan</h4>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <img src="/social/facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+              <img src="/social/linkin.svg" alt="LinkedIn">
+            </a>
+            <a href="#" class="social-link">
+              <img src="/social/instagram.svg" alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Produk & Layanan -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <ul class="footer-links">
+            <li><a href="#">Salam App</a></li>
+            <li><a href="#">Salam e-Rapor</a></li>
+            <li><a href="#">Salam Admin</a></li>
+            <li><a href="#">Learning Management System</a></li>
+            <li><a href="#">Ziswaf System</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Portfolio & About -->
+        <div class="footer-column">
+          <h3>PORTOFOLIO</h3>
+          <ul class="footer-links">
+            <li><a href="#">Daftar Sekolah Terdaftar</a></li>
+          </ul>
+
+          <h3 style="margin-top: 2rem;">TENTANG</h3>
+          <ul class="footer-links">
+            <li><a href="#">Tentang USA</a></li>
+            <li><a href="#">Karir USA</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Certifications -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <div class="footer-contact">
+            <p>SalamThe Darmawangsa Square Unit 268 - Jakarta Selatan. DKI Jakarta.</p>
+            <p>uswah@salam-alazhar.id</p>
+            <p>(021) 72786730 - (021) 72786780</p>
+          </div>
+
+          <!-- ISO Certifications -->
+          <div class="iso-certifications">
+            <div class="iso-badge">
+              <img src="/sertification/iso-27001.png" alt="ISO 27001">
+            </div>
+            <div class="iso-badge">
+              <img src="/sertification/iso-9001.png" alt="ISO 9001">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      <p>© 2021. All Right Reserved. Uswah Salam AlAzhar</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll functionality
+    const navbar = document.getElementById('navbar');
+    let isScrolled = false;
+
+    function handleScroll() {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 50 && !isScrolled) {
+        isScrolled = true;
+        navbar.classList.add('scrolled');
+      } else if (scrollY <= 50 && isScrolled) {
+        isScrolled = false;
+        navbar.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    let isMobileMenuOpen = false;
+
+    function toggleMobileMenu() {
+      isMobileMenuOpen = !isMobileMenuOpen;
+
+      if (isMobileMenuOpen) {
+        mobileMenu.classList.add('active');
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'inline-block';
+      } else {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'inline-block';
+        closeIcon.style.display = 'none';
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    mobileMenuClose.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when clicking overlay
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        toggleMobileMenu();
+      }
+    });
+
+    // Close mobile menu when clicking on menu links
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-items a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+  </script>
+</body>
+</html>

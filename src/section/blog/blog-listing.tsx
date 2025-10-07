@@ -192,7 +192,7 @@ export default function BlogListing() {
                 <CardDescription className="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-4">
                   {post.description}
                 </CardDescription>
-                <a href="#" className="text-sm font-semibold text-[#45ABD5] inline-flex items-center gap-2 hover:gap-3 transition-all">
+                <a href={`/blog/${post.id}`} className="text-sm font-semibold text-[#45ABD5] inline-flex items-center gap-2 hover:gap-3 transition-all">
                   Baca Selengkapnya
                   <ChevronRight className="h-4 w-4" />
                 </a>

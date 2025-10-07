@@ -21,11 +21,15 @@ export interface Product {
 
 // Blog-related types
 export interface BlogPost {
+  id: number;
   title: string;
   description: string;
   date: string;
   category: string;
   image: string;
+  author?: string;
+  content?: string;
+  tags?: string[];
 }
 
 // Partner-related types

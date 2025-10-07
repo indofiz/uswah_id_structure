@@ -1,137 +1,94 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { HeroParallax } from "@/components/ui/hero-parallax";
-import { ArrowRight } from "lucide-react";
-
-const products = [
-  {
-    title: "Mobile Application",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "e-Rapor System",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Learning Management System",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "HRIS System",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Academic Management",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "BI Dashboard",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Backoffice System",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "ZISWAF Management",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Yazan System",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Assessment Tools",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1606868306217-dbf5046868d2?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Communication Platform",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Analytics Suite",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Resource Management",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Student Portal",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
-  },
-  {
-    title: "Parent Connect",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&crop=center",
-  },
-];
-
-const CustomHeader = () => {
-  return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <div className="text-center">
-        <Badge variant="outline" className="mb-6 text-sm" style={{borderColor: '#45ABD5', color: '#01193F'}}>
-          Leading Educational Technology Provider
-        </Badge>
-
-        <h1 className="text-4xl md:text-7xl font-bold text-gray-900 mb-6">
-          <span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(135deg, #45ABD5 0%, #01193F 100%)'}}>
-            PT Uswah Salam
-          </span>
-          <br />
-          AlAzhar
-        </h1>
-
-        <p className="max-w-3xl text-lg md:text-xl mt-8 text-gray-600 mx-auto leading-relaxed">
-          Transforming Education Through Innovative Technology Solutions.
-          Empowering educational institutions across Indonesia with cutting-edge systems.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          <Button className="text-lg px-8 py-6 text-white" style={{background: 'linear-gradient(135deg, #45ABD5 0%, #01193F 100%)'}}>
-            Explore Our Solutions
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button variant="outline" className="text-lg px-8 py-6">
-            Watch Demo
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  ArrowRight,
+} from "lucide-react";
 
 export default function Hero2() {
   return (
-    <div className="bg-white">
-      <div style={{ position: 'relative' }}>
-        {/* Replace the default header with our custom one */}
-        <style>{`
-          .hero-parallax-header {
-            display: none !important;
-          }
-        `}</style>
-        <div className="absolute top-0 left-0 w-full z-50">
-          <CustomHeader />
-        </div>
-        <HeroParallax products={products} />
+    <section id="home" className="relative overflow-hidden py-12 sm:py-20 md:py-32 bg-primary-brand">
+      {/* Ornament decorations */}
+      <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-[554px] sm:h-[480px]">
+        <img
+          src="/ornament/hero-bottom-left.png"
+          alt=""
+          className="w-full h-full object-contain"
+        />
       </div>
-    </div>
+      <div className="absolute top-0 right-0 w-48 h-48 sm:w-[496px] sm:h-[472px]">
+        <img
+          src="/ornament/hero-top-right.png"
+          alt=""
+          className="w-full h-full object-contain"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="mb-4  mx-auto sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-yellow-300 bg-yellow-300 rounded-full w-fit text-navy-brand">
+            Perusahaan Jasa Layanan IT Terpercaya
+          </div>
+
+          <h1 className="mb-6 sm:mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight">
+            <span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(135deg, #01193F 0%, #111111 100%)'}}>
+              Transforming Education Through Innovative Technology Solutions
+            </span>
+          </h1>
+
+          <p className="mb-8 sm:mb-10 text-base sm:text-lg max-w-3xl mx-auto px-4 text-white">
+            Empowering educational institutions across Indonesia with cutting-edge technology solutions that streamline operations, enhance learning experiences, and drive institutional growth.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+            <Button className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-5 sm:py-4 md:py-6 bg-white text-navy-brand hover:bg-yellow-300 hover:opacity-100 transition-opacity">
+              Explore Product
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+            </Button>
+            <Button variant="outline" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-5 sm:py-4 md:py-6 text-white border-white bg-transparent hover:bg-white hover:text-gray-900 transition-colors">
+              Services
+            </Button>
+          </div>
+        </div>
+
+        {/* Certifications */}
+        <div className="mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto px-4">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
+            {[
+              {
+                label: "ISO 9001:2015",
+                description: "Quality Management",
+                image: "/sertification/iso-9001.png"
+              },
+              {
+                label: "ISO 27001:2013",
+                description: "Information Security",
+                image: "/sertification/iso-27001.png"
+              }
+            ].map((item, index) => (
+              <Card key={index} className="bg-white border-0 shadow-xs hover:shadow-sm transition-all w-full sm:w-auto sm:max-w-xs flex-1">
+                <CardContent className="p-3 sm:p-4">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="flex-shrink-0">
+                      <img
+                        src={item.image}
+                        alt={item.label}
+                        className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col text-left min-w-0">
+                      <div className="text-sm sm:text-base font-semibold text-gray-900 leading-tight">{item.label}</div>
+                      <div className="text-xs sm:text-sm text-gray-600 leading-tight">{item.description}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
   );
 }

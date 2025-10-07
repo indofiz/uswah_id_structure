@@ -1,5 +1,5 @@
 "use client";
-import Hero1 from "@/section/hero/hero-1";
+
 import CompanyIntro from "@/section/about/company-intro";
 import Services from "@/section/services/services";
 import ProductsServices from "@/section/products/products-services";
@@ -8,6 +8,7 @@ import MitraKami from "@/section/partners/mitra-kami";
 import BlogSection from "@/section/blog/blog-section";
 import Footer from "@/section/footer/footer";
 import Navigation from "@/components/layout/navigation";
+import Hero2 from "@/section/hero/hero-2";
 
 export default function Template2() {
   return (
@@ -16,7 +17,7 @@ export default function Template2() {
       <Navigation />
 
       {/* Hero Section */}
-      <Hero1 />
+      <Hero2 />
 
       {/* Company Introduction */}
       <CompanyIntro />

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masa Depan Pembelajaran Digital di Indonesia - PT USWAH SALAM AL AZHAR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-detail-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="min-h-screen bg-gray-50">
+        <!-- Navigation -->
+        <nav class="sticky top-0 z-50 w-full transition-all duration-300 bg-brand-navy border-b border-navy-dark" id="nav-container">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center">
+                <!-- Left Column - Logo (flex-1) -->
+                <div class="flex-1 flex items-center">
+                    <a href="index.html">
+                        <img src="./logo_uswah.png" alt="PT Uswah Salam AlAzhar" class="h-8 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Middle Column - Navigation Menu (flex-1) -->
+                <div class="flex-1 hidden md:flex justify-center">
+                    <ul class="flex gap-2 list-none navbar-desktop">
+                        <li class="list-none">
+                            <a href="index.html#home" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Beranda</a>
+                        </li>
+                        <li class="nav-menu relative list-none">
+                            <button class="nav-link text-sm font-medium transition-colors bg-transparent text-white hover:text-gray-200 flex items-center gap-1" id="products-trigger">
+                                Produk & Layanan
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="list-none">
+                            <a href="index.html#portfolio" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Portfolio</a>
+                        </li>
+                        <li class="list-none">
+                            <a href="blog.html" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Blog</a>
+                        </li>
+                        <li class="list-none">
+                            <a href="#career" class="nav-link text-sm font-medium transition-colors text-white hover:text-gray-200">Karir</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Column - Contact & Support (flex-1) -->
+                <div class="flex-1 flex items-center justify-end gap-4">
+                    <button class="btn btn-ghost hidden sm:inline-flex bg-transparent hover:bg-transparent transition-colors text-white hover:text-gray-200" id="contact-btn" style="color: white;">
+                        Contact
+                    </button>
+                    <button class="btn hidden sm:flex items-center gap-2.5 text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-xs text-black bg-yellow-300 hover:bg-yellow-500 transition-colors" id="support-btn">
+                        <img src="./icon/support.svg" alt="Support" class="w-4 h-4">
+                        Support
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-ghost md:hidden text-white" id="mobile-menu-btn">
+                        <svg class="icon" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Image Section -->
+        <div class="hero-image-container">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=600&fit=crop&crop=center"
+                 alt="Masa Depan Pembelajaran Digital di Indonesia"
+                 class="hero-image">
+            <div class="hero-gradient"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 main-content-container">
+            <div class="content-grid">
+                <!-- Main Article -->
+                <div class="article-column">
+                    <article class="article-card">
+                        <div class="article-header">
+                            <h1 class="article-title">Masa Depan Pembelajaran Digital di Indonesia</h1>
+
+                            <!-- Meta Information -->
+                            <div class="article-meta">
+                                <div class="meta-item">
+                                    <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    </svg>
+                                    <span>Dr. Ahmad Santoso</span>
+                                </div>
+                                <div class="meta-item">
+                                    <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>15 Maret 2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-content">
+                            <p class="article-paragraph indent">Pendidikan digital telah menjadi bagian integral dari sistem pembelajaran modern di Indonesia. Dengan perkembangan teknologi yang pesat, institusi pendidikan kini memiliki akses ke berbagai alat dan platform yang dapat meningkatkan kualitas pembelajaran secara signifikan. Transformasi ini bukan hanya sekadar penggantian dari metode konvensional ke digital, tetapi merupakan perubahan paradigma dalam cara kita memandang proses belajar-mengajar. Di era digital ini, pembelajaran tidak lagi terbatas pada ruang kelas fisik dan jam pelajaran tertentu. Teknologi memungkinkan siswa untuk belajar kapan saja, di mana saja, dengan kecepatan mereka sendiri. Hal ini membuka peluang baru dalam personalisasi pembelajaran, di mana setiap siswa dapat memiliki jalur pembelajaran yang disesuaikan dengan kebutuhan, minat, dan kemampuan mereka masing-masing.</p>
+
+                            <h2 class="article-heading">Transformasi Digital dalam Pendidikan</h2>
+                            <p class="article-paragraph indent">Teknologi pendidikan tidak hanya mengubah cara guru mengajar, tetapi juga bagaimana siswa belajar dan berinteraksi dengan materi pembelajaran. Platform Learning Management System (LMS) modern memungkinkan pembelajaran yang lebih interaktif, personal, dan dapat diakses dari mana saja dengan koneksi internet. Sistem-sistem ini dilengkapi dengan berbagai fitur canggih seperti video pembelajaran interaktif, simulasi virtual, gamifikasi, dan forum diskusi online yang memfasilitasi kolaborasi antar siswa. Guru juga mendapatkan manfaat dari analytics dashboard yang memberikan insight mendalam tentang progress dan pemahaman setiap siswa secara real-time. Dengan data-data ini, guru dapat mengidentifikasi siswa yang membutuhkan bantuan ekstra atau menyesuaikan metode pengajaran mereka untuk hasil yang lebih optimal. Integrasi dengan berbagai tools seperti video conferencing, digital whiteboard, dan cloud storage membuat ekosistem pembelajaran digital menjadi semakin komprehensif dan seamless.</p>
+
+                            <h3 class="article-subheading">Keuntungan Pembelajaran Digital</h3>
+                            <ul class="article-list">
+                                <li>Akses pembelajaran 24/7 dari berbagai perangkat (smartphone, tablet, laptop)</li>
+                                <li>Materi pembelajaran yang interaktif dan multimedia (video, animasi, simulasi)</li>
+                                <li>Penilaian otomatis dan feedback real-time untuk evaluasi berkelanjutan</li>
+                                <li>Analitik pembelajaran untuk monitoring progress siswa secara detail</li>
+                                <li>Kolaborasi yang lebih baik antara siswa dan guru melalui tools digital</li>
+                                <li>Pengurangan biaya operasional seperti cetak materi dan transportasi</li>
+                                <li>Fleksibilitas waktu dan tempat belajar yang mendukung work-life balance</li>
+                                <li>Akses ke sumber belajar global dan expert dari berbagai negara</li>
+                            </ul>
+
+                            <blockquote class="article-quote">
+                                "Teknologi pendidikan bukan hanya tentang digitalisasi, tetapi tentang menciptakan pengalaman pembelajaran yang lebih baik, lebih efektif, dan lebih inklusif untuk setiap siswa di Indonesia. Dengan pendekatan yang tepat, teknologi dapat menjadi equalizer yang membuka akses pendidikan berkualitas untuk semua."
+                            </blockquote>
+
+                            <h2 class="article-heading">Tantangan dan Solusi dalam Implementasi</h2>
+                            <p class="article-paragraph indent">Meskipun memberikan banyak manfaat, implementasi teknologi pendidikan juga menghadapi berbagai tantangan yang perlu diatasi secara sistematis. Infrastruktur teknologi yang belum merata di seluruh Indonesia menjadi hambatan utama, di mana beberapa daerah masih mengalami keterbatasan akses internet dan perangkat digital. Selain itu, kesenjangan digital literasi antara guru senior dan junior juga menjadi isu yang perlu diperhatikan. Banyak tenaga pendidik yang belum familiar dengan teknologi digital dan membutuhkan pelatihan intensif untuk dapat memanfaatkan platform pembelajaran digital secara maksimal. Di sisi siswa, adaptasi terhadap metode pembelajaran baru juga memerlukan waktu dan bimbingan yang konsisten. Tantangan lainnya meliputi keamanan data, privacy concerns, dan bagaimana memastikan integritas akademik dalam lingkungan pembelajaran online. Namun, dengan strategi yang tepat dan komitmen dari semua stakeholder, tantangan-tantangan ini dapat diatasi secara bertahap.</p>
+
+                            <h3 class="article-subheading">Strategi Implementasi yang Efektif</h3>
+                            <p class="article-paragraph indent">Untuk berhasil mengimplementasikan teknologi pendidikan, institusi perlu memiliki roadmap yang jelas, dukungan dari seluruh stakeholder (manajemen, guru, siswa, dan orang tua), serta komitmen untuk continuous improvement. Pelatihan berkelanjutan untuk guru dan dukungan teknis yang memadai juga sangat penting untuk memastikan adopsi teknologi berjalan lancar. Implementasi sebaiknya dilakukan secara bertahap (phased approach), dimulai dari pilot project di beberapa kelas atau mata pelajaran tertentu sebelum di-roll out ke seluruh institusi. Change management yang baik juga krusial untuk mengelola resistensi terhadap perubahan dan membangun buy-in dari semua pihak. Institusi perlu menyediakan help desk dan technical support yang responsif, serta membuat dokumentasi dan tutorial yang mudah dipahami. Regular evaluation dan feedback gathering akan membantu mengidentifikasi area improvement dan memastikan sistem terus berkembang sesuai kebutuhan pengguna.</p>
+
+                            <h2 class="article-heading">Masa Depan Pendidikan Digital yang Cerah</h2>
+                            <p class="article-paragraph indent">Dengan perkembangan teknologi seperti Artificial Intelligence (AI), Machine Learning, Virtual Reality (VR), Augmented Reality (AR), dan Big Data Analytics, masa depan pendidikan digital di Indonesia sangat menjanjikan dan penuh dengan potensi inovasi. AI-powered tutoring systems akan mampu memberikan pembelajaran yang benar-benar personalized untuk setiap siswa, menyesuaikan pace, konten, dan metode pembelajaran berdasarkan karakteristik individu. VR dan AR akan membawa pengalaman immersive learning yang memungkinkan siswa "mengalami" konsep-konsep abstrak atau mengunjungi lokasi-lokasi yang tidak mungkin dijangkau secara fisik, seperti eksplorasi ruang angkasa atau menjelajahi struktur molekul dalam skala nano. Personalisasi pembelajaran akan semakin canggih dengan algoritma yang dapat memprediksi kesulitan belajar siswa sebelum terjadi dan memberikan intervensi preventif. Gap dalam akses pendidikan dapat diperkecil melalui mobile-first solutions dan offline-capable applications yang memungkinkan pembelajaran tanpa koneksi internet stabil.</p>
+
+                            <p class="article-paragraph indent">Sebagai penyedia solusi teknologi pendidikan terkemuka di Indonesia, kami di PT Uswah ID Structure berkomitmen untuk terus berinovasi dan mendukung institusi pendidikan Indonesia dalam perjalanan transformasi digital mereka. Kami memahami bahwa setiap institusi memiliki kebutuhan dan tantangan yang unik, oleh karena itu kami menawarkan solusi yang customizable dan scalable untuk memenuhi kebutuhan spesifik Anda. Tim expert kami siap memberikan konsultasi, implementasi, training, dan ongoing support untuk memastikan kesuksesan adopsi teknologi pendidikan di institusi Anda. Bersama-sama, mari kita ciptakan ekosistem pendidikan digital Indonesia yang lebih baik, lebih efektif, dan lebih inklusif untuk generasi masa depan. Hubungi kami hari ini untuk diskusi lebih lanjut tentang bagaimana kami dapat membantu mewujudkan visi pendidikan digital Anda.</p>
+
+                            <!-- Tags -->
+                            <div class="article-tags-section">
+                                <div class="tags-header">
+                                    <svg class="tag-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                                    </svg>
+                                    <span class="tags-title">Tags:</span>
+                                </div>
+                                <div class="tags-list">
+                                    <span class="tag-badge">Teknologi</span>
+                                    <span class="tag-badge">Pendidikan</span>
+                                    <span class="tag-badge">Digital</span>
+                                    <span class="tag-badge">Indonesia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Author Info Card -->
+                    <div class="author-card">
+                        <div class="author-content">
+                            <div class="author-avatar">
+                                <svg class="avatar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="author-name">Dr. Ahmad Santoso</h3>
+                                <p class="author-date">15 Maret 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar-column">
+                    <div class="sidebar-sticky">
+                        <!-- Recent Posts -->
+                        <div class="sidebar-card">
+                            <div class="sidebar-card-header">
+                                <h3 class="sidebar-title">Berita Terbaru</h3>
+                            </div>
+                            <div class="sidebar-card-content">
+                                <a href="blog-detail.html" class="recent-post-item">
+                                    <div class="recent-post-image">
+                                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&h=250&fit=crop&crop=center" alt="Recent post">
+                                    </div>
+                                    <div class="recent-post-text">
+                                        <h4 class="recent-post-title">5 Tren Teknologi Pendidikan 2025</h4>
+                                        <p class="recent-post-date">5 Maret 2025</p>
+                                    </div>
+                                </a>
+
+                                <a href="blog-detail.html" class="recent-post-item">
+                                    <div class="recent-post-image">
+                                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center" alt="Recent post">
+                                    </div>
+                                    <div class="recent-post-text">
+                                        <h4 class="recent-post-title">Mengoptimalkan e-Rapor untuk Evaluasi Siswa</h4>
+                                        <p class="recent-post-date">1 Maret 2025</p>
+                                    </div>
+                                </a>
+
+                                <a href="blog-detail.html" class="recent-post-item">
+                                    <div class="recent-post-image">
+                                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop&crop=center" alt="Recent post">
+                                    </div>
+                                    <div class="recent-post-text">
+                                        <h4 class="recent-post-title">Strategi Meningkatkan Engagement Siswa Online</h4>
+                                        <p class="recent-post-date">28 Februari 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="sidebar-card">
+                            <div class="sidebar-card-header">
+                                <h3 class="sidebar-title">Tags Populer</h3>
+                            </div>
+                            <div class="sidebar-card-content">
+                                <div class="popular-tags">
+                                    <a href="#" class="popular-tag">Teknologi</a>
+                                    <a href="#" class="popular-tag">Pendidikan</a>
+                                    <a href="#" class="popular-tag">Digital</a>
+                                    <a href="#" class="popular-tag">LMS</a>
+                                    <a href="#" class="popular-tag">E-Learning</a>
+                                    <a href="#" class="popular-tag">Inovasi</a>
+                                    <a href="#" class="popular-tag">Best Practice</a>
+                                    <a href="#" class="popular-tag">Tutorial</a>
+                                    <a href="#" class="popular-tag">Case Study</a>
+                                    <a href="#" class="popular-tag">Indonesia</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Card -->
+                        <div class="cta-card">
+                            <div class="cta-content">
+                                <h3 class="cta-title">Ingin Tahu Lebih Lanjut?</h3>
+                                <p class="cta-text">
+                                    Hubungi kami untuk konsultasi gratis tentang solusi teknologi pendidikan untuk institusi Anda.
+                                </p>
+                                <a href="#contact" class="cta-button">
+                                    Hubungi Kami
+                                    <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="bg-brand-navy text-white py-12 sm:py-16 relative overflow-hidden" style="margin-top: 4rem;">
+            <!-- Background Ornaments -->
+            <div class="absolute top-0 right-0 w-48 h-48 sm:w-[300px] sm:h-[280px]">
+                <img src="./ornament/hero-top-right.png" alt="" class="w-full h-full object-contain">
+            </div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
+                    <!-- Column 1: Logo and Company Info -->
+                    <div class="space-y-6">
+                        <div>
+                            <img src="./logo_uswah.png" alt="Uswah" class="h-12 w-auto mb-4">
+                            <h3 class="text-xl font-bold mb-2">Solusi Digital</h3>
+                            <h4 class="text-lg font-medium text-gray-300 mb-6">Layanan Pendidikan</h4>
+                        </div>
+
+                        <!-- Social Media Icons -->
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-primary-brand rounded-lg flex items-center justify-center hover:bg-primary-brand/80 transition-colors" style="text-decoration: none;">
+                                <img src="./social/facebook.svg" alt="Facebook" class="w-6 h-6">
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary-brand rounded-lg flex items-center justify-center hover:bg-primary-brand/80 transition-colors" style="text-decoration: none;">
+                                <img src="./social/linkin.svg" alt="LinkedIn" class="w-6 h-6">
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary-brand rounded-lg flex items-center justify-center hover:bg-primary-brand/80 transition-colors" style="text-decoration: none;">
+                                <img src="./social/instagram.svg" alt="Instagram" class="w-6 h-6">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Produk & Layanan -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-6 text-primary-brand">PRODUK & LAYANAN</h3>
+                        <ul class="space-y-3 text-gray-300" style="list-style: none;">
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Salam App</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Salam e-Rapor</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Salam Admin</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Learning Management System</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Ziswaf System</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Portfolio & About -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-6 text-primary-brand">PORTOFOLIO</h3>
+                        <ul class="space-y-3 text-gray-300 mb-8" style="list-style: none;">
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Daftar Sekolah Terdaftar</a></li>
+                        </ul>
+
+                        <h3 class="text-lg font-semibold mb-6 text-primary-brand">TENTANG</h3>
+                        <ul class="space-y-3 text-gray-300" style="list-style: none;">
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Tentang USA</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" style="text-decoration: none; color: white;">Karir USA</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact & Certifications -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-6 text-primary-brand">KONTAK</h3>
+                        <div class="space-y-4 text-gray-300">
+                            <p class="text-sm leading-relaxed">
+                                The Darmawangsa Square Unit 268 - Jakarta Selatan. DKI Jakarta.
+                            </p>
+                            <p class="text-sm">uswah@salam-alazhar.id</p>
+                            <p class="text-sm">(021) 72786730 - (021) 72786780</p>
+                        </div>
+
+                        <!-- ISO Certifications -->
+                        <div class="flex space-x-4 mt-8">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                <img src="./sertification/iso-27001.png" alt="ISO 27001" class="w-12 h-12 object-contain">
+                            </div>
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                <img src="./sertification/iso-9001.png" alt="ISO 9001" class="w-12 h-12 object-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="bg-brand-navy pt-6 sm:pt-8 text-center" style="border-top: 1px solid #092D66;">
+                <p class="text-sm text-gray-300">
+                    © 2021. All Right Reserved. Uswah Salam AlAzhar
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

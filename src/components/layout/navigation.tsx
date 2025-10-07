@@ -32,13 +32,13 @@ export default function Navigation() {
     <nav className={`sticky top-0 z-50 w-full transition-all duration-300 ${
       isScrolled
         ? 'bg-white border-b border-gray-200 shadow-sm'
-        : 'bg-brand-navy border-b border-[#1c3660]'
+        : 'bg-primary-brand border-b border-[#3da3ce]'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center">
         {/* Left Column - Logo (flex-1) */}
         <div className="flex-1 flex items-center">
           <img
-            src="/logo_uswah.png"
+            src={isScrolled ? "/logo_uswah.png" : "/logo_uswah_white_all.png"}
             alt="PT Uswah Salam AlAzhar"
             className="h-8 w-auto object-contain"
           />

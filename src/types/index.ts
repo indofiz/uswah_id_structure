@@ -58,6 +58,4 @@ export interface DataProvider<T> {
   getData(): T[];
 }
 
-export interface ProductDataProvider extends DataProvider<Product> {}
-export interface BlogDataProvider extends DataProvider<BlogPost> {}
-export interface PartnerDataProvider extends DataProvider<Partner> {}
+// You can use DataProvider<Product>, DataProvider<BlogPost>, and DataProvider<Partner> directly instead of empty interfaces.

@@ -3,9 +3,7 @@ import type {
   Product,
   BlogPost,
   Partner,
-  ProductDataProvider,
-  BlogDataProvider,
-  PartnerDataProvider
+  DataProvider
 } from "@/types";
 import {
   Smartphone,
@@ -19,7 +17,7 @@ import {
 } from "lucide-react";
 
 // Product data provider
-export class ProductsDataProvider implements ProductDataProvider {
+export class ProductsDataProvider implements DataProvider<Product> {
   getData(): Product[] {
     return [
       {
@@ -153,10 +151,11 @@ export class ProductsDataProvider implements ProductDataProvider {
 }
 
 // Blog data provider
-export class BlogDataProviderImpl implements BlogDataProvider {
+export class BlogDataProviderImpl implements DataProvider<BlogPost> {
   getData(): BlogPost[] {
     return [
       {
+        id: 1,
         title: "The Future of Digital Learning in Indonesia",
         description: "Exploring how advanced educational technologies are transforming the learning landscape across Indonesian institutions.",
         date: "March 15, 2024",
@@ -164,6 +163,7 @@ export class BlogDataProviderImpl implements BlogDataProvider {
         image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center"
       },
       {
+        id: 2,
         title: "Advanced Analytics Dashboard Features Released",
         description: "Discover the powerful new analytics tools that help educators make data-driven decisions for better outcomes.",
         date: "March 10, 2024",
@@ -171,6 +171,7 @@ export class BlogDataProviderImpl implements BlogDataProvider {
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
       },
       {
+        id: 3,
         title: "Case Study: 300% Increase in Student Engagement",
         description: "How SMA Jakarta leveraged our LMS solution to achieve remarkable improvements in student participation.",
         date: "March 5, 2024",
@@ -182,7 +183,7 @@ export class BlogDataProviderImpl implements BlogDataProvider {
 }
 
 // Partner data provider
-export class PartnersDataProvider implements PartnerDataProvider {
+export class PartnersDataProvider implements DataProvider<Partner> {
   getData(): Partner[] {
     return [
       { name: "SDN Jakarta", logo: "SDN", type: "Elementary Schools" },
@@ -197,15 +198,15 @@ export class PartnersDataProvider implements PartnerDataProvider {
 
 // Factory pattern for creating data providers (Dependency Inversion)
 export class DataProviderFactory {
-  static createProductsProvider(): ProductDataProvider {
+  static createProductsProvider(): DataProvider<Product> {
     return new ProductsDataProvider();
   }
 
-  static createBlogProvider(): BlogDataProvider {
+  static createBlogProvider(): DataProvider<BlogPost> {
     return new BlogDataProviderImpl();
   }
 
-  static createPartnersProvider(): PartnerDataProvider {
+  static createPartnersProvider(): DataProvider<Partner> {
     return new PartnersDataProvider();
   }
 }

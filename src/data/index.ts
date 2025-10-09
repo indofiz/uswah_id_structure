@@ -3,7 +3,8 @@ import type {
   Product,
   BlogPost,
   Partner,
-  DataProvider
+  DataProvider,
+  ProductDetail
 } from "@/types";
 import {
   Smartphone,
@@ -13,7 +14,18 @@ import {
   Building2,
   UserCheck,
   Wallet,
-  PieChart
+  PieChart,
+  CreditCard,
+  Bell,
+  Users,
+  BookOpen,
+  Gift,
+  TrendingUp,
+  BarChart3,
+  Shield,
+  Zap,
+  Apple,
+  Bot
 } from "lucide-react";
 
 // Product data provider
@@ -196,6 +208,119 @@ export class PartnersDataProvider implements DataProvider<Partner> {
   }
 }
 
+// Product Detail data provider
+export class SalamMobileDataProvider {
+  getData(): ProductDetail {
+    return {
+      id: "salam-mobile",
+      name: "Salam Mobile",
+      tagline: "Transformasi Digital untuk Ekosistem Pendidikan Modern",
+      description: "Aplikasi berbasis mobile yang memudahkan para peserta didik dan juga orang tua peserta didik dalam mengelola setiap aktifitas pendidikan dengan mudah, cepat, dan terintegrasi.",
+      heroImage: "/products/salam-mobile-hero.png",
+      features: [
+        {
+          icon: UserCheck,
+          title: "PPDB Online",
+          description: "Pendaftaran peserta didik baru secara digital dan terintegrasi dengan sistem pembayaran"
+        },
+        {
+          icon: CreditCard,
+          title: "Pembayaran Langsung",
+          description: "Pembayaran langsung ke rekening yayasan dengan koneksi host-to-host bank"
+        },
+        {
+          icon: BookOpen,
+          title: "Informasi Akademik",
+          description: "Update informasi akademik real-time untuk siswa dan orang tua"
+        },
+        {
+          icon: Bell,
+          title: "Notifikasi & Pesan",
+          description: "Sistem notifikasi via SMS dan email untuk komunikasi efektif"
+        },
+        {
+          icon: Building2,
+          title: "Informasi Sekolah",
+          description: "Tampilan informasi sekolah yang lengkap dan mudah diakses"
+        },
+        {
+          icon: Gift,
+          title: "Program Loyalitas",
+          description: "Program loyalitas untuk meningkatkan engagement siswa dan orang tua"
+        }
+      ],
+      benefits: {
+        users: [
+          {
+            icon: Zap,
+            title: "Pembayaran Mudah",
+            description: "Bayar biaya sekolah kapan saja, dimana saja dengan berbagai metode pembayaran",
+            audience: "user"
+          },
+          {
+            icon: BarChart3,
+            title: "Riwayat Pembayaran",
+            description: "Lihat dan download riwayat pembayaran lengkap dengan bukti transaksi",
+            audience: "user"
+          },
+          {
+            icon: FileText,
+            title: "Registrasi Digital",
+            description: "Daftar sekolah baru secara online tanpa perlu datang ke lokasi",
+            audience: "user"
+          },
+          {
+            icon: Users,
+            title: "Monitoring Orang Tua",
+            description: "Pantau perkembangan akademik anak secara real-time dari smartphone",
+            audience: "user"
+          }
+        ],
+        institutions: [
+          {
+            icon: TrendingUp,
+            title: "Efektivitas Personil",
+            description: "Meningkatkan efektivitas personil dengan otomasi proses administrasi",
+            audience: "institution"
+          },
+          {
+            icon: Shield,
+            title: "Pelacakan Finansial",
+            description: "Pelacakan finansial langsung dengan laporan yang transparan dan akurat",
+            audience: "institution"
+          },
+          {
+            icon: PieChart,
+            title: "Dukungan Keputusan",
+            description: "Dashboard analytics untuk pengambilan keputusan berbasis data",
+            audience: "institution"
+          },
+          {
+            icon: GraduationCap,
+            title: "Kualitas Pendidikan",
+            description: "Peningkatan kualitas pendidikan digital dengan sistem terintegrasi",
+            audience: "institution"
+          }
+        ]
+      },
+      platforms: [
+        {
+          name: "iOS",
+          icon: Apple,
+          available: true
+        },
+        {
+          name: "Android",
+          icon: Bot,
+          available: true
+        }
+      ],
+      ctaText: "Mulai Transformasi Digital",
+      ctaLink: "mailto:uswah@salam-alazhar.id"
+    };
+  }
+}
+
 // Factory pattern for creating data providers (Dependency Inversion)
 export class DataProviderFactory {
   static createProductsProvider(): DataProvider<Product> {
@@ -208,5 +333,9 @@ export class DataProviderFactory {
 
   static createPartnersProvider(): DataProvider<Partner> {
     return new PartnersDataProvider();
+  }
+
+  static createSalamMobileProvider(): SalamMobileDataProvider {
+    return new SalamMobileDataProvider();
   }
 }

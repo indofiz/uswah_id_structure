@@ -53,6 +53,40 @@ export interface NavigationProps {
   companyShortName: string;
 }
 
+// Product Detail types
+export interface ProductFeature {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+export interface ProductBenefit {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  audience: "user" | "institution";
+}
+
+export interface ProductDetail {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  heroImage: string;
+  features: ProductFeature[];
+  benefits: {
+    users: ProductBenefit[];
+    institutions: ProductBenefit[];
+  };
+  platforms: {
+    name: string;
+    icon: LucideIcon;
+    available: boolean;
+  }[];
+  ctaText: string;
+  ctaLink: string;
+}
+
 // Data provider interfaces (Dependency Inversion Principle)
 export interface DataProvider<T> {
   getData(): T[];

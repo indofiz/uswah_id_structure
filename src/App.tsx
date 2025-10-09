@@ -5,6 +5,7 @@ import BlogDetail from "./template/blog-detail";
 import Portfolio from "./template/portfolio";
 import Karir from "./template/karir";
 import TentangPage from "./template/tentang";
+import SalamMobilePage from "./template/salam-mobile-page";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/blog/:id" element={<BlogDetail />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/karir" element={<Karir />} />
+      <Route path="/product/salam-mobile" element={<SalamMobilePage />} />
     </Routes>
   )
 }

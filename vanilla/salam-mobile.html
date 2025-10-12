@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salam Mobile - PT Uswah Salam AlAzhar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="salam-mobile-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <img src="./logo_uswah.png" alt="PT Uswah Salam AlAzhar">
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="nav-menu">
+        <a href="index.html">Beranda</a>
+        <a href="index.html#mobile">Produk & Layanan</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="blog.html">Blog</a>
+        <a href="karir.html">Karir</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-contact">Contact</a>
+        <a href="#" class="btn-support">
+          <img src="./icon/support.svg" alt="Support">
+          Support
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <svg class="icon-svg" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="icon-svg" id="close-icon" style="display: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close">
+            <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-menu-items">
+          <a href="index.html">Beranda</a>
+          <a href="index.html#mobile">Produk & Layanan</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="tentang.html">Tentang</a>
+          <a href="blog.html">Blog</a>
+          <a href="karir.html">Karir</a>
+          <div class="mobile-menu-actions">
+            <a href="#contact" class="mobile-btn-contact">Contact</a>
+            <a href="#" class="mobile-btn-support">
+              <img src="./icon/support.svg" alt="Support">
+              Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Hero Section -->
+  <section class="product-hero">
+    <!-- Grid background -->
+    <div class="grid-background">
+      <img src="../public/grid-bg.png" alt="" />
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <div class="product-hero-grid">
+        <!-- Left Content -->
+        <div class="product-hero-content">
+          <div class="product-badge">
+            Salam Mobile
+          </div>
+          <h1 class="product-title">Transformasi Digital untuk Ekosistem Pendidikan Modern</h1>
+          <p class="product-description">
+            Aplikasi berbasis mobile yang memudahkan para peserta didik dan juga orang tua peserta didik dalam mengelola setiap aktifitas pendidikan dengan mudah, cepat, dan terintegrasi.
+          </p>
+
+          <div class="hero-actions">
+            <a href="mailto:uswah@salam-alazhar.id" class="cta-button">
+              Mulai Transformasi Digital
+              <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+
+            <!-- Platform Badges -->
+            <div class="platform-badges">
+              <div class="platform-badge">
+                <svg class="platform-icon" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                <span>iOS</span>
+              </div>
+              <div class="platform-badge">
+                <svg class="platform-icon" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.523 15.341c-.108-.235-.264-.45-.461-.619a30.09 30.09 0 0 0-2.188-1.738l-.133-.1-.095-.072-.058-.045c-.207-.159-.344-.28-.41-.367-.064-.085-.096-.206-.096-.363 0-.156.053-.339.157-.55.104-.21.25-.445.435-.703l.139-.194a42.64 42.64 0 0 0 1.024-1.498c.333-.525.583-.975.752-1.352.17-.376.254-.698.254-.968 0-.446-.116-.843-.35-1.19-.233-.348-.558-.62-.974-.82-.416-.198-.89-.297-1.422-.297-.54 0-1.02.096-1.44.288-.42.192-.75.458-.99.797-.24.34-.36.725-.36 1.154 0 .43.12.815.36 1.155.24.34.57.605.99.797.42.192.9.288 1.44.288.22 0 .43-.025.63-.073.2-.048.38-.116.54-.203a30.5 30.5 0 0 1-.54.742c-.223.302-.457.61-.703.924l-.37.474a3.14 3.14 0 0 0-.35.524c-.095.187-.143.398-.143.634 0 .316.074.617.22.906.147.288.36.54.637.753.278.214.61.38.998.502.387.12.82.181 1.297.181.477 0 .91-.061 1.297-.181.388-.121.72-.288.998-.502.277-.213.49-.465.637-.753.146-.289.22-.59.22-.906 0-.316-.074-.617-.22-.906z"/>
+                </svg>
+                <span>Android</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="product-hero-image">
+          <!-- Glow effect -->
+          <div class="glow-effect"></div>
+
+          <img src="../public/product_mock/illust-mobile.svg" alt="Salam Mobile" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+          Fitur Produk
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+          Fitur Unggulan Salam Mobile
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+          Solusi lengkap untuk manajemen pendidikan modern dengan berbagai fitur terintegrasi
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">PPDB Online</h3>
+          <p class="feature-description">
+            Pendaftaran peserta didik baru secara digital dan terintegrasi dengan sistem pembayaran
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Pembayaran Langsung</h3>
+          <p class="feature-description">
+            Pembayaran langsung ke rekening yayasan dengan koneksi host-to-host bank
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Informasi Akademik</h3>
+          <p class="feature-description">
+            Update informasi akademik real-time untuk siswa dan orang tua
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Notifikasi & Pesan</h3>
+          <p class="feature-description">
+            Sistem notifikasi via SMS dan email untuk komunikasi efektif
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Informasi Sekolah</h3>
+          <p class="feature-description">
+            Tampilan informasi sekolah yang lengkap dan mudah diakses
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Program Loyalitas</h3>
+          <p class="feature-description">
+            Program loyalitas untuk meningkatkan engagement siswa dan orang tua
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Benefits Section -->
+  <section class="user-benefits-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+          Untuk Pengguna
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+          Kemudahan untuk Siswa & Orang Tua
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+          Akses mudah ke informasi pendidikan dan pembayaran dalam satu aplikasi
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Pembayaran Mudah</h3>
+          <p class="benefit-description">Bayar biaya sekolah kapan saja, dimana saja dengan berbagai metode pembayaran</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Riwayat Pembayaran</h3>
+          <p class="benefit-description">Lihat dan download riwayat pembayaran lengkap dengan bukti transaksi</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Registrasi Digital</h3>
+          <p class="benefit-description">Daftar sekolah baru secara online tanpa perlu datang ke lokasi</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Monitoring Orang Tua</h3>
+          <p class="benefit-description">Pantau perkembangan akademik anak secara real-time dari smartphone</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institution Benefits Section -->
+  <section class="institution-benefits-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+          Untuk Institusi
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
+          Efisiensi untuk Manajemen Sekolah
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
+          Tingkatkan efisiensi operasional dengan sistem terintegrasi dan transparan
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Efektivitas Personil</h3>
+          <p class="benefit-description">Meningkatkan efektivitas personil dengan otomasi proses administrasi</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Pelacakan Finansial</h3>
+          <p class="benefit-description">Pelacakan finansial langsung dengan laporan yang transparan dan akurat</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Dukungan Keputusan</h3>
+          <p class="benefit-description">Dashboard analytics untuk pengambilan keputusan berbasis data</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+              <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Kualitas Pendidikan</h3>
+          <p class="benefit-description">Peningkatan kualitas pendidikan digital dengan sistem terintegrasi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="cta-main-card">
+        <h2 class="cta-title">Siap Memulai Transformasi Digital?</h2>
+        <p class="cta-description">
+          Hubungi kami untuk konsultasi gratis dan demo Salam Mobile. Tim kami siap membantu institusi Anda mencapai excellence dalam pendidikan digital.
+        </p>
+        <a href="mailto:uswah@salam-alazhar.id" class="cta-button-large">
+          Mulai Transformasi Digital
+          <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <p class="contact-label">Email</p>
+          <p class="contact-value">uswah@salam-alazhar.id</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <p class="contact-label">Telepon</p>
+          <p class="contact-value">(021) 72786730</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <p class="contact-label">Lokasi</p>
+          <p class="contact-value">Jakarta Selatan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Background Ornament -->
+    <div class="footer-ornament">
+      <img src="./ornament/hero-top-right.png" alt="">
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <div class="footer-grid">
+        <!-- Column 1: Logo and Company Info -->
+        <div class="footer-column">
+          <div>
+            <img src="./logo_uswah.png" alt="Uswah" class="footer-logo">
+            <h3 class="footer-tagline">Solusi Digital</h3>
+            <h4 class="footer-subtitle">Layanan Pendidikan</h4>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <img src="./social/facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./social/linkin.svg" alt="LinkedIn">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./social/instagram.svg" alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Produk & Layanan -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <ul class="footer-links">
+            <li><a href="#">Salam App</a></li>
+            <li><a href="#">Salam e-Rapor</a></li>
+            <li><a href="#">Salam Admin</a></li>
+            <li><a href="#">Learning Management System</a></li>
+            <li><a href="#">Ziswaf System</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Portfolio & About -->
+        <div class="footer-column">
+          <h3>PORTOFOLIO</h3>
+          <ul class="footer-links">
+            <li><a href="#">Daftar Sekolah Terdaftar</a></li>
+          </ul>
+
+          <h3 style="margin-top: 2rem;">TENTANG</h3>
+          <ul class="footer-links">
+            <li><a href="#">Tentang USA</a></li>
+            <li><a href="#">Karir USA</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Certifications -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <div class="footer-contact">
+            <p>SalamThe Darmawangsa Square Unit 268 - Jakarta Selatan. DKI Jakarta.</p>
+            <p>uswah@salam-alazhar.id</p>
+            <p>(021) 72786730 - (021) 72786780</p>
+          </div>
+
+          <!-- ISO Certifications -->
+          <div class="iso-certifications">
+            <div class="iso-badge">
+              <img src="./sertification/iso-27001.png" alt="ISO 27001">
+            </div>
+            <div class="iso-badge">
+              <img src="./sertification/iso-9001.png" alt="ISO 9001">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      <p>© 2021. All Right Reserved. Uswah Salam AlAzhar</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll functionality
+    const navbar = document.getElementById('navbar');
+    let isScrolled = false;
+
+    function handleScroll() {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 50 && !isScrolled) {
+        isScrolled = true;
+        navbar.classList.add('scrolled');
+      } else if (scrollY <= 50 && isScrolled) {
+        isScrolled = false;
+        navbar.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    let isMobileMenuOpen = false;
+
+    function toggleMobileMenu() {
+      isMobileMenuOpen = !isMobileMenuOpen;
+
+      if (isMobileMenuOpen) {
+        mobileMenu.classList.add('active');
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'inline-block';
+      } else {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'inline-block';
+        closeIcon.style.display = 'none';
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    mobileMenuClose.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when clicking overlay
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        toggleMobileMenu();
+      }
+    });
+
+    // Close mobile menu when clicking on menu links
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-items a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+  </script>
+</body>
+</html>

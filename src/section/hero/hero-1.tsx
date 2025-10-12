@@ -30,21 +30,21 @@ export default function Hero1() {
             Perusahaan Jasa Layanan IT Terpercaya
           </div>
 
-          <h1 className="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
-            <span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(135deg, #9CDBF5 0%, #308AB0 100%)'}}>
+          <h1 className="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white">
+            <span>
               PT USWAH SALAM
             </span>
             <br />
-            <span className="text-white">
+            <span>
               AL AZHAR
             </span>
           </h1>
 
-          <p className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl text-gray-200">
+          <p className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl text-white">
             Transforming Education Through Innovative Technology Solutions
           </p>
 
-          <p className="mb-8 sm:mb-10 text-base sm:text-lg max-w-3xl mx-auto px-4" style={{color: '#93B4E7'}}>
+          <p className="mb-8 sm:mb-10 text-base sm:text-lg max-w-3xl mx-auto px-4 text-white">
             Empowering educational institutions across Indonesia with cutting-edge technology solutions that streamline operations, enhance learning experiences, and drive institutional growth.
           </p>
 
@@ -74,7 +74,7 @@ export default function Hero1() {
                 image: "/sertification/iso-27001.png"
               }
             ].map((item, index) => (
-              <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto sm:max-w-xs flex-1">
+              <Card key={index} className="bg-transparent border-0 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto sm:max-w-xs flex-1">
                 <CardContent className="p-3 sm:p-4">
                   <div className="flex items-center gap-3 sm:gap-4">
                     <div className="flex-shrink-0">
@@ -85,8 +85,8 @@ export default function Hero1() {
                       />
                     </div>
                     <div className="flex flex-col text-left min-w-0">
-                      <div className="text-sm sm:text-base font-semibold text-gray-900 leading-tight">{item.label}</div>
-                      <div className="text-xs sm:text-sm text-gray-600 leading-tight">{item.description}</div>
+                      <div className="text-sm sm:text-base font-semibold text-white leading-tight">{item.label}</div>
+                      <div className="text-xs sm:text-sm text-white leading-tight">{item.description}</div>
                     </div>
                   </div>
                 </CardContent>

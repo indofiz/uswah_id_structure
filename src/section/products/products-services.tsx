@@ -7,32 +7,38 @@ export default function ProductsServices() {
     {
       title: "Mobile Application",
       description: "Native mobile apps for iOS and Android with seamless user experience and offline capabilities.",
-      image: "/product/image 4-1.png"
+      image: "/product/image 4-1.png",
+      link: "/product/salam-mobile"
     },
     {
       title: "e-Rapor System",
       description: "Digital report card system with automated grading, progress tracking, and parent communication.",
-      image: "/product/image 4-2.png"
+      image: "/product/image 4-2.png",
+      link: "/e-rapor"
     },
     {
       title: "Backoffice System",
       description: "Comprehensive administrative platform for managing operations, finances, and institutional workflows.",
-      image: "/product/image 4-3.png"
+      image: "/product/image 4-3.png",
+      link: "/salam-admin"
     },
     {
       title: "Learning Management System",
       description: "Advanced LMS with interactive content delivery, assessment tools, and learning analytics.",
-      image: "/product/image 4-4.png"
+      image: "/product/image 4-4.png",
+      link: "/lms-moodle"
     },
     {
       title: "Yazan System",
       description: "Digital writing and documentation platform with collaborative editing and version control.",
-      image: "/product/image 4-5.png"
+      image: "/product/image 4-5.png",
+      link: "/lms-yazan"
     },
     {
       title: "AMS - Academic Management",
       description: "Complete academic management solution covering curriculum, scheduling, and student lifecycle management.",
-      image: "/product/image 4-6.png"
+      image: "/product/image 4-6.png",
+      link: "/ams"
     },
     {
       title: "HRIS - Human Resources",
@@ -42,12 +48,14 @@ export default function ProductsServices() {
     {
       title: "ZISWAF Management",
       description: "Comprehensive system for managing Zakat, Infaq, Sedekah, and Wakaf with transparency and accountability.",
-      image: "/product/image 4-8.png"
+      image: "/product/image 4-8.png",
+      link: "/ziswaf"
     },
     {
       title: "BI Dashboard",
       description: "Business Intelligence dashboard with real-time analytics, reporting, and data visualization tools.",
-      image: "/product/image 4.png"
+      image: "/product/image 4.png",
+      link: "/bi-dashboard"
     }
   ];
 
@@ -97,14 +105,27 @@ export default function ProductsServices() {
                 </CardDescription>
 
                 {/* Lihat Detail Button */}
-                <Button variant="ghost" className="p-0 h-auto w-full text-primary-brand hover:text-primary-brand/80 hover:bg-transparent flex justify-between gap-2">
-                  <span className="font-medium flex-1 text-left">Lihat Detail</span>
-                  <img
-                    src="/icon/arrow-right-blue.svg"
-                    alt=""
-                    className="h-4 w-4"
-                  />
-                </Button>
+                {product.link ? (
+                  <a href={product.link}>
+                    <Button variant="ghost" className="p-0 h-auto w-full text-primary-brand hover:text-primary-brand/80 hover:bg-transparent flex justify-between gap-2">
+                      <span className="font-medium flex-1 text-left">Lihat Detail</span>
+                      <img
+                        src="/icon/arrow-right-blue.svg"
+                        alt=""
+                        className="h-4 w-4"
+                      />
+                    </Button>
+                  </a>
+                ) : (
+                  <Button variant="ghost" className="p-0 h-auto w-full text-primary-brand hover:text-primary-brand/80 hover:bg-transparent flex justify-between gap-2">
+                    <span className="font-medium flex-1 text-left">Lihat Detail</span>
+                    <img
+                      src="/icon/arrow-right-blue.svg"
+                      alt=""
+                      className="h-4 w-4"
+                    />
+                  </Button>
+                )}
               </div>
             </Card>
           ))}

@@ -8,30 +8,23 @@ import {
 export default function Hero2() {
   return (
     <section id="home" className="relative overflow-hidden py-12 sm:py-20 md:py-32 bg-primary-brand">
-      {/* Ornament decorations */}
-      <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-[554px] sm:h-[480px]">
+      {/* Grid background */}
+      <div className="absolute inset-0 w-full h-full">
         <img
-          src="/ornament/hero-bottom-left.png"
+          src="/grid-bg.png"
           alt=""
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <div className="absolute top-0 right-0 w-48 h-48 sm:w-[496px] sm:h-[472px]">
-        <img
-          src="/ornament/hero-top-right.png"
-          alt=""
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover opacity-100"
         />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4  mx-auto sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-yellow-300 bg-yellow-300 rounded-full w-fit text-navy-brand">
+          <div className="mb-4  mx-auto sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-yellow-300 bg-yellow-300 rounded-full w-fit text-brand-navy font-semibold">
             Perusahaan Jasa Layanan IT Terpercaya
           </div>
 
-          <h1 className="mb-6 sm:mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight">
-            <span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(135deg, #01193F 0%, #111111 100%)'}}>
+          <h1 className="mb-6 sm:mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white">
+            <span>
               Transforming Education Through Innovative Technology Solutions
             </span>
           </h1>
@@ -41,11 +34,11 @@ export default function Hero2() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-            <Button className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-5 sm:py-4 md:py-6 bg-white text-navy-brand hover:bg-yellow-300 hover:opacity-100 transition-opacity">
+            <Button className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-5 sm:py-4 md:py-6 bg-brand-navy text-white hover:bg-yellow-300 hover:opacity-100 hover:text-brand-navy transition-all font-semibold">
               Explore Product
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
-            <Button variant="outline" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-5 sm:py-4 md:py-6 text-white border-white bg-transparent hover:bg-white hover:text-gray-900 transition-colors">
+            <Button variant="outline" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-5 sm:py-4 md:py-6 text-white border-white bg-transparent hover:bg-white hover:text-gray-900 transition-colors font-semibold">
               Services
             </Button>
           </div>
@@ -66,7 +59,7 @@ export default function Hero2() {
                 image: "/sertification/iso-27001.png"
               }
             ].map((item, index) => (
-              <Card key={index} className="bg-white border-0 shadow-xs hover:shadow-sm transition-all w-full sm:w-auto sm:max-w-xs flex-1">
+              <Card key={index} className="bg-white/20 border border-white/40 shadow-xs hover:shadow-sm transition-all w-full sm:w-auto sm:max-w-xs flex-1">
                 <CardContent className="p-3 sm:p-4">
                   <div className="flex items-center gap-3 sm:gap-4">
                     <div className="flex-shrink-0">
@@ -77,8 +70,8 @@ export default function Hero2() {
                       />
                     </div>
                     <div className="flex flex-col text-left min-w-0">
-                      <div className="text-sm sm:text-base font-semibold text-gray-900 leading-tight">{item.label}</div>
-                      <div className="text-xs sm:text-sm text-gray-600 leading-tight">{item.description}</div>
+                      <div className="text-sm sm:text-base font-semibold text-white leading-tight">{item.label}</div>
+                      <div className="text-xs sm:text-sm text-white leading-tight">{item.description}</div>
                     </div>
                   </div>
                 </CardContent>

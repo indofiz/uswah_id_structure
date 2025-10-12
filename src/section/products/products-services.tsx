@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export default function ProductsServices() {
   const products = [
@@ -8,7 +9,7 @@ export default function ProductsServices() {
       title: "Mobile Application",
       description: "Native mobile apps for iOS and Android with seamless user experience and offline capabilities.",
       image: "/product/image 4-1.png",
-      link: "/product/salam-mobile"
+      link: "/salam-mobile"
     },
     {
       title: "e-Rapor System",
@@ -106,7 +107,7 @@ export default function ProductsServices() {
 
                 {/* Lihat Detail Button */}
                 {product.link ? (
-                  <a href={product.link}>
+                  <Link to={product.link}>
                     <Button variant="ghost" className="p-0 h-auto w-full text-primary-brand hover:text-primary-brand/80 hover:bg-transparent flex justify-between gap-2">
                       <span className="font-medium flex-1 text-left">Lihat Detail</span>
                       <img
@@ -115,7 +116,7 @@ export default function ProductsServices() {
                         className="h-4 w-4"
                       />
                     </Button>
-                  </a>
+                  </Link>
                 ) : (
                   <Button variant="ghost" className="p-0 h-auto w-full text-primary-brand hover:text-primary-brand/80 hover:bg-transparent flex justify-between gap-2">
                     <span className="font-medium flex-1 text-left">Lihat Detail</span>

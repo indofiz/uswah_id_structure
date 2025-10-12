@@ -23,7 +23,7 @@ export default function App() {
       <Route path="/blog/:id" element={<BlogDetail />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/karir" element={<Karir />} />
-      <Route path="/product/salam-mobile" element={<SalamMobilePage />} />
+      <Route path="/salam-mobile" element={<SalamMobilePage />} />
       <Route path="/salam-admin" element={<SalamAdminPage />} />
       <Route path="/e-rapor" element={<ERaporPage />} />
       <Route path="/lms-moodle" element={<LMSMoodlePage />} />

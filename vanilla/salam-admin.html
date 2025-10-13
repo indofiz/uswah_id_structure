@@ -6,6 +6,12 @@
   <title>Salam Admin - PT Uswah Salam AlAzhar</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="salam-mobile-styles.css">
+  <style>
+    /* Override hero background for salam-admin to match primary brand */
+    .product-hero {
+      background: #249BCD;
+    }
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -16,13 +22,13 @@
     <div class="nav-container">
       <!-- Logo -->
       <div class="nav-logo">
-        <img src="./logo_uswah.png" alt="PT Uswah Salam AlAzhar">
+        <img id="navbar-logo" src="./logo_uswah_white_all.png" alt="PT Uswah Salam AlAzhar">
       </div>
 
       <!-- Desktop Menu -->
       <div class="nav-menu">
         <a href="index.html">Beranda</a>
-        <a href="index.html#mobile">Produk & Layanan</a>
+        <a href="index.html#mobile">Produk</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="tentang.html">Tentang</a>
         <a href="blog.html">Blog</a>
@@ -107,7 +113,7 @@
             <div class="platform-badges">
               <div class="platform-badge">
                 <svg class="platform-icon" fill="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
                 <span>Web</span>
               </div>
@@ -130,14 +136,11 @@
   <section class="features-section">
     <div class="container" style="max-width: 1280px;">
       <div class="text-center mb-12 sm:mb-16">
-        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
-          Fitur Produk
-        </div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
-          Fitur Unggulan Salam Admin
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4 text-brand-navy">
+          Fitur Unggulan
         </h2>
-        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
-          Solusi administrasi terpadu untuk pengelolaan institusi pendidikan secara efektif
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Solusi lengkap untuk manajemen pendidikan modern dengan berbagai fitur terintegrasi
         </p>
       </div>
 
@@ -200,19 +203,19 @@
   <!-- User Benefits Section -->
   <section class="user-benefits-section">
     <div class="container" style="max-width: 1280px;">
-      <div class="text-center mb-12 sm:mb-16">
-        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+      <div class="text-center mb-12">
+        <div class="mb-3 mx-auto text-sm px-4 py-2 border rounded-full w-fit font-medium" style="border-color: #0ea5e9; background-color: #f0f9ff; color: #0369a1; display: inline-block;">
           Untuk Pengguna
         </div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
-          Kemudahan untuk Pengelola & Admin
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4 text-brand-navy">
+          Kemudahan untuk Siswa & Orang Tua
         </h2>
-        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
-          Akses mudah ke sistem administrasi dan pengelolaan data dalam satu platform
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Akses mudah ke informasi pendidikan dan pembayaran dalam satu aplikasi
         </p>
       </div>
 
-      <div class="benefits-grid" style="grid-template-columns: 1fr;">
+      <div class="benefits-grid">
         <!-- Benefit 1 -->
         <div class="benefit-card user-benefit">
           <div class="benefit-icon user-icon">
@@ -241,15 +244,15 @@
   <!-- Institution Benefits Section -->
   <section class="institution-benefits-section">
     <div class="container" style="max-width: 1280px;">
-      <div class="text-center mb-12 sm:mb-16">
-        <div class="mb-4 sm:mb-6 text-xs sm:text-sm px-5 py-2 border border-primary-brand rounded-full w-fit text-primary-brand bg-white mx-auto">
+      <div class="text-center mb-12">
+        <div class="mb-3 mx-auto text-sm px-4 py-2 border rounded-full w-fit font-medium" style="border-color: #0ea5e9; background-color: #f0f9ff; color: #0369a1; display: inline-block;">
           Untuk Institusi
         </div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-4 text-brand-navy">
-          Efisiensi untuk Manajemen Institusi
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4 text-brand-navy">
+          Efisiensi untuk Manajemen Sekolah
         </h2>
-        <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4" style="color: #505050">
-          Tingkatkan efektivitas operasional dengan sistem administrasi yang terintegrasi
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Tingkatkan efisiensi operasional dengan sistem terintegrasi dan transparan
         </p>
       </div>
 
@@ -442,6 +445,7 @@
   <script>
     // Navigation scroll functionality
     const navbar = document.getElementById('navbar');
+    const navbarLogo = document.getElementById('navbar-logo');
     let isScrolled = false;
 
     function handleScroll() {
@@ -450,9 +454,11 @@
       if (scrollY > 50 && !isScrolled) {
         isScrolled = true;
         navbar.classList.add('scrolled');
+        navbarLogo.src = './logo_uswah.png';
       } else if (scrollY <= 50 && isScrolled) {
         isScrolled = false;
         navbar.classList.remove('scrolled');
+        navbarLogo.src = './logo_uswah_white_all.png';
       }
     }
 

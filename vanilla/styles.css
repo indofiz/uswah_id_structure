@@ -219,6 +219,9 @@ a { text-decoration: none; }
     .sm\:mb-16 { margin-bottom: 4rem; }
     .sm\:mt-16 { margin-top: 4rem; }
     .sm\:w-auto { width: auto !important; }
+    .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .sm\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
 }
 
 @media (min-width: 768px) {
@@ -226,6 +229,8 @@ a { text-decoration: none; }
     .md\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
     .md\:py-32 { padding-top: 8rem; padding-bottom: 8rem; }
     .md\:mt-20 { margin-top: 5rem; }
+    .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .md\:text-5xl { font-size: 3rem; line-height: 1; }
 }
 
 @media (min-width: 1024px) {
@@ -250,6 +255,7 @@ a { text-decoration: none; }
 .w-fit { width: fit-content; }
 .w-400 { width: 400px; }
 .max-w-xs { max-width: 20rem; }
+.max-w-2xl { max-width: 42rem; }
 .max-w-3xl { max-width: 48rem; }
 .max-w-4xl { max-width: 56rem; }
 .max-w-85vw { max-width: 85vw; }
@@ -946,8 +952,8 @@ nav {
   z-index: 50;
   width: 100%;
   transition: all 0.3s;
-  background-color: #01193F;
-  border-bottom: 1px solid #1c3660;
+  background-color: #249BCD;
+  border-bottom: 1px solid #3da3ce;
 }
 
 nav.scrolled {
@@ -1045,7 +1051,7 @@ nav.scrolled .btn-contact:hover {
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
-  background-color: #fde047;
+  background-color: #fcd34d;
   color: black;
   border: none;
   border-radius: 0.125rem;
@@ -1055,7 +1061,7 @@ nav.scrolled .btn-contact:hover {
 }
 
 .btn-support:hover {
-  background-color: #facc15;
+  background-color: #eab308;
 }
 
 .btn-support img {
@@ -1075,6 +1081,12 @@ nav.scrolled .btn-contact:hover {
 
 nav.scrolled .mobile-menu-btn {
   color: #374151;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
 }
 
 .mobile-menu-overlay {

@@ -1,6 +1,6 @@
 /* Product Hero Section */
 .product-hero {
-  background: #45ABD5;
+  background: #249BCD;
   padding: 5rem 1rem 4rem;
   position: relative;
   overflow: hidden;
@@ -80,7 +80,7 @@
   font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: -0.025em;
   color: white;
 }
@@ -105,7 +105,7 @@
 
 .product-description {
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.625;
   margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.8);
   max-width: 42rem;
@@ -327,7 +327,7 @@
 .feature-card {
   background: white;
   padding: 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   border: 1px solid rgb(229, 231, 235);
   transition: all 0.3s;
 }
@@ -406,19 +406,19 @@
 
 /* User Benefits Section */
 .user-benefits-section {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   background: white;
 }
 
 @media (min-width: 640px) {
   .user-benefits-section {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
   }
 }
 
 @media (min-width: 768px) {
   .user-benefits-section {
-    padding: 6rem 1rem;
+    padding: 4rem 1rem;
   }
 }
 
@@ -454,7 +454,7 @@
 
 .benefit-card {
   padding: 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   border: 1px solid rgb(229, 231, 235);
   text-align: center;
   transition: all 0.3s;
@@ -504,19 +504,19 @@
 
 /* Institution Benefits Section */
 .institution-benefits-section {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   background: white;
 }
 
 @media (min-width: 640px) {
   .institution-benefits-section {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
   }
 }
 
 @media (min-width: 768px) {
   .institution-benefits-section {
-    padding: 6rem 1rem;
+    padding: 4rem 1rem;
   }
 }
 
@@ -638,7 +638,7 @@
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   text-align: center;
 }
 

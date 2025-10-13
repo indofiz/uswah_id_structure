@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm run dev)",
-      "Read(//d//**)"
+      "Read(//d//**)",
+      "Bash(open:*)"
     ],
     "deny": [],
     "ask": []

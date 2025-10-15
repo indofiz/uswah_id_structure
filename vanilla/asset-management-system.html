@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Management System - PT Uswah Salam AlAzhar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="salam-mobile-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <img id="navbar-logo" src="./logo_uswah_white_all.png" alt="PT Uswah Salam AlAzhar">
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="nav-menu">
+        <a href="index.html">Beranda</a>
+        <a href="index.html#mobile">Produk</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="blog.html">Blog</a>
+        <a href="karir.html">Karir</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-contact">Contact</a>
+        <a href="#" class="btn-support">
+          <img src="./icon/support.svg" alt="Support">
+          Support
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <svg class="icon-svg" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="icon-svg" id="close-icon" style="display: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close">
+            <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-menu-items">
+          <a href="index.html">Beranda</a>
+          <a href="index.html#mobile">Produk & Layanan</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="tentang.html">Tentang</a>
+          <a href="blog.html">Blog</a>
+          <a href="karir.html">Karir</a>
+          <div class="mobile-menu-actions">
+            <a href="#contact" class="mobile-btn-contact">Contact</a>
+            <a href="#" class="mobile-btn-support">
+              <img src="./icon/support.svg" alt="Support">
+              Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Hero Section -->
+  <section class="product-hero">
+    <!-- Grid background -->
+    <div class="grid-background">
+      <img src="../public/grid-bg.png" alt="" />
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <div class="product-hero-grid">
+        <!-- Left Content -->
+        <div class="product-hero-content">
+          <div class="product-badge">
+            Asset Management System
+          </div>
+          <h1 class="product-title">Sistem Manajemen Aset Digital Terintegrasi</h1>
+          <p class="product-description">
+            Asset Management System (AMS) adalah solusi digital untuk mengelola aset institusi secara efisien dengan fitur tracking lokasi, inventory management, dan mobile scanning. Sistem terintegrasi untuk monitoring dan pelaporan aset secara real-time.
+          </p>
+
+          <div class="hero-actions">
+            <a href="mailto:uswah@salam-alazhar.id" class="cta-button">
+              Konsultasi Asset Management System
+              <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+
+            <!-- Platform Badges -->
+            <div class="platform-badges">
+              <div class="platform-badge">
+                <svg class="platform-icon" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span>Web</span>
+              </div>
+              <div class="platform-badge">
+                <svg class="platform-icon" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67a.643.643 0 0 0-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52M7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5"/>
+                </svg>
+                <span>Android</span>
+              </div>
+              <div class="platform-badge">
+                <svg class="platform-icon" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                <span>iOS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="product-hero-image">
+          <!-- Glow effect -->
+          <div class="glow-effect"></div>
+
+          <img src="../public/product_mock/illust-ams.png" alt="Asset Management System" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12 sm:mb-16">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4 text-brand-navy">
+          Fitur Unggulan
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Solusi lengkap untuk manajemen aset institusi dengan tracking dan monitoring real-time
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Dashboard Monitoring</h3>
+          <p class="feature-description">
+            Dashboard real-time untuk monitoring status dan nilai aset institusi
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Inventory Management</h3>
+          <p class="feature-description">
+            Manajemen inventory aset dengan kategorisasi dan pencarian yang mudah
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Location Tracking</h3>
+          <p class="feature-description">
+            Pelacakan lokasi aset dengan integrasi peta dan geolocation
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Mobile Scanning</h3>
+          <p class="feature-description">
+            Aplikasi mobile untuk scanning barcode/QR code aset di lapangan
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Asset History</h3>
+          <p class="feature-description">
+            Riwayat lengkap perpindahan dan perubahan status aset
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Alert & Notification</h3>
+          <p class="feature-description">
+            Notifikasi otomatis untuk maintenance, penyusutan, dan anomali aset
+          </p>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Comprehensive Reporting</h3>
+          <p class="feature-description">
+            Laporan lengkap nilai aset, penyusutan, dan analisis keuangan
+          </p>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Centralized Database</h3>
+          <p class="feature-description">
+            Database terpusat untuk semua informasi aset institusi
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Benefits Section -->
+  <section class="user-benefits-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12">
+        <div class="mb-3 mx-auto text-sm px-4 py-2 border rounded-full w-fit font-medium" style="border-color: #0ea5e9; background-color: #f0f9ff; color: #0369a1; display: inline-block;">
+          Untuk Pengguna
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4 text-brand-navy">
+          Kemudahan untuk Tim Lapangan
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Akses mobile dan scanning yang mudah untuk manajemen aset di lapangan
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Mobile Access</h3>
+          <p class="benefit-description">Akses dan update data aset melalui aplikasi mobile di lapangan</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Easy Asset Scanning</h3>
+          <p class="benefit-description">Scan QR code atau barcode untuk identifikasi aset dengan cepat</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Location Awareness</h3>
+          <p class="benefit-description">Mengetahui lokasi aset secara real-time dengan fitur GPS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institution Benefits Section -->
+  <section class="institution-benefits-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12">
+        <div class="mb-3 mx-auto text-sm px-4 py-2 border rounded-full w-fit font-medium" style="border-color: #0ea5e9; background-color: #f0f9ff; color: #0369a1; display: inline-block;">
+          Untuk Institusi
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4 text-brand-navy">
+          Efisiensi untuk Manajemen Institusi
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Tingkatkan efisiensi pengelolaan aset dengan sistem yang terintegrasi dan transparan
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Optimasi Aset</h3>
+          <p class="benefit-description">Optimalisasi penggunaan dan alokasi aset untuk efisiensi maksimal</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Asset Security</h3>
+          <p class="benefit-description">Keamanan aset dengan tracking dan audit trail yang lengkap</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Financial Analysis</h3>
+          <p class="benefit-description">Analisis nilai aset, depresiasi, dan perencanaan keuangan</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Compliance & Audit</h3>
+          <p class="benefit-description">Memenuhi standar audit dan compliance manajemen aset</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="cta-main-card">
+        <h2 class="cta-title">Siap Memulai Transformasi Digital?</h2>
+        <p class="cta-description">
+          Hubungi kami untuk konsultasi gratis dan demo Asset Management System. Tim kami siap membantu institusi Anda mengoptimalkan pengelolaan aset dengan sistem yang terintegrasi.
+        </p>
+        <a href="mailto:uswah@salam-alazhar.id" class="cta-button-large">
+          Konsultasi Asset Management System
+          <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <p class="contact-label">Email</p>
+          <p class="contact-value">uswah@salam-alazhar.id</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <p class="contact-label">Telepon</p>
+          <p class="contact-value">(021) 72786730</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <p class="contact-label">Lokasi</p>
+          <p class="contact-value">Jakarta Selatan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Background Ornament -->
+    <div class="footer-ornament">
+      <img src="./ornament/hero-top-right.png" alt="">
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <div class="footer-grid">
+        <!-- Column 1: Logo and Company Info -->
+        <div class="footer-column">
+          <div>
+            <img src="./logo_uswah.png" alt="Uswah" class="footer-logo">
+            <h3 class="footer-tagline">Solusi Digital</h3>
+            <h4 class="footer-subtitle">Layanan Pendidikan</h4>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <img src="./social/facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./social/linkin.svg" alt="LinkedIn">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./social/instagram.svg" alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Produk & Layanan -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <ul class="footer-links">
+            <li><a href="#">Salam App</a></li>
+            <li><a href="#">Salam e-Rapor</a></li>
+            <li><a href="#">Salam Admin</a></li>
+            <li><a href="#">Learning Management System</a></li>
+            <li><a href="#">Ziswaf System</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Portfolio & About -->
+        <div class="footer-column">
+          <h3>PORTOFOLIO</h3>
+          <ul class="footer-links">
+            <li><a href="#">Daftar Sekolah Terdaftar</a></li>
+          </ul>
+
+          <h3 style="margin-top: 2rem;">TENTANG</h3>
+          <ul class="footer-links">
+            <li><a href="#">Tentang USA</a></li>
+            <li><a href="#">Karir USA</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Certifications -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <div class="footer-contact">
+            <p>SalamThe Darmawangsa Square Unit 268 - Jakarta Selatan. DKI Jakarta.</p>
+            <p>uswah@salam-alazhar.id</p>
+            <p>(021) 72786730 - (021) 72786780</p>
+          </div>
+
+          <!-- ISO Certifications -->
+          <div class="iso-certifications">
+            <div class="iso-badge">
+              <img src="./sertification/iso-27001.png" alt="ISO 27001">
+            </div>
+            <div class="iso-badge">
+              <img src="./sertification/iso-9001.png" alt="ISO 9001">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      <p>© 2021. All Right Reserved. Uswah Salam AlAzhar</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll functionality
+    const navbar = document.getElementById('navbar');
+    const navbarLogo = document.getElementById('navbar-logo');
+    let isScrolled = false;
+
+    function handleScroll() {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 50 && !isScrolled) {
+        isScrolled = true;
+        navbar.classList.add('scrolled');
+        navbarLogo.src = './logo_uswah.png';
+      } else if (scrollY <= 50 && isScrolled) {
+        isScrolled = false;
+        navbar.classList.remove('scrolled');
+        navbarLogo.src = './logo_uswah_white_all.png';
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    let isMobileMenuOpen = false;
+
+    function toggleMobileMenu() {
+      isMobileMenuOpen = !isMobileMenuOpen;
+
+      if (isMobileMenuOpen) {
+        mobileMenu.classList.add('active');
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'inline-block';
+      } else {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'inline-block';
+        closeIcon.style.display = 'none';
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    mobileMenuClose.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when clicking overlay
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        toggleMobileMenu();
+      }
+    });
+
+    // Close mobile menu when clicking on menu links
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-items a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+  </script>
+</body>
+</html>

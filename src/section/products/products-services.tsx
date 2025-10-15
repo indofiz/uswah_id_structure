@@ -57,6 +57,18 @@ export default function ProductsServices() {
       description: "Business Intelligence dashboard with real-time analytics, reporting, and data visualization tools.",
       image: "/product/image 4.png",
       link: "/bi-dashboard"
+    },
+    {
+      title: "Alazhar Tour & Travel",
+      description: "Layanan tour dan travel terpercaya untuk perjalanan umroh, haji, dan wisata religi dengan pelayanan profesional.",
+      image: "/product/image 4-9.png",
+      link: "/alazhar-tour"
+    },
+    {
+      title: "UPJ - Layanan Jenazah",
+      description: "Unit Pelayanan Jenazah yang menyediakan layanan pengurusan jenazah secara Islami dengan penuh kepedulian.",
+      image: "/product/image 4-10.png",
+      link: "https://jenazah.digitalazhar.id/layanan"
     }
   ];
 

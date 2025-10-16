@@ -13,6 +13,8 @@ import LMSYazanPage from "./template/lms-yazan-page";
 import AMSPage from "./template/ams-page";
 import ZISWAFPage from "./template/ziswaf-page";
 import BIDashboardPage from "./template/bi-dashboard-page";
+import TourTravelPage from "./template/tour-travel-page";
+import UPJPage from "./template/upj-page";
 
 export default function App() {
   return (
@@ -31,6 +33,8 @@ export default function App() {
       <Route path="/ams" element={<AMSPage />} />
       <Route path="/ziswaf" element={<ZISWAFPage />} />
       <Route path="/bi-dashboard" element={<BIDashboardPage />} />
+      <Route path="/tour-travel" element={<TourTravelPage />} />
+      <Route path="/upj" element={<UPJPage />} />
     </Routes>
   )
 }

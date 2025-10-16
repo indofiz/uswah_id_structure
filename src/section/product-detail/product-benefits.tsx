@@ -5,9 +5,20 @@ import type { ProductBenefit } from "@/types";
 interface ProductBenefitsProps {
   userBenefits: ProductBenefit[];
   institutionBenefits: ProductBenefit[];
+  userBenefitsTitle?: string;
+  userBenefitsDescription?: string;
+  institutionBenefitsTitle?: string;
+  institutionBenefitsDescription?: string;
 }
 
-export default function ProductBenefits({ userBenefits, institutionBenefits }: ProductBenefitsProps) {
+export default function ProductBenefits({
+  userBenefits,
+  institutionBenefits,
+  userBenefitsTitle = "Kemudahan untuk Siswa & Orang Tua",
+  userBenefitsDescription = "Akses mudah ke informasi pendidikan dan pembayaran dalam satu aplikasi",
+  institutionBenefitsTitle = "Efisiensi untuk Manajemen Sekolah",
+  institutionBenefitsDescription = "Tingkatkan efisiensi operasional dengan sistem terintegrasi dan transparan"
+}: ProductBenefitsProps) {
   return (
     <section className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,10 +29,10 @@ export default function ProductBenefits({ userBenefits, institutionBenefits }: P
               Untuk Pengguna
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-              Kemudahan untuk Siswa & Orang Tua
+              {userBenefitsTitle}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Akses mudah ke informasi pendidikan dan pembayaran dalam satu aplikasi
+              {userBenefitsDescription}
             </p>
           </div>
 
@@ -59,10 +70,10 @@ export default function ProductBenefits({ userBenefits, institutionBenefits }: P
               Untuk Institusi
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-              Efisiensi untuk Manajemen Sekolah
+              {institutionBenefitsTitle}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Tingkatkan efisiensi operasional dengan sistem terintegrasi dan transparan
+              {institutionBenefitsDescription}
             </p>
           </div>
 

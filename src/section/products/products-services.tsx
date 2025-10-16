@@ -62,13 +62,13 @@ export default function ProductsServices() {
       title: "Alazhar Tour & Travel",
       description: "Layanan tour dan travel terpercaya untuk perjalanan umroh, haji, dan wisata religi dengan pelayanan profesional.",
       image: "/product/image 4-9.png",
-      link: "/alazhar-tour"
+      link: "/tour-travel"
     },
     {
       title: "UPJ - Layanan Jenazah",
       description: "Unit Pelayanan Jenazah yang menyediakan layanan pengurusan jenazah secara Islami dengan penuh kepedulian.",
       image: "/product/image 4-10.png",
-      link: "https://jenazah.digitalazhar.id/layanan"
+      link: "/upj"
     }
   ];
 

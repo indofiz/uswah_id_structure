@@ -63,7 +63,21 @@ import {
   Landmark,
   LineChart,
   Filter,
-  Download
+  Download,
+  Plane,
+  Home,
+  Utensils,
+  FileText as Document,
+  Headphones,
+  Map,
+  ShieldCheck,
+  CalendarDays,
+  Truck,
+  Droplets,
+  PackageCheck,
+  MapPinned,
+  Heart,
+  ClipboardCheck
 } from "lucide-react";
 
 // Product data provider
@@ -1171,6 +1185,242 @@ export class BIDashboardDataProvider {
   }
 }
 
+// Tour and Travel data provider
+export class TourTravelDataProvider {
+  getData(): ProductDetail {
+    return {
+      id: "tour-travel",
+      name: "Al Azhar Travel",
+      tagline: "Layanan Tour & Travel Terpercaya untuk Perjalanan Ibadah",
+      description: "Layanan tour dan travel yang berfokus pada perjalanan ibadah seperti Umrah dan Haji, serta paket wisata halal. Didukung oleh tim profesional dan terdaftar resmi di Kementerian Agama RI, kami memberikan pengalaman perjalanan yang aman, nyaman, dan penuh berkah.",
+      heroImage: "/product_mock/erapor.png",
+      features: [
+        {
+          icon: Plane,
+          title: "Paket Umrah & Haji",
+          description: "Berbagai pilihan paket Umrah dan Haji dengan durasi fleksibel mulai dari 9 hari hingga 29 hari"
+        },
+        {
+          icon: Map,
+          title: "Wisata Halal",
+          description: "Paket wisata halal ke berbagai destinasi menarik seperti Turki, Dubai, dan destinasi lainnya"
+        },
+        {
+          icon: Home,
+          title: "Akomodasi Nyaman",
+          description: "Hotel nyaman dekat dengan lokasi ibadah (Masjidil Haram dan Masjid Nabawi)"
+        },
+        {
+          icon: Utensils,
+          title: "Makanan Halal Terjamin",
+          description: "Menyediakan makanan halal yang terjamin kehalalannya selama perjalanan"
+        },
+        {
+          icon: Document,
+          title: "Pengurusan Visa & Dokumen",
+          description: "Bantuan lengkap pengurusan visa dan dokumen perjalanan"
+        },
+        {
+          icon: Headphones,
+          title: "Pemandu Berpengalaman",
+          description: "Tim pemandu wisata berpengalaman, informatif, dan sabar mendampingi perjalanan Anda"
+        },
+        {
+          icon: ShieldCheck,
+          title: "Legalitas Terjamin",
+          description: "Terdaftar resmi di Kementerian Agama RI dan dipercaya ribuan jamaah"
+        },
+        {
+          icon: CalendarDays,
+          title: "Paket Keluarga & Grup",
+          description: "Paket spesial untuk keluarga dan grup dengan harga kompetitif"
+        }
+      ],
+      benefits: {
+        users: [
+          {
+            icon: Shield,
+            title: "Perjalanan Aman & Terpercaya",
+            description: "Perjalanan ibadah yang aman dengan legalitas resmi dari Kementerian Agama RI",
+            audience: "user"
+          },
+          {
+            icon: Users,
+            title: "Layanan Profesional",
+            description: "Tim berpengalaman mendampingi dari persiapan hingga kepulangan",
+            audience: "user"
+          },
+          {
+            icon: Utensils,
+            title: "Makanan Halal & Nyaman",
+            description: "Jaminan makanan halal dan akomodasi nyaman dekat lokasi ibadah",
+            audience: "user"
+          },
+          {
+            icon: Map,
+            title: "Itinerary Lengkap",
+            description: "Itinerary terperinci dan pelaksanaan perjalanan yang tepat waktu",
+            audience: "user"
+          }
+        ],
+        institutions: [
+          {
+            icon: Building2,
+            title: "Paket Institusi",
+            description: "Paket khusus untuk institusi pendidikan dengan harga spesial",
+            audience: "institution"
+          },
+          {
+            icon: Users,
+            title: "Grup Management",
+            description: "Manajemen grup yang terorganisir untuk perjalanan bersama",
+            audience: "institution"
+          },
+          {
+            icon: CheckCircle2,
+            title: "Koordinasi Mudah",
+            description: "Koordinasi mudah dengan tim yang responsif dan profesional",
+            audience: "institution"
+          },
+          {
+            icon: TrendingUp,
+            title: "Pengalaman Terbaik",
+            description: "Pengalaman perjalanan ibadah yang berkesan dan penuh manfaat",
+            audience: "institution"
+          }
+        ]
+      },
+      platforms: [
+        {
+          name: "Web",
+          icon: Globe,
+          available: true
+        }
+      ],
+      ctaText: "Konsultasi Paket Travel",
+      ctaLink: "mailto:uswah@salam-alazhar.id"
+    };
+  }
+}
+
+// UPJ (Unit Pelayanan Jenazah) data provider
+export class UPJDataProvider {
+  getData(): ProductDetail {
+    return {
+      id: "upj",
+      name: "UPJ - Unit Pelayanan Jenazah",
+      tagline: "Layanan Pengurusan Jenazah Secara Islami dengan Penuh Kepedulian",
+      description: "Unit Pelayanan Jenazah Al-Azhar menyediakan layanan pengurusan jenazah yang komprehensif sesuai syariat Islam. Didukung oleh tim profesional dan fasilitas lengkap, kami memberikan pelayanan terbaik untuk keluarga yang berduka dengan penuh empati dan kehormatan.",
+      heroImage: "/product_mock/erapor.png",
+      features: [
+        {
+          icon: Truck,
+          title: "Mobil Jenazah",
+          description: "Layanan transportasi jenazah ke tempat pemakaman di area Jabodetabek dengan kendaraan yang memadai"
+        },
+        {
+          icon: Droplets,
+          title: "Memandikan & Mengkafani",
+          description: "Layanan memandikan dan mengkafani jenazah lengkap dengan peralatan sesuai syariat Islam"
+        },
+        {
+          icon: Plane,
+          title: "Pengurusan Kargo & Formalin",
+          description: "Pengurusan kargo bandara untuk pengiriman jenazah ke luar kota/daerah dengan perlakuan formalin"
+        },
+        {
+          icon: MapPinned,
+          title: "Pemindahan Makam",
+          description: "Layanan pemindahan makam dalam kota maupun antar kota sesuai permintaan keluarga"
+        },
+        {
+          icon: Map,
+          title: "Pengantaran Antarkota",
+          description: "Pengantaran jenazah ke tempat pemakaman di luar Jabodetabek hingga kampung halaman"
+        },
+        {
+          icon: PackageCheck,
+          title: "Layanan Lengkap",
+          description: "Paket layanan lengkap mulai dari memandikan, mengkafani hingga transportasi dengan peralatan lengkap"
+        },
+        {
+          icon: ClipboardCheck,
+          title: "Peralatan Lengkap",
+          description: "Menyediakan semua peralatan seperti kain kafan, kapas, papan pemakaman, dan perlengkapan lainnya"
+        },
+        {
+          icon: Heart,
+          title: "Tim Profesional",
+          description: "Didampingi tim yang berpengalaman dan mengikuti tuntunan syariat Islam dalam setiap prosesnya"
+        }
+      ],
+      benefits: {
+        users: [
+          {
+            icon: Heart,
+            title: "Pelayanan Penuh Empati",
+            description: "Pelayanan dengan penuh kepedulian dan empati untuk meringankan beban keluarga",
+            audience: "user"
+          },
+          {
+            icon: Shield,
+            title: "Sesuai Syariat Islam",
+            description: "Semua proses dilakukan sesuai dengan tuntunan syariat Islam yang benar",
+            audience: "user"
+          },
+          {
+            icon: Truck,
+            title: "Transportasi Lengkap",
+            description: "Tersedia 4 kendaraan operasional untuk berbagai kebutuhan transportasi jenazah",
+            audience: "user"
+          },
+          {
+            icon: PackageCheck,
+            title: "Perlengkapan Komplit",
+            description: "Semua peralatan dan bahan yang diperlukan sudah tersedia dan berkualitas",
+            audience: "user"
+          }
+        ],
+        institutions: [
+          {
+            icon: Users,
+            title: "Layanan Kolektif",
+            description: "Melayani kebutuhan pemakaman untuk institusi dan komunitas",
+            audience: "institution"
+          },
+          {
+            icon: CheckCircle2,
+            title: "Prosedur Standar",
+            description: "Mengikuti prosedur standar yang sesuai dengan syariat Islam",
+            audience: "institution"
+          },
+          {
+            icon: Clock,
+            title: "Respon Cepat",
+            description: "Tim siap melayani dengan cepat untuk kebutuhan mendesak",
+            audience: "institution"
+          },
+          {
+            icon: HandHeart,
+            title: "Pelayanan Terpercaya",
+            description: "Dipercaya oleh ribuan keluarga untuk menyelenggarakan pemakaman Islami",
+            audience: "institution"
+          }
+        ]
+      },
+      platforms: [
+        {
+          name: "Web",
+          icon: Globe,
+          available: true
+        }
+      ],
+      ctaText: "Hubungi Layanan UPJ",
+      ctaLink: "https://jenazah.digitalazhar.id/layanan"
+    };
+  }
+}
+
 // Factory pattern for creating data providers (Dependency Inversion)
 export class DataProviderFactory {
   static createProductsProvider(): DataProvider<Product> {
@@ -1215,5 +1465,13 @@ export class DataProviderFactory {
 
   static createBIDashboardProvider(): BIDashboardDataProvider {
     return new BIDashboardDataProvider();
+  }
+
+  static createTourTravelProvider(): TourTravelDataProvider {
+    return new TourTravelDataProvider();
+  }
+
+  static createUPJProvider(): UPJDataProvider {
+    return new UPJDataProvider();
   }
 }

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Azhar Travel - PT Uswah Salam AlAzhar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tour-travel-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <img id="navbar-logo" src="./logo_uswah_white_all.png" alt="PT Uswah Salam AlAzhar">
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="nav-menu">
+        <a href="index.html">Beranda</a>
+        <a href="index.html#mobile">Produk</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="blog.html">Blog</a>
+        <a href="karir.html">Karir</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-contact">Contact</a>
+        <a href="#" class="btn-support">
+          <img src="./icon/support.svg" alt="Support">
+          Support
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <svg class="icon-svg" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="icon-svg" id="close-icon" style="display: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close">
+            <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-menu-items">
+          <a href="index.html">Beranda</a>
+          <a href="index.html#mobile">Produk & Layanan</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="tentang.html">Tentang</a>
+          <a href="blog.html">Blog</a>
+          <a href="karir.html">Karir</a>
+          <div class="mobile-menu-actions">
+            <a href="#contact" class="mobile-btn-contact">Contact</a>
+            <a href="#" class="mobile-btn-support">
+              <img src="./icon/support.svg" alt="Support">
+              Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Hero Section -->
+  <section class="product-hero">
+    <!-- Grid background -->
+    <div class="grid-background">
+      <img src="../public/grid-bg.png" alt="" />
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <div class="product-hero-grid">
+        <!-- Left Content -->
+        <div class="product-hero-content">
+          <div class="product-badge">
+            Al Azhar Travel
+          </div>
+          <h1 class="product-title">Layanan Tour & Travel Terpercaya untuk Perjalanan Ibadah</h1>
+          <p class="product-description">
+            Layanan tour dan travel yang berfokus pada perjalanan ibadah seperti Umrah dan Haji, serta paket wisata halal. Didukung oleh tim profesional dan terdaftar resmi di Kementerian Agama RI, kami memberikan pengalaman perjalanan yang aman, nyaman, dan penuh berkah.
+          </p>
+
+          <div class="hero-actions">
+            <a href="mailto:uswah@salam-alazhar.id" class="cta-button">
+              Konsultasi Paket Travel
+              <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+
+            <!-- Platform Badges -->
+            <div class="platform-badges">
+              <div class="platform-badge">
+                <svg class="platform-icon" fill="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>Web</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="product-hero-image">
+          <!-- Glow effect -->
+          <div class="glow-effect"></div>
+
+          <img src="../public/product_mock/travel.png" alt="Al Azhar Travel" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12 sm:mb-16">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4 text-brand-navy">
+          Fitur Unggulan
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Layanan lengkap untuk perjalanan ibadah yang aman, nyaman, dan penuh berkah
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Paket Umrah & Haji</h3>
+          <p class="feature-description">
+            Berbagai pilihan paket Umrah dan Haji dengan durasi fleksibel mulai dari 9 hari hingga 29 hari
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Wisata Halal</h3>
+          <p class="feature-description">
+            Paket wisata halal ke berbagai destinasi menarik seperti Turki, Dubai, dan destinasi lainnya
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Akomodasi Nyaman</h3>
+          <p class="feature-description">
+            Hotel nyaman dekat dengan lokasi ibadah (Masjidil Haram dan Masjid Nabawi)
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Makanan Halal Terjamin</h3>
+          <p class="feature-description">
+            Menyediakan makanan halal yang terjamin kehalalannya selama perjalanan
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Pengurusan Visa & Dokumen</h3>
+          <p class="feature-description">
+            Bantuan lengkap pengurusan visa dan dokumen perjalanan
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Pemandu Berpengalaman</h3>
+          <p class="feature-description">
+            Tim pemandu wisata berpengalaman, informatif, dan sabar mendampingi perjalanan Anda
+          </p>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Legalitas Terjamin</h3>
+          <p class="feature-description">
+            Terdaftar resmi di Kementerian Agama RI dan dipercaya ribuan jamaah
+          </p>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Paket Keluarga & Grup</h3>
+          <p class="feature-description">
+            Paket spesial untuk keluarga dan grup dengan harga kompetitif
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Benefits Section -->
+  <section class="user-benefits-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12">
+        <div class="mb-3 mx-auto text-sm px-4 py-2 border rounded-full w-fit font-medium" style="border-color: #0ea5e9; background-color: #f0f9ff; color: #0369a1; display: inline-block;">
+          Untuk Jamaah
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4 text-brand-navy">
+          Kemudahan untuk Jamaah
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Pengalaman perjalanan ibadah yang nyaman dan terpercaya
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Perjalanan Aman & Terpercaya</h3>
+          <p class="benefit-description">Perjalanan ibadah yang aman dengan legalitas resmi dari Kementerian Agama RI</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Layanan Profesional</h3>
+          <p class="benefit-description">Tim berpengalaman mendampingi dari persiapan hingga kepulangan</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Makanan Halal & Nyaman</h3>
+          <p class="benefit-description">Jaminan makanan halal dan akomodasi nyaman dekat lokasi ibadah</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card user-benefit">
+          <div class="benefit-icon user-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Itinerary Lengkap</h3>
+          <p class="benefit-description">Itinerary terperinci dan pelaksanaan perjalanan yang tepat waktu</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institution Benefits Section -->
+  <section class="institution-benefits-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="text-center mb-12">
+        <div class="mb-3 mx-auto text-sm px-4 py-2 border rounded-full w-fit font-medium" style="border-color: #0ea5e9; background-color: #f0f9ff; color: #0369a1; display: inline-block;">
+          Untuk Grup & Institusi
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-4 text-brand-navy">
+          Layanan untuk Grup & Institusi
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          Paket khusus dan pelayanan profesional untuk perjalanan bersama
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Paket Institusi</h3>
+          <p class="benefit-description">Paket khusus untuk institusi pendidikan dengan harga spesial</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Grup Management</h3>
+          <p class="benefit-description">Manajemen grup yang terorganisir untuk perjalanan bersama</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Koordinasi Mudah</h3>
+          <p class="benefit-description">Koordinasi mudah dengan tim yang responsif dan profesional</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card institution-benefit">
+          <div class="benefit-icon institution-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Pengalaman Terbaik</h3>
+          <p class="benefit-description">Pengalaman perjalanan ibadah yang berkesan dan penuh manfaat</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container" style="max-width: 1280px;">
+      <div class="cta-main-card">
+        <h2 class="cta-title">Siap Memulai Perjalanan Ibadah Anda?</h2>
+        <p class="cta-description">
+          Hubungi kami untuk konsultasi gratis dan informasi paket perjalanan. Tim kami siap membantu Anda merencanakan perjalanan ibadah yang aman, nyaman, dan penuh berkah.
+        </p>
+        <a href="mailto:uswah@salam-alazhar.id" class="cta-button-large">
+          Konsultasi Paket Travel
+          <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <p class="contact-label">Email</p>
+          <p class="contact-value">uswah@salam-alazhar.id</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <p class="contact-label">Telepon</p>
+          <p class="contact-value">(021) 72786730</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <p class="contact-label">Lokasi</p>
+          <p class="contact-value">Jakarta Selatan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Background Ornament -->
+    <div class="footer-ornament">
+      <img src="./ornament/hero-top-right.png" alt="">
+    </div>
+
+    <div class="container" style="max-width: 1280px;">
+      <div class="footer-grid">
+        <!-- Column 1: Logo and Company Info -->
+        <div class="footer-column">
+          <div>
+            <img src="./logo_uswah.png" alt="Uswah" class="footer-logo">
+            <h3 class="footer-tagline">Solusi Digital</h3>
+            <h4 class="footer-subtitle">Layanan Pendidikan</h4>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <img src="./social/facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./social/linkin.svg" alt="LinkedIn">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./social/instagram.svg" alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Produk & Layanan -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <ul class="footer-links">
+            <li><a href="#">Salam App</a></li>
+            <li><a href="#">Salam e-Rapor</a></li>
+            <li><a href="#">Salam Admin</a></li>
+            <li><a href="#">Learning Management System</a></li>
+            <li><a href="#">Ziswaf System</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Portfolio & About -->
+        <div class="footer-column">
+          <h3>PORTOFOLIO</h3>
+          <ul class="footer-links">
+            <li><a href="#">Daftar Sekolah Terdaftar</a></li>
+          </ul>
+
+          <h3 style="margin-top: 2rem;">TENTANG</h3>
+          <ul class="footer-links">
+            <li><a href="#">Tentang USA</a></li>
+            <li><a href="#">Karir USA</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Certifications -->
+        <div class="footer-column">
+          <h3>PRODUK & LAYANAN</h3>
+          <div class="footer-contact">
+            <p>SalamThe Darmawangsa Square Unit 268 - Jakarta Selatan. DKI Jakarta.</p>
+            <p>uswah@salam-alazhar.id</p>
+            <p>(021) 72786730 - (021) 72786780</p>
+          </div>
+
+          <!-- ISO Certifications -->
+          <div class="iso-certifications">
+            <div class="iso-badge">
+              <img src="./sertification/iso-27001.png" alt="ISO 27001">
+            </div>
+            <div class="iso-badge">
+              <img src="./sertification/iso-9001.png" alt="ISO 9001">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      <p>© 2021. All Right Reserved. Uswah Salam AlAzhar</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll functionality
+    const navbar = document.getElementById('navbar');
+    const navbarLogo = document.getElementById('navbar-logo');
+    let isScrolled = false;
+
+    function handleScroll() {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 50 && !isScrolled) {
+        isScrolled = true;
+        navbar.classList.add('scrolled');
+        navbarLogo.src = './logo_uswah.png';
+      } else if (scrollY <= 50 && isScrolled) {
+        isScrolled = false;
+        navbar.classList.remove('scrolled');
+        navbarLogo.src = './logo_uswah_white_all.png';
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    let isMobileMenuOpen = false;
+
+    function toggleMobileMenu() {
+      isMobileMenuOpen = !isMobileMenuOpen;
+
+      if (isMobileMenuOpen) {
+        mobileMenu.classList.add('active');
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'inline-block';
+      } else {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'inline-block';
+        closeIcon.style.display = 'none';
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    mobileMenuClose.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when clicking overlay
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        toggleMobileMenu();
+      }
+    });
+
+    // Close mobile menu when clicking on menu links
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-items a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+  </script>
+</body>
+</html>

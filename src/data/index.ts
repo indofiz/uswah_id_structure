@@ -1193,7 +1193,7 @@ export class TourTravelDataProvider {
       name: "Al Azhar Travel",
       tagline: "Layanan Tour & Travel Terpercaya untuk Perjalanan Ibadah",
       description: "Layanan tour dan travel yang berfokus pada perjalanan ibadah seperti Umrah dan Haji, serta paket wisata halal. Didukung oleh tim profesional dan terdaftar resmi di Kementerian Agama RI, kami memberikan pengalaman perjalanan yang aman, nyaman, dan penuh berkah.",
-      heroImage: "/product_mock/erapor.png",
+      heroImage: "/product_mock/travel.png",
       features: [
         {
           icon: Plane,
@@ -1311,7 +1311,7 @@ export class UPJDataProvider {
       name: "UPJ - Unit Pelayanan Jenazah",
       tagline: "Layanan Pengurusan Jenazah Secara Islami dengan Penuh Kepedulian",
       description: "Unit Pelayanan Jenazah Al-Azhar menyediakan layanan pengurusan jenazah yang komprehensif sesuai syariat Islam. Didukung oleh tim profesional dan fasilitas lengkap, kami memberikan pelayanan terbaik untuk keluarga yang berduka dengan penuh empati dan kehormatan.",
-      heroImage: "/product_mock/erapor.png",
+      heroImage: "/product_mock/UPJ.png",
       features: [
         {
           icon: Truck,

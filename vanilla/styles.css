@@ -1213,7 +1213,7 @@ nav.scrolled .mobile-menu-btn {
    FOOTER STYLES
    ======================================== */
 footer {
-  background-color: #01193F;
+  background-color: #249BCD;
   color: white;
   padding: 3rem 0;
   position: relative;
@@ -1246,7 +1246,7 @@ footer {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #249BCD;
+  color: #01193F;
 }
 
 .footer-logo {
@@ -1321,8 +1321,33 @@ footer {
 
 .iso-certifications {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
+}
+
+.iso-cert-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #0B2545;
+  border-radius: 8px;
+}
+
+.iso-cert-image {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.iso-cert-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
 }
 
 .iso-badge {

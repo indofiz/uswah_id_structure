@@ -13,6 +13,7 @@ import {
   GraduationCap,
   Building2,
   UserCheck,
+  UserPlus,
   Wallet,
   PieChart,
   CreditCard,
@@ -64,18 +65,9 @@ import {
   LineChart,
   Filter,
   Download,
-  Plane,
-  Home,
-  Utensils,
-  FileText as Document,
-  Headphones,
   Map,
-  ShieldCheck,
-  CalendarDays,
   Truck,
-  Droplets,
   PackageCheck,
-  MapPinned,
   Heart,
   ClipboardCheck
 } from "lucide-react";
@@ -1196,44 +1188,34 @@ export class TourTravelDataProvider {
       heroImage: "/product_mock/travel.png",
       features: [
         {
-          icon: Plane,
-          title: "Paket Umrah & Haji",
-          description: "Berbagai pilihan paket Umrah dan Haji dengan durasi fleksibel mulai dari 9 hari hingga 29 hari"
+          icon: Package,
+          title: "Manajemen Paket & Jadwal Keberangkatan",
+          description: "Mengelola paket Umroh, Haji, dan Tour secara lengkap, termasuk fasilitas, jenis paket, serta jadwal keberangkatan."
         },
         {
-          icon: Map,
-          title: "Wisata Halal",
-          description: "Paket wisata halal ke berbagai destinasi menarik seperti Turki, Dubai, dan destinasi lainnya"
+          icon: ClipboardCheck,
+          title: "Sistem Booking (Pendaftaran Jamaah)",
+          description: "Proses pendaftaran jamaah dilakukan melalui sistem dengan kemudahan upload dokumen secara digital."
         },
         {
-          icon: Home,
-          title: "Akomodasi Nyaman",
-          description: "Hotel nyaman dekat dengan lokasi ibadah (Masjidil Haram dan Masjid Nabawi)"
+          icon: CreditCard,
+          title: "Payment Gateway (Lunas & Cicilan)",
+          description: "Mendukung pembayaran paket Umroh, Haji, dan Tour dengan metode yang mudah, aman, dan fleksibel—baik pelunasan langsung maupun cicilan."
         },
         {
-          icon: Utensils,
-          title: "Makanan Halal Terjamin",
-          description: "Menyediakan makanan halal yang terjamin kehalalannya selama perjalanan"
+          icon: Users,
+          title: "Sistem Afiliasi (Marketing)",
+          description: "Memungkinkan siapa saja menjadi mitra pemasaran travel untuk membantu memperluas jangkauan penjualan."
         },
         {
-          icon: Document,
-          title: "Pengurusan Visa & Dokumen",
-          description: "Bantuan lengkap pengurusan visa dan dokumen perjalanan"
+          icon: LayoutDashboard,
+          title: "Dashboard Pengguna & Admin",
+          description: "Menyajikan informasi lengkap mengenai kinerja travel, mulai dari grafik penjualan, paket terlaris, total jamaah per bulan, hingga status pembayaran setiap jamaah. Tersedia khusus untuk owner dan admin."
         },
         {
-          icon: Headphones,
-          title: "Pemandu Berpengalaman",
-          description: "Tim pemandu wisata berpengalaman, informatif, dan sabar mendampingi perjalanan Anda"
-        },
-        {
-          icon: ShieldCheck,
-          title: "Legalitas Terjamin",
-          description: "Terdaftar resmi di Kementerian Agama RI dan dipercaya ribuan jamaah"
-        },
-        {
-          icon: CalendarDays,
-          title: "Paket Keluarga & Grup",
-          description: "Paket spesial untuk keluarga dan grup dengan harga kompetitif"
+          icon: Bell,
+          title: "Reminder Pembayaran Otomatis",
+          description: "Mengirimkan pengingat jatuh tempo pembayaran, cicilan, atau pelunasan kepada jamaah secara otomatis melalui WhatsApp dan email."
         }
       ],
       benefits: {
@@ -1251,7 +1233,7 @@ export class TourTravelDataProvider {
             audience: "user"
           },
           {
-            icon: Utensils,
+            icon: Heart,
             title: "Makanan Halal & Nyaman",
             description: "Jaminan makanan halal dan akomodasi nyaman dekat lokasi ibadah",
             audience: "user"
@@ -1314,44 +1296,24 @@ export class UPJDataProvider {
       heroImage: "/product_mock/UPJ.png",
       features: [
         {
-          icon: Truck,
-          title: "Mobil Jenazah",
-          description: "Layanan transportasi jenazah ke tempat pemakaman di area Jabodetabek dengan kendaraan yang memadai"
+          icon: UserPlus,
+          title: "Pendaftaran Keanggotaan",
+          description: "Proses pendaftaran anggota reguler maupun paket dapat dilakukan melalui PWA atau langsung oleh admin."
         },
         {
-          icon: Droplets,
-          title: "Memandikan & Mengkafani",
-          description: "Layanan memandikan dan mengkafani jenazah lengkap dengan peralatan sesuai syariat Islam"
-        },
-        {
-          icon: Plane,
-          title: "Pengurusan Kargo & Formalin",
-          description: "Pengurusan kargo bandara untuk pengiriman jenazah ke luar kota/daerah dengan perlakuan formalin"
-        },
-        {
-          icon: MapPinned,
-          title: "Pemindahan Makam",
-          description: "Layanan pemindahan makam dalam kota maupun antar kota sesuai permintaan keluarga"
-        },
-        {
-          icon: Map,
-          title: "Pengantaran Antarkota",
-          description: "Pengantaran jenazah ke tempat pemakaman di luar Jabodetabek hingga kampung halaman"
-        },
-        {
-          icon: PackageCheck,
-          title: "Layanan Lengkap",
-          description: "Paket layanan lengkap mulai dari memandikan, mengkafani hingga transportasi dengan peralatan lengkap"
+          icon: CreditCard,
+          title: "Manajemen Pembayaran",
+          description: "Sistem secara otomatis mencatat riwayat pembayaran, status pembayaran, serta monitoring cicilan anggota."
         },
         {
           icon: ClipboardCheck,
-          title: "Peralatan Lengkap",
-          description: "Menyediakan semua peralatan seperti kain kafan, kapas, papan pemakaman, dan perlengkapan lainnya"
+          title: "Permohonan Pelayanan Jenazah",
+          description: "Dalam kondisi darurat, keluarga dapat mengajukan permohonan pelayanan jenazah melalui sistem yang dikelola admin agar proses penanganan lebih cepat dan terkoordinasi."
         },
         {
-          icon: Heart,
-          title: "Tim Profesional",
-          description: "Didampingi tim yang berpengalaman dan mengikuti tuntunan syariat Islam dalam setiap prosesnya"
+          icon: LayoutDashboard,
+          title: "Dashboard Admin",
+          description: "Admin dapat melihat data anggota reguler dan paket, melakukan penambahan atau pengeditan data anggota, serta memantau pembayaran dan cicilan secara real-time."
         }
       ],
       benefits: {

@@ -64,45 +64,47 @@ export default function ProductBenefits({
         </div>
 
         {/* Institution Benefits */}
-        <div>
-          <div className="text-center mb-12">
-            <div className="mb-3 mx-auto text-sm px-4 py-2 border border-sky-500 bg-sky-50 rounded-full w-fit text-sky-700 font-medium">
-              Untuk Institusi
+        {institutionBenefits.length > 0 && (
+          <div>
+            <div className="text-center mb-12">
+              <div className="mb-3 mx-auto text-sm px-4 py-2 border border-sky-500 bg-sky-50 rounded-full w-fit text-sky-700 font-medium">
+                Untuk Institusi
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+                {institutionBenefitsTitle}
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                {institutionBenefitsDescription}
+              </p>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-              {institutionBenefitsTitle}
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              {institutionBenefitsDescription}
-            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {institutionBenefits.map((benefit, index) => {
+                const Icon = benefit.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="bg-gradient-to-br from-brand-navy/5 to-white border border-brand-navy/10 hover:shadow-md transition-all duration-300"
+                  >
+                    <CardContent className="p-6 text-center">
+                      <div className="mb-4 w-12 h-12 bg-brand-navy rounded-lg flex items-center justify-center mx-auto">
+                        <Icon className="h-6 w-6 text-white" />
+                      </div>
+
+                      <h3 className="text-lg font-bold text-brand-navy mb-2">
+                        {benefit.title}
+                      </h3>
+
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {benefit.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {institutionBenefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <Card
-                  key={index}
-                  className="bg-gradient-to-br from-brand-navy/5 to-white border border-brand-navy/10 hover:shadow-md transition-all duration-300"
-                >
-                  <CardContent className="p-6 text-center">
-                    <div className="mb-4 w-12 h-12 bg-brand-navy rounded-lg flex items-center justify-center mx-auto">
-                      <Icon className="h-6 w-6 text-white" />
-                    </div>
-
-                    <h3 className="text-lg font-bold text-brand-navy mb-2">
-                      {benefit.title}
-                    </h3>
-
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

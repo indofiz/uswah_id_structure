@@ -69,7 +69,13 @@ import {
   Truck,
   PackageCheck,
   Heart,
-  ClipboardCheck
+  ClipboardCheck,
+  CalendarDays,
+  Home,
+  Boxes,
+  Lock,
+  Search,
+  QrCode
 } from "lucide-react";
 
 // Product data provider
@@ -1383,6 +1389,134 @@ export class UPJDataProvider {
   }
 }
 
+// SIPG (Sistem Informasi Penyewaan Gedung) data provider
+export class SIPGDataProvider {
+  getData(): ProductDetail {
+    return {
+      id: "sipg",
+      name: "Sistem Informasi Penyewaan Gedung",
+      tagline: "Transformasi Digital Pengelolaan Gedung & Ruangan Modern",
+      description: "Sistem informasi penyewaan gedung berbasis web yang memudahkan pengelolaan booking, pembayaran, dan manajemen fasilitas secara terintegrasi. Solusi lengkap untuk meningkatkan efisiensi operasional dan memberikan pengalaman booking yang seamless bagi penyewa.",
+      heroImage: "/product_mock/BUYA_HAMKA.png",
+      features: [
+        {
+          icon: Home,
+          title: "Manajemen Gedung & Ruangan",
+          description: "Daftar lengkap gedung & ruangan dengan foto, kapasitas, fasilitas, lokasi, dan status ketersediaan real-time"
+        },
+        {
+          icon: CalendarDays,
+          title: "Kalender & Manajemen Jadwal",
+          description: "Kalender interaktif dengan visualisasi booking harian, mingguan, bulanan, dan deteksi bentrok jadwal otomatis"
+        },
+        {
+          icon: ClipboardCheck,
+          title: "Pemesanan Online",
+          description: "Formulir pemesanan mandiri dengan pilihan durasi sewa (jam/hari/minggu) dan konfirmasi otomatis"
+        },
+        {
+          icon: CreditCard,
+          title: "Pembayaran & Tagihan",
+          description: "Integrasi payment gateway (Midtrans, Xendit) dengan sistem DP, pelunasan terjadwal, dan invoice digital"
+        },
+        {
+          icon: Boxes,
+          title: "Manajemen Fasilitas & Layanan",
+          description: "Checklist fasilitas lengkap (AC, proyektor, sound system, catering) dengan paket sewa gabungan"
+        },
+        {
+          icon: Lock,
+          title: "Otentikasi & Role Management",
+          description: "Role-based access (Admin, Operator, Penyewa) dengan SSO/email login dan profil riwayat pemesanan"
+        },
+        {
+          icon: Bell,
+          title: "Notifikasi & Komunikasi",
+          description: "Notifikasi otomatis konfirmasi booking, reminder, pembayaran via WhatsApp API dan email/SMS"
+        },
+        {
+          icon: PieChart,
+          title: "Pelaporan & Analitik",
+          description: "Laporan keuangan, utilisasi ruangan, prediksi permintaan berbasis AI, dan dashboard analitik lengkap"
+        },
+        {
+          icon: Database,
+          title: "API & Integrasi Eksternal",
+          description: "RESTful API untuk integrasi ERP/HRIS, webhook notifikasi, dan embeddable booking widget"
+        },
+        {
+          icon: Smartphone,
+          title: "Mobile-Friendly & QR Check-in",
+          description: "Responsive web UI mobile-first, aplikasi mobile dengan QR check-in dan digital key access"
+        }
+      ],
+      benefits: {
+        users: [
+          {
+            icon: Search,
+            title: "Booking Mudah & Cepat",
+            description: "Cari dan booking ruangan dengan mudah melalui kalender interaktif real-time",
+            audience: "user"
+          },
+          {
+            icon: CreditCard,
+            title: "Pembayaran Fleksibel",
+            description: "Berbagai metode pembayaran dengan sistem DP dan cicilan terjadwal",
+            audience: "user"
+          },
+          {
+            icon: Receipt,
+            title: "Riwayat & Invoice Digital",
+            description: "Akses riwayat pemesanan lengkap dengan invoice digital yang dapat diunduh",
+            audience: "user"
+          },
+          {
+            icon: QrCode,
+            title: "QR Check-in Digital",
+            description: "Check-in praktis dengan QR code dan digital key untuk akses ruangan",
+            audience: "user"
+          }
+        ],
+        institutions: [
+          {
+            icon: TrendingUp,
+            title: "Optimasi Utilisasi Ruangan",
+            description: "Maksimalkan penggunaan gedung dengan monitoring utilisasi dan prediksi permintaan AI",
+            audience: "institution"
+          },
+          {
+            icon: DollarSign,
+            title: "Peningkatan Pendapatan",
+            description: "Laporan keuangan real-time, analitik pendapatan, dan sistem pembayaran terintegrasi",
+            audience: "institution"
+          },
+          {
+            icon: Shield,
+            title: "Manajemen Akses Aman",
+            description: "Role-based access control, audit trail lengkap, dan keamanan data terjamin",
+            audience: "institution"
+          },
+          {
+            icon: BarChart2,
+            title: "Dashboard Analitik",
+            description: "Insight mendalam tentang performa gedung, tingkat hunian, dan trend pemesanan",
+            audience: "institution"
+          }
+        ]
+      },
+      platforms: [
+        {
+          name: "Web",
+          icon: Globe,
+          available: true
+        }
+      ],
+      ctaText: "Konsultasi Sistem Penyewaan Gedung",
+      ctaLink: "mailto:uswah@salam-alazhar.id"
+    };
+  }
+}
+
 // Factory pattern for creating data providers (Dependency Inversion)
 export class DataProviderFactory {
   static createProductsProvider(): DataProvider<Product> {
@@ -1435,5 +1569,9 @@ export class DataProviderFactory {
 
   static createUPJProvider(): UPJDataProvider {
     return new UPJDataProvider();
+  }
+
+  static createSIPGProvider(): SIPGDataProvider {
+    return new SIPGDataProvider();
   }
 }

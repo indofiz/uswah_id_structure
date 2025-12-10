@@ -3,7 +3,10 @@
     "allow": [
       "Bash(npm run dev)",
       "Read(//d//**)",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "Bash(grep:*)",
+      "Bash(npm run build:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

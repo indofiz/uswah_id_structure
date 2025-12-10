@@ -69,6 +69,12 @@ export default function ProductsServices() {
       description: "Unit Pelayanan Jenazah yang menyediakan layanan pengurusan jenazah secara Islami dengan penuh kepedulian.",
       image: "/product/image 4-10.png",
       link: "/upj"
+    },
+    {
+      title: "Sistem Informasi Penyewaan Gedung",
+      description: "Sistem penyewaan gedung berbasis web dengan manajemen booking, pembayaran, dan fasilitas terintegrasi untuk efisiensi operasional maksimal.",
+      image: "/product_mock/BUYA_HAMKA.png",
+      link: "/sipg"
     }
   ];
 

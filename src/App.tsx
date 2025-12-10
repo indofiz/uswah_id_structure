@@ -15,6 +15,7 @@ import ZISWAFPage from "./template/ziswaf-page";
 import BIDashboardPage from "./template/bi-dashboard-page";
 import TourTravelPage from "./template/tour-travel-page";
 import UPJPage from "./template/upj-page";
+import SIPGPage from "./template/sipg-page";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
       <Route path="/bi-dashboard" element={<BIDashboardPage />} />
       <Route path="/tour-travel" element={<TourTravelPage />} />
       <Route path="/upj" element={<UPJPage />} />
+      <Route path="/sipg" element={<SIPGPage />} />
     </Routes>
   )
 }

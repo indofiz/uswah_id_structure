@@ -65,17 +65,11 @@ import {
   LineChart,
   Filter,
   Download,
-  Map,
-  Truck,
-  PackageCheck,
-  Heart,
   ClipboardCheck,
   CalendarDays,
   Home,
   Boxes,
-  Lock,
-  Search,
-  QrCode
+  Lock
 } from "lucide-react";
 
 // Product data provider
@@ -1003,47 +997,95 @@ export class ZISWAFDataProvider {
       benefits: {
         users: [
           {
-            icon: Smartphone,
-            title: "Donasi Mudah",
-            description: "Berdonasi kapan saja, dimana saja melalui aplikasi mobile",
+            icon: Zap,
+            title: "Donasi Cepat & Mudah (Anytime, Anywhere)",
+            description: "Donasi dapat dilakukan kapan saja dan di mana saja dengan proses yang praktis",
+            audience: "user"
+          },
+          {
+            icon: Landmark,
+            title: "Pilihan Program Donasi yang Jelas",
+            description: "Beragam program donasi tersaji secara transparan dan mudah dipahami",
             audience: "user"
           },
           {
             icon: Receipt,
-            title: "Bukti Digital",
-            description: "Dapatkan bukti donasi digital langsung setelah transaksi",
+            title: "Bukti Donasi Otomatis & Real-Time",
+            description: "Bukti donasi diterima secara otomatis dan langsung setelah transaksi berhasil",
             audience: "user"
           },
           {
             icon: History,
-            title: "Riwayat Donasi",
-            description: "Lihat riwayat lengkap kontribusi dan dampak sosial Anda",
+            title: "Riwayat & Rekap Donasi Pribadi",
+            description: "Catatan lengkap donasi tersimpan rapi dan dapat diakses kapan saja",
+            audience: "user"
+          },
+          {
+            icon: Shield,
+            title: "Transparansi Penyaluran Dana",
+            description: "Informasi penyaluran dana ditampilkan secara terbuka dan dapat dipantau",
+            audience: "user"
+          },
+          {
+            icon: Bell,
+            title: "Pengingat & Notifikasi Donasi",
+            description: "Notifikasi otomatis membantu menjaga konsistensi dalam berdonasi",
+            audience: "user"
+          },
+          {
+            icon: Smartphone,
+            title: "Pengalaman Donasi yang Modern & Aman",
+            description: "Sistem donasi digital yang aman, nyaman, dan sesuai standar teknologi terkini",
             audience: "user"
           }
         ],
         institutions: [
           {
-            icon: Shield,
-            title: "Transparansi & Akuntabilitas",
-            description: "Sistem transparan untuk meningkatkan kepercayaan donatur",
+            icon: Database,
+            title: "Pengelolaan Dana Terpusat & Terintegrasi",
+            description: "Seluruh alur dana dikelola dalam satu sistem yang rapi, terpusat, dan saling terhubung",
             audience: "institution"
           },
           {
             icon: TrendingUp,
-            title: "Optimasi Fundraising",
-            description: "Tools untuk mengoptimalkan kampanye penggalangan dana",
+            title: "Otomatisasi Fundraising & Transaksi",
+            description: "Proses penggalangan dan pencatatan transaksi berjalan otomatis, cepat, dan minim kesalahan",
             audience: "institution"
           },
           {
-            icon: PieChart,
-            title: "Analytics Dashboard",
-            description: "Dashboard analitik untuk monitoring performa program",
+            icon: Target,
+            title: "Penyaluran Dana Lebih Terkontrol",
+            description: "Distribusi dana terpantau jelas, sesuai tujuan, dan dapat dipertanggungjawabkan",
             audience: "institution"
           },
           {
-            icon: CheckCircle2,
-            title: "Compliance Management",
-            description: "Memenuhi standar pengelolaan dana sosial dan keagamaan",
+            icon: FileBarChart,
+            title: "Pelaporan Cepat & Siap Audit",
+            description: "Laporan keuangan tersedia real-time, akurat, dan siap untuk kebutuhan audit",
+            audience: "institution"
+          },
+          {
+            icon: Users,
+            title: "Manajemen Donatur yang Lebih Efektif",
+            description: "Data donatur tersusun rapi untuk komunikasi, loyalitas, dan pengelolaan berkelanjutan",
+            audience: "institution"
+          },
+          {
+            icon: Clock,
+            title: "Pengurangan Beban Operasional",
+            description: "Mengurangi proses manual sehingga waktu, tenaga, dan biaya operasional lebih efisien",
+            audience: "institution"
+          },
+          {
+            icon: Lock,
+            title: "Kontrol Akses & Keamanan Data",
+            description: "Hak akses pengguna terkelola dengan baik dan data terlindungi secara optimal",
+            audience: "institution"
+          },
+          {
+            icon: Boxes,
+            title: "Integrasi POS & Kanal Offline",
+            description: "Transaksi offline dan POS tercatat otomatis dalam sistem yang sama",
             audience: "institution"
           }
         ]
@@ -1227,53 +1269,89 @@ export class TourTravelDataProvider {
       benefits: {
         users: [
           {
-            icon: Shield,
-            title: "Perjalanan Aman & Terpercaya",
-            description: "Perjalanan ibadah yang aman dengan legalitas resmi dari Kementerian Agama RI",
+            icon: UserPlus,
+            title: "Pendaftaran Jamaah Online",
+            description: "Daftar mudah kapan saja, tanpa harus datang ke kantor",
             audience: "user"
           },
           {
-            icon: Users,
-            title: "Layanan Profesional",
-            description: "Tim berpengalaman mendampingi dari persiapan hingga kepulangan",
+            icon: Package,
+            title: "Informasi Paket Jelas & Transparan",
+            description: "Detail paket lengkap, harga dan fasilitas terlihat jelas",
             audience: "user"
           },
           {
-            icon: Heart,
-            title: "Makanan Halal & Nyaman",
-            description: "Jaminan makanan halal dan akomodasi nyaman dekat lokasi ibadah",
+            icon: CreditCard,
+            title: "Pembayaran Mudah & Tercatat Otomatis",
+            description: "Pembayaran aman, status langsung terupdate",
             audience: "user"
           },
           {
-            icon: Map,
-            title: "Itinerary Lengkap",
-            description: "Itinerary terperinci dan pelaksanaan perjalanan yang tepat waktu",
+            icon: BarChart2,
+            title: "Tracking Status Jamaah Real-Time",
+            description: "Pantau proses jamaah secara real-time",
+            audience: "user"
+          },
+          {
+            icon: Bell,
+            title: "Notifikasi Otomatis",
+            description: "Info penting langsung diterima jamaah",
+            audience: "user"
+          },
+          {
+            icon: FileCheck,
+            title: "Akses Dokumen Digital",
+            description: "Dokumen perjalanan tersimpan rapi dan aman",
+            audience: "user"
+          },
+          {
+            icon: Smartphone,
+            title: "Pengalaman Jamaah Lebih Praktis & Modern",
+            description: "Layanan digital yang nyaman dan terpercaya",
             audience: "user"
           }
         ],
         institutions: [
           {
-            icon: Building2,
-            title: "Paket Institusi",
-            description: "Paket khusus untuk institusi pendidikan dengan harga spesial",
+            icon: LayoutDashboard,
+            title: "Pengelolaan Jamaah Grup Secara Terpusat",
+            description: "Travel dapat mengelola ratusan hingga ribuan jamaah dari berbagai grup atau institusi dalam satu dashboard sistem",
             audience: "institution"
           },
           {
-            icon: Users,
-            title: "Grup Management",
-            description: "Manajemen grup yang terorganisir untuk perjalanan bersama",
+            icon: Filter,
+            title: "Segmentasi Grup yang Fleksibel",
+            description: "Jamaah dapat dikelompokkan berdasarkan instansi, cabang, kloter, atau PIC tertentu sehingga koordinasi dan monitoring menjadi lebih mudah",
             audience: "institution"
           },
           {
-            icon: CheckCircle2,
-            title: "Koordinasi Mudah",
-            description: "Koordinasi mudah dengan tim yang responsif dan profesional",
+            icon: ClipboardCheck,
+            title: "Pendaftaran Jamaah Lebih Mudah & Terstruktur",
+            description: "Proses pendaftaran cepat, tertata, dan mudah diakses oleh jamaah",
             audience: "institution"
           },
           {
-            icon: TrendingUp,
-            title: "Pengalaman Terbaik",
-            description: "Pengalaman perjalanan ibadah yang berkesan dan penuh manfaat",
+            icon: Shield,
+            title: "Sistem Pembayaran Terintegrasi & Transparan",
+            description: "Pembayaran tercatat otomatis, aman, dan mudah dipantau",
+            audience: "institution"
+          },
+          {
+            icon: Sliders,
+            title: "Manajemen Paket yang Fleksibel",
+            description: "Pengaturan paket layanan sesuai kebutuhan komunitas dan institusi",
+            audience: "institution"
+          },
+          {
+            icon: FileBarChart,
+            title: "Pelaporan Profesional & Siap Audit",
+            description: "Laporan rapi, akurat, dan mendukung transparansi lembaga",
+            audience: "institution"
+          },
+          {
+            icon: Award,
+            title: "Meningkatkan Citra Profesional Mitra",
+            description: "Membantu mitra tampil lebih modern, terpercaya, dan profesional",
             audience: "institution"
           }
         ]
@@ -1325,53 +1403,71 @@ export class UPJDataProvider {
       benefits: {
         users: [
           {
-            icon: Heart,
-            title: "Pelayanan Penuh Empati",
-            description: "Pelayanan dengan penuh kepedulian dan empati untuk meringankan beban keluarga",
+            icon: Smartphone,
+            title: "Kemudahan Proses bagi Keluarga",
+            description: "Penyelenggaraan jenazah lebih mudah melalui satu layanan digital",
+            audience: "user"
+          },
+          {
+            icon: ClipboardList,
+            title: "Alur Layanan yang Jelas dan Terstruktur",
+            description: "Alur layanan jelas dan terstruktur dari awal hingga pemakaman",
             audience: "user"
           },
           {
             icon: Shield,
-            title: "Sesuai Syariat Islam",
-            description: "Semua proses dilakukan sesuai dengan tuntunan syariat Islam yang benar",
+            title: "Kepastian Sesuai Syariat Islam",
+            description: "Layanan sesuai syariat Islam",
             audience: "user"
           },
           {
-            icon: Truck,
-            title: "Transportasi Lengkap",
-            description: "Tersedia 4 kendaraan operasional untuk berbagai kebutuhan transportasi jenazah",
+            icon: FileCheck,
+            title: "Transparansi Informasi dan Biaya",
+            description: "Transparan, jelas, dan dapat dipercaya",
             audience: "user"
           },
           {
-            icon: PackageCheck,
-            title: "Perlengkapan Komplit",
-            description: "Semua peralatan dan bahan yang diperlukan sudah tersedia dan berkualitas",
+            icon: UserCheck,
+            title: "Dukungan Layanan yang Amanah dan Profesional",
+            description: "Ditangani tim profesional dan terpercaya",
+            audience: "user"
+          },
+          {
+            icon: HandHeart,
+            title: "Solusi Layanan Sosial yang Berkelanjutan",
+            description: "Kolaborasi layanan sosial yang bernilai dan terpercaya",
             audience: "user"
           }
         ],
         institutions: [
           {
             icon: Users,
-            title: "Layanan Kolektif",
-            description: "Melayani kebutuhan pemakaman untuk institusi dan komunitas",
+            title: "Menguatkan Peran Komunitas & Layanan Sosial",
+            description: "Solusi digital untuk pelayanan umat yang amanah dan terorganisir",
             audience: "institution"
           },
           {
-            icon: CheckCircle2,
-            title: "Prosedur Standar",
-            description: "Mengikuti prosedur standar yang sesuai dengan syariat Islam",
+            icon: ClipboardCheck,
+            title: "Kemudahan Pengelolaan Layanan Jenazah",
+            description: "Pengelolaan layanan jenazah lebih cepat, rapi, dan sesuai syariat",
             audience: "institution"
           },
           {
-            icon: Clock,
-            title: "Respon Cepat",
-            description: "Tim siap melayani dengan cepat untuk kebutuhan mendesak",
+            icon: Building2,
+            title: "Mendukung Kolaborasi & Skala Komunitas",
+            description: "Menyatukan masjid, yayasan, dan relawan dalam satu sistem",
             audience: "institution"
           },
           {
-            icon: HandHeart,
-            title: "Pelayanan Terpercaya",
-            description: "Dipercaya oleh ribuan keluarga untuk menyelenggarakan pemakaman Islami",
+            icon: Zap,
+            title: "Sistem yang Mudah Digunakan",
+            description: "Antarmuka sederhana, mudah dipahami, tanpa latar belakang IT",
+            audience: "institution"
+          },
+          {
+            icon: Award,
+            title: "Citra Profesional bagi Mitra",
+            description: "Meningkatkan kepercayaan dan kredibilitas lembaga di mata umat",
             audience: "institution"
           }
         ]
@@ -1453,27 +1549,33 @@ export class SIPGDataProvider {
       benefits: {
         users: [
           {
-            icon: Search,
-            title: "Booking Mudah & Cepat",
-            description: "Cari dan booking ruangan dengan mudah melalui kalender interaktif real-time",
+            icon: CalendarDays,
+            title: "Booking Gedung Lebih Mudah & Cepat",
+            description: "Pemesanan gedung online dengan jadwal real-time dan proses instan",
             audience: "user"
           },
           {
             icon: CreditCard,
-            title: "Pembayaran Fleksibel",
-            description: "Berbagai metode pembayaran dengan sistem DP dan cicilan terjadwal",
+            title: "Proses Pembayaran Praktis & Aman",
+            description: "Pembayaran digital terintegrasi, aman, dan tercatat otomatis",
             audience: "user"
           },
           {
-            icon: Receipt,
-            title: "Riwayat & Invoice Digital",
-            description: "Akses riwayat pemesanan lengkap dengan invoice digital yang dapat diunduh",
+            icon: Smartphone,
+            title: "Pengalaman Pengguna yang Nyaman",
+            description: "Antarmuka sederhana yang mudah digunakan oleh semua pengguna",
             audience: "user"
           },
           {
-            icon: QrCode,
-            title: "QR Check-in Digital",
-            description: "Check-in praktis dengan QR code dan digital key untuk akses ruangan",
+            icon: FileCheck,
+            title: "Informasi Fasilitas Transparan",
+            description: "Detail fasilitas dan ketersediaan ditampilkan jelas sejak awal",
+            audience: "user"
+          },
+          {
+            icon: LayoutDashboard,
+            title: "Pengelolaan Lebih Ringkas untuk Mitra",
+            description: "Manajemen booking dan pembayaran terpusat dalam satu sistem",
             audience: "user"
           }
         ],

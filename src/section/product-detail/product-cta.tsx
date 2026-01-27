@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, type LucideIcon } from "lucide-react";
 
 interface ProductCTAProps {
   productName: string;
@@ -9,62 +8,91 @@ interface ProductCTAProps {
   ctaLink: string;
 }
 
+interface ContactItem {
+  icon: LucideIcon;
+  label: string;
+  href?: string;
+}
+
+const contactItems: ContactItem[] = [
+  { icon: Mail, label: "uswah@salam-alazhar.id", href: "mailto:uswah@salam-alazhar.id" },
+  { icon: Phone, label: "(021) 72786730", href: "tel:02172786730" },
+  { icon: MapPin, label: "Jakarta Selatan" },
+];
+
 export default function ProductCTA({ productName, ctaText, ctaLink }: ProductCTAProps) {
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-sky-500 via-primary-brand to-brand-navy">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Main CTA Card */}
-          <Card className="bg-white border-0 shadow-2xl overflow-hidden mb-8">
-            <CardContent className="p-8 sm:p-12 text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* CTA Card */}
+        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-primary-brand">
+          {/* Grid background */}
+          <div className="absolute inset-0">
+            <img
+              src="/grid-bg.png"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Illustration - Hidden on mobile, visible from sm up */}
+          <div className="hidden sm:flex absolute inset-y-0 right-4 md:right-8 lg:right-12 w-48 md:w-64 lg:w-80 items-center justify-center pointer-events-none">
+            <img
+              src="/ILLUSTRATION-CONTACT.svg"
+              alt=""
+              className="w-full h-auto object-contain opacity-90"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 px-5 py-10 sm:px-8 sm:py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
+            {/* Text Content & Button */}
+            <div className="max-w-md sm:max-w-lg md:max-w-xl">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
                 Siap Memulai Transformasi Digital?
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Hubungi kami untuk konsultasi gratis dan demo {productName}. Tim kami siap membantu institusi Anda mencapai excellence dalam pendidikan digital.
+              <p className="text-sm sm:text-base md:text-lg text-white/80 mb-6 sm:mb-8">
+                Hubungi kami untuk konsultasi gratis dan demo {productName}. Tim kami siap membantu institusi Anda.
               </p>
 
               <Button
-                className="text-base sm:text-lg px-8 py-6 bg-gradient-to-r from-sky-500 to-brand-navy text-white hover:opacity-90 transition-all shadow-lg"
+                className="w-full sm:w-auto text-sm sm:text-base px-5 sm:px-6 py-5 sm:py-6 bg-white text-brand-navy hover:bg-yellow-300 transition-all font-semibold"
                 onClick={() => window.location.href = ctaLink}
               >
                 {ctaText}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Card className="bg-white/10 backdrop-blur-sm border border-white/20">
-              <CardContent className="p-6 text-center">
-                <div className="mb-3 w-10 h-10 bg-white rounded-lg flex items-center justify-center mx-auto">
-                  <Mail className="h-5 w-5 text-sky-500" />
-                </div>
-                <p className="text-sm text-white/80 mb-1">Email</p>
-                <p className="text-sm font-medium text-white">uswah@salam-alazhar.id</p>
-              </CardContent>
-            </Card>
+            {/* Contact Info */}
+            <div className="mt-8 sm:mt-10">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+                {contactItems.map(({ icon: Icon, label, href }) => {
+                  const content = (
+                    <>
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
+                      </div>
+                      <span className="text-xs sm:text-sm font-medium">{label}</span>
+                    </>
+                  );
 
-            <Card className="bg-white/10 backdrop-blur-sm border border-white/20">
-              <CardContent className="p-6 text-center">
-                <div className="mb-3 w-10 h-10 bg-white rounded-lg flex items-center justify-center mx-auto">
-                  <Phone className="h-5 w-5 text-sky-500" />
-                </div>
-                <p className="text-sm text-white/80 mb-1">Telepon</p>
-                <p className="text-sm font-medium text-white">(021) 72786730</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 backdrop-blur-sm border border-white/20">
-              <CardContent className="p-6 text-center">
-                <div className="mb-3 w-10 h-10 bg-white rounded-lg flex items-center justify-center mx-auto">
-                  <MapPin className="h-5 w-5 text-sky-500" />
-                </div>
-                <p className="text-sm text-white/80 mb-1">Lokasi</p>
-                <p className="text-sm font-medium text-white">Jakarta Selatan</p>
-              </CardContent>
-            </Card>
+                  return href ? (
+                    <a
+                      key={label}
+                      href={href}
+                      className="flex items-center gap-3 text-white/90 hover:text-white transition-colors"
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <div key={label} className="flex items-center gap-3 text-white/90">
+                      {content}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
